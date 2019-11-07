@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=NetU1_10 Pin=U1-10
+Added Pin To Net: NetName=NetU1_10 Pin=U1-11
+Added Pin To Net: NetName=NetU1_10 Pin=U1-12
+Added Pin To Net: NetName=NetU1_10 Pin=U1-13
+Added Net: Name=NetU1_10
+Added Member To Class: ClassName=Telemetry_schematic Member=Component U1 ACS712
