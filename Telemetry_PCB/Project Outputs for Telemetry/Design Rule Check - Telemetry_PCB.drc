@@ -1,0 +1,126 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_PCB.PcbDoc
+Date     : 07.11.2019
+Time     : 21.37.49
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+   Violation between Clearance Constraint: (7.874mil < 10mil) Between Pad U3-1(5409.606mil,2681.772mil) on Top Layer And Pad U3-2(5435.197mil,2681.772mil) on Top Layer 
+   Violation between Clearance Constraint: (7.874mil < 10mil) Between Pad U3-2(5435.197mil,2681.772mil) on Top Layer And Pad U3-3(5460.787mil,2681.772mil) on Top Layer 
+   Violation between Clearance Constraint: (7.874mil < 10mil) Between Pad U3-5(5486.378mil,2855mil) on Top Layer And Pad U3-6(5460.787mil,2855mil) on Top Layer 
+   Violation between Clearance Constraint: (7.874mil < 10mil) Between Pad U3-6(5460.787mil,2855mil) on Top Layer And Pad U3-7(5435.197mil,2855mil) on Top Layer 
+   Violation between Clearance Constraint: (7.874mil < 10mil) Between Pad U3-7(5435.197mil,2855mil) on Top Layer And Pad U3-8(5409.606mil,2855mil) on Top Layer 
+Rule Violations :5
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net NetC1_1 Between Pad U1-6(3820.197mil,3565.315mil) on Top Layer And Pad C1-1(3831.614mil,3386.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C1-2(3758.78mil,3386.535mil) on Top Layer And Pad C2-2(3948.78mil,3390mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C1-2(3758.78mil,3386.535mil) on Top Layer And Pad U1-5(3770.197mil,3565.315mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U5-AGND(1525mil,2635mil) on Multi-Layer And Pad C1-2(3758.78mil,3386.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad C2-1(4021.614mil,3390mil) on Top Layer And Pad L1-1(5191.968mil,2855mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad U1-8(3920.197mil,3565.315mil) on Top Layer And Pad C2-1(4021.614mil,3390mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C2-2(3948.78mil,3390mil) on Top Layer And Pad P3-2(5485.197mil,3506.535mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetC3_1 Between Pad C4-2(5177.165mil,2620mil) on Top Layer And Pad C3-1(5177.362mil,2511.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C4-1(5250mil,2620mil) on Top Layer And Pad C3-2(5250.197mil,2511.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C6-2(4956.417mil,2350mil) on Top Layer And Pad C3-2(5250.197mil,2511.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C3-2(5250.197mil,2511.535mil) on Top Layer And Pad R2-1(5350.197mil,2511.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C4-1(5250mil,2620mil) on Top Layer And Pad C7-2(5265mil,2730mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetC3_1 Between Pad C4-2(5177.165mil,2620mil) on Top Layer And Pad U3-3(5460.787mil,2681.772mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetC5_1 Between Pad C5-1(5412.362mil,3035mil) on Top Layer And Pad U3-7(5435.197mil,2855mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetC5_2 Between Pad U3-6(5460.787mil,2855mil) on Top Layer And Pad C5-2(5485.197mil,3035mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad C6-1(4883.583mil,2350mil) on Top Layer And Pad C7-1(5192.165mil,2730mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad R1-2(4585mil,2025mil) on Top Layer And Pad C6-1(4883.583mil,2350mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad L1-1(5191.968mil,2855mil) on Top Layer And Pad C7-1(5192.165mil,2730mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C7-2(5265mil,2730mil) on Top Layer And Pad U3-8(5409.606mil,2855mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetC8_1 Between Pad U3-2(5435.197mil,2681.772mil) on Top Layer And Pad C8-1(5898.583mil,2708.583mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U3-5(5486.378mil,2855mil) on Top Layer And Pad C8-2(5898.583mil,2781.417mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +3V3 Between Pad U2-2(5568.583mil,1995.158mil) on Top Layer And Pad C9-1(6072.835mil,1275mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U2-3(5478.032mil,1995.158mil) on Top Layer And Pad C9-2(6000mil,1275mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetC5_2 Between Pad L1-2(5265.197mil,2855mil) on Top Layer And Pad U3-6(5460.787mil,2855mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +24 Between Pad U1-1(3920.197mil,3787.756mil) on Top Layer And Pad P1-1(4530.197mil,3790mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetP1_2 Between Pad P2-2(3160.197mil,3501.535mil) on Multi-Layer And Pad P1-2(4530.197mil,3506.535mil) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetP2_1 Between Pad P2-1(3160.197mil,3785mil) on Multi-Layer And Pad U1-4(3770.197mil,3787.756mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetC3_1 Between Pad P3-1(5485.197mil,3790mil) on Multi-Layer And Pad U3-4(5486.378mil,2681.772mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad P3-2(5485.197mil,3506.535mil) on Multi-Layer And Pad U3-5(5486.378mil,2855mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetR1_1 Between Pad R1-1(4512.165mil,2025mil) on Top Layer And Pad R2-2(5423.032mil,2511.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad R1-2(4585mil,2025mil) on Top Layer And Pad U2-1(5659.134mil,1995.158mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad R2-1(5350.197mil,2511.535mil) on Top Layer And Pad U2-3(5478.032mil,1995.158mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetR1_1 Between Pad U3-1(5409.606mil,2681.772mil) on Top Layer And Pad R2-2(5423.032mil,2511.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +24 Between Pad U1-2(3870.197mil,3787.756mil) on Top Layer And Pad U1-1(3920.197mil,3787.756mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetP2_1 Between Pad U1-4(3770.197mil,3787.756mil) on Top Layer And Pad U1-3(3820.197mil,3787.756mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetU1_7 Between Pad U5-14(2625mil,2635mil) on Multi-Layer And Pad U1-7(3870.197mil,3565.315mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +3V3 Between Pad U5-VIN(1425mil,2635mil) on Multi-Layer And Pad U2-2(5568.583mil,1995.158mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetC3_1 Between Pad U3-3(5460.787mil,2681.772mil) on Top Layer And Pad U3-4(5486.378mil,2681.772mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U3-8(5409.606mil,2855mil) on Top Layer And Pad U3-5(5486.378mil,2855mil) on Top Layer 
+Rule Violations :39
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+   Violation between Hole Size Constraint: (177.165mil > 100mil) Pad P1-1(4530.197mil,3790mil) on Multi-Layer Actual Hole Size = 177.165mil
+   Violation between Hole Size Constraint: (177.165mil > 100mil) Pad P1-2(4530.197mil,3506.535mil) on Multi-Layer Actual Hole Size = 177.165mil
+   Violation between Hole Size Constraint: (177.165mil > 100mil) Pad P2-1(3160.197mil,3785mil) on Multi-Layer Actual Hole Size = 177.165mil
+   Violation between Hole Size Constraint: (177.165mil > 100mil) Pad P2-2(3160.197mil,3501.535mil) on Multi-Layer Actual Hole Size = 177.165mil
+   Violation between Hole Size Constraint: (177.165mil > 100mil) Pad P3-1(5485.197mil,3790mil) on Multi-Layer Actual Hole Size = 177.165mil
+   Violation between Hole Size Constraint: (177.165mil > 100mil) Pad P3-2(5485.197mil,3506.535mil) on Multi-Layer Actual Hole Size = 177.165mil
+Rule Violations :6
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C4-1(5250mil,2620mil) on Top Layer And Text "C3" (5155.78mil,2579.535mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C4-2(5177.165mil,2620mil) on Top Layer And Text "C3" (5155.78mil,2579.535mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C7-1(5192.165mil,2730mil) on Top Layer And Text "C4" (5155.583mil,2688mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C7-2(5265mil,2730mil) on Top Layer And Text "C4" (5155.583mil,2688mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad L1-1(5191.968mil,2855mil) on Top Layer And Text "C7" (5171.083mil,2798.5mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad L1-2(5265.197mil,2855mil) on Top Layer And Text "C7" (5171.083mil,2798.5mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad P1-2(4530.197mil,3506.535mil) on Multi-Layer And Text "P1" (4536.697mil,3537.035mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad P2-2(3160.197mil,3501.535mil) on Multi-Layer And Text "P2" (3166.697mil,3532.035mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (8.89mil < 10mil) Between Pad U1-8(3920.197mil,3565.315mil) on Top Layer And Text "C2" (3927.197mil,3458mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.89mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad U2-1(5659.134mil,1995.158mil) on Top Layer And Track (5436.693mil,1941.024mil)(5700.472mil,1941.024mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad U2-2(5568.583mil,1995.158mil) on Top Layer And Track (5436.693mil,1941.024mil)(5700.472mil,1941.024mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad U2-3(5478.032mil,1995.158mil) on Top Layer And Track (5436.693mil,1941.024mil)(5700.472mil,1941.024mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad U2-4(5568.583mil,1764.842mil) on Top Layer And Track (5436.693mil,1818.976mil)(5700.472mil,1818.976mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.985mil < 10mil) Between Pad U3-1(5409.606mil,2681.772mil) on Top Layer And Track (5388.378mil,2718.772mil)(5388.378mil,2816.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.985mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.519mil < 10mil) Between Pad U3-1(5409.606mil,2681.772mil) on Top Layer And Track (5388.378mil,2718.772mil)(5396.378mil,2718.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [4.519mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.457mil < 10mil) Between Pad U3-1(5409.606mil,2681.772mil) on Top Layer And Track (5396.378mil,2718.772mil)(5507.378mil,2718.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.457mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.457mil < 10mil) Between Pad U3-2(5435.197mil,2681.772mil) on Top Layer And Track (5396.378mil,2718.772mil)(5507.378mil,2718.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.457mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.457mil < 10mil) Between Pad U3-3(5460.787mil,2681.772mil) on Top Layer And Track (5396.378mil,2718.772mil)(5507.378mil,2718.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.457mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.457mil < 10mil) Between Pad U3-4(5486.378mil,2681.772mil) on Top Layer And Track (5396.378mil,2718.772mil)(5507.378mil,2718.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.457mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.797mil < 10mil) Between Pad U3-4(5486.378mil,2681.772mil) on Top Layer And Track (5507.378mil,2718.772mil)(5507.378mil,2816.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.797mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.685mil < 10mil) Between Pad U3-5(5486.378mil,2855mil) on Top Layer And Track (5388.378mil,2816.772mil)(5507.378mil,2816.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [4.685mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.685mil < 10mil) Between Pad U3-6(5460.787mil,2855mil) on Top Layer And Track (5388.378mil,2816.772mil)(5507.378mil,2816.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [4.685mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.685mil < 10mil) Between Pad U3-7(5435.197mil,2855mil) on Top Layer And Track (5388.378mil,2816.772mil)(5507.378mil,2816.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [4.685mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (4.685mil < 10mil) Between Pad U3-8(5409.606mil,2855mil) on Top Layer And Track (5388.378mil,2816.772mil)(5507.378mil,2816.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [4.685mil]
+Rule Violations :24
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (7.883mil < 10mil) Between Text "C7" (5171.083mil,2798.5mil) on Top Overlay And Track (5226.614mil,2831.772mil)(5230.551mil,2831.772mil) on Top Overlay Silk Text to Silk Clearance [7.883mil]
+Rule Violations :1
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Room Telemetry_schematic (Bounding Region = (955.197mil, 1.535mil, 9975.197mil, 7061.535mil) (InComponentClass('Telemetry_schematic'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 75
+Waived Violations : 0
+Time Elapsed        : 00:00:00
