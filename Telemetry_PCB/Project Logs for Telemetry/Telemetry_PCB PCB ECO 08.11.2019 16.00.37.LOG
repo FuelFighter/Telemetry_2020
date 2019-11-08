@@ -1,0 +1,36 @@
+Added Component: Designator=U5(teensy_3.6)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetU5_3 Pin=U5-3
+Added Pin To Net: NetName=NetU5_4 Pin=U5-4
+Added Pin To Net: NetName=NetU4_16 Pin=U5-10
+Added Pin To Net: NetName=NetU4_15 Pin=U5-11
+Added Pin To Net: NetName=NetU4_14 Pin=U5-12
+Added Pin To Net: NetName=NetP5_14 Pin=U5-13
+Added Pin To Net: NetName=NetU1_7 Pin=U5-14
+Added Pin To Net: NetName=NetP5_12 Pin=U5-15
+Added Pin To Net: NetName=NetP5_11 Pin=U5-16
+Added Pin To Net: NetName=NetP5_10 Pin=U5-17
+Added Pin To Net: NetName=NetP5_9 Pin=U5-18
+Added Pin To Net: NetName=NetP5_8 Pin=U5-19
+Added Pin To Net: NetName=NetP5_7 Pin=U5-20
+Added Pin To Net: NetName=NetP5_6 Pin=U5-21
+Added Pin To Net: NetName=NetP5_5 Pin=U5-22
+Added Pin To Net: NetName=NetP5_4 Pin=U5-23
+Added Pin To Net: NetName=NetU4_12 Pin=U5-24
+Added Pin To Net: NetName=NetU4_13 Pin=U5-28
+Added Pin To Net: NetName=NetP5_24 Pin=U5-33
+Added Pin To Net: NetName=NetP5_23 Pin=U5-34
+Added Pin To Net: NetName=NetP5_22 Pin=U5-35
+Added Pin To Net: NetName=NetP5_21 Pin=U5-36
+Added Pin To Net: NetName=NetP5_20 Pin=U5-37
+Added Pin To Net: NetName=NetP5_19 Pin=U5-38
+Added Pin To Net: NetName=NetP5_18 Pin=U5-39
+Added Pin To Net: NetName=NetP5_17 Pin=U5-A21
+Added Pin To Net: NetName=NetP5_16 Pin=U5-A22
+Added Pin To Net: NetName=GND Pin=U5-AGND
+Added Pin To Net: NetName=GND Pin=U5-GND
+Added Pin To Net: NetName=GND Pin=U5-GND
+Added Pin To Net: NetName=+5 Pin=U5-VIN
+Added Member To Class: ClassName=Telemetry_schematic Member=Component U5 teensy_3.6

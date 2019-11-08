@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=GND Pin=U5-3.3V1
+Added Pin To Net: NetName=+5 Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P1 1x24_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P2 RJ11
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P3 XT-60

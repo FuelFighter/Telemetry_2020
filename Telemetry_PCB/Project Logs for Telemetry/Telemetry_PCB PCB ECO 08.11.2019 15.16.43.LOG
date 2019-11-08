@@ -1,0 +1,54 @@
+Removed Pin From Net: NetName=+5 Pin=P1-1
+Removed Pin From Net: NetName=GND Pin=P1-2
+Removed Pin From Net: NetName=NetU5_33 Pin=U5-33
+Removed Pin From Net: NetName=NetU5_34 Pin=U5-34
+Added Pin To Net: NetName=+5 Pin=P1-1
+Added Pin To Net: NetName=+24 Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=GND Pin=U5-3.3V2
+Added Pin To Net: NetName=NetU5_33 Pin=U5-15
+Added Pin To Net: NetName=NetU5_34 Pin=U5-16
+Change Net Name : Old Net Name=NetU5_33 New Net Name=NetP1_12
+Change Net Name : Old Net Name=NetU5_34 New Net Name=NetP1_11
+Added Pin To Net: NetName=NetP1_4 Pin=U5-23
+Added Net: Name=NetP1_4
+Added Pin To Net: NetName=NetP1_5 Pin=U5-22
+Added Net: Name=NetP1_5
+Added Pin To Net: NetName=NetP1_6 Pin=U5-21
+Added Net: Name=NetP1_6
+Added Pin To Net: NetName=NetP1_7 Pin=U5-20
+Added Net: Name=NetP1_7
+Added Pin To Net: NetName=NetP1_8 Pin=U5-19
+Added Net: Name=NetP1_8
+Added Pin To Net: NetName=NetP1_9 Pin=U5-18
+Added Net: Name=NetP1_9
+Added Pin To Net: NetName=NetP1_10 Pin=U5-17
+Added Net: Name=NetP1_10
+Added Pin To Net: NetName=NetP1_14 Pin=U5-13
+Added Net: Name=NetP1_14
+Added Pin To Net: NetName=NetP1_16 Pin=U5-A22
+Added Net: Name=NetP1_16
+Added Pin To Net: NetName=NetP1_17 Pin=U5-A21
+Added Net: Name=NetP1_17
+Added Pin To Net: NetName=NetP1_18 Pin=U5-39
+Added Net: Name=NetP1_18
+Added Pin To Net: NetName=NetP1_19 Pin=U5-38
+Added Net: Name=NetP1_19
+Added Pin To Net: NetName=NetP1_20 Pin=U5-37
+Added Net: Name=NetP1_20
+Added Pin To Net: NetName=NetP1_21 Pin=U5-36
+Added Net: Name=NetP1_21
+Added Pin To Net: NetName=NetP1_22 Pin=U5-35
+Added Net: Name=NetP1_22
+Added Pin To Net: NetName=NetP1_23 Pin=U5-34
+Added Net: Name=NetP1_23
+Added Pin To Net: NetName=NetP1_24 Pin=U5-33
+Added Net: Name=NetP1_24
+Added Pin To Net: NetName=NetU5_3 Pin=U5-3
+Added Net: Name=NetU5_3
+Added Pin To Net: NetName=NetU5_4 Pin=U5-4
+Added Net: Name=NetU5_4
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P1 1x24_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P2 RJ11
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P3 XT-60
