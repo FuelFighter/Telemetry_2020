@@ -1,0 +1,19 @@
+Added Component: Designator=R5(R_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4M"; VariantName = "[No Variations]"
+Added Component: Designator=R6(R_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1M"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=+24 Pin=R5-2
+Added Net: Name=+24
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetR5_1 Pin=R6-2
+Added Pin To Net: NetName=NetR5_1 Pin=U5-15
+Added Net: Name=NetR5_1
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R5 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R6 SMD
