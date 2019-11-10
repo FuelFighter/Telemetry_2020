@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=+24in Pin=P3-1
+Removed Pin From Net: NetName=+24ut Pin=R5-2
+Change Component Footprint: Designator=L1 Old Footprint=L_SMD_0805_PCB New Footprint=L_DR73_SMD
+Added Pin To Net: NetName=NetC3_1 Pin=P3-1
+Added Pin To Net: NetName=+24 Pin=R5-2
+Added Room: Name=Telemetry_schematic
