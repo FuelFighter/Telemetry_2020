@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=+3V3 Pin=P5-3
+Removed Pin From Net: NetName=+3V3 Pin=U5-+3V3
+Removed Pin From Net: NetName=+3V3 Pin=U5-+3V3
+Added Component: Designator=P12(PIN_HEADER_M_1x5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P13(PIN_HEADER_M_1x5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P14(PIN_HEADER_M_1x5)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetP5_3 Pin=P5-3
+Added Pin To Net: NetName=+3V3 Pin=P12-1
+Added Pin To Net: NetName=+5 Pin=P12-2
+Added Pin To Net: NetName=NetP9_3 Pin=P12-3
+Added Pin To Net: NetName=NetP9_4 Pin=P12-4
+Added Pin To Net: NetName=GND Pin=P12-5
+Added Pin To Net: NetName=+3V3 Pin=P13-1
+Added Pin To Net: NetName=+5 Pin=P13-2
+Added Pin To Net: NetName=NetP9_3 Pin=P13-3
+Added Pin To Net: NetName=NetP9_4 Pin=P13-4
+Added Pin To Net: NetName=GND Pin=P13-5
+Added Pin To Net: NetName=+3V3 Pin=P14-1
+Added Pin To Net: NetName=+5 Pin=P14-2
+Added Pin To Net: NetName=NetP9_3 Pin=P14-3
+Added Pin To Net: NetName=NetP9_4 Pin=P14-4
+Added Pin To Net: NetName=GND Pin=P14-5
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P12 1x5_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P13 1x5_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P14 1x5_M
