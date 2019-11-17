@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=NetR1_1 Pin=R2-2
+Removed Pin From Net: NetName=NetR1_1 Pin=U3-1
+Change component parameters: Designator = "R1"; Footprint = "R_SMD_0805_pcb"; UniqueID = "\ARSGKVGS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "50k"; VariantName = "[No Variations]"
+Added Component: Designator=R3(R_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.3K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetR1_1 Pin=R3-2
+Added Pin To Net: NetName=NetP6_2 Pin=R4-1
+Added Pin To Net: NetName=+24 Pin=R5-2
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=NetP5_9 Pin=R7-2
+Added Pin To Net: NetName=+3V3 Pin=R8-1
+Added Pin To Net: NetName=NetP5_8 Pin=R8-2
+Added Pin To Net: NetName=NetP4_2 Pin=P4-2
+Added Pin To Net: NetName=NetP4_2 Pin=R4-2
+Added Net: Name=NetP4_2
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=NetR2_2 Pin=R3-1
+Added Pin To Net: NetName=NetR2_2 Pin=U3-1
+Added Net: Name=NetR2_2
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R3 SMD

@@ -105,6 +105,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PHMVXCMP
 
+[Document5]
+DocumentPath=..\..\backuplib.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=QQBPGSKB
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for Telemetry\Design Rule Check - Telemetry_PCB.html
 DItemRevisionGUID=
