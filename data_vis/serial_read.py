@@ -10,7 +10,7 @@ ax1 = plt.axes()
 
 # make plot
 line, = plt.plot(ydata)
-plt.ylim([10,40])
+plt.ylim([10, 40])
 
 # start data collection
 while True:

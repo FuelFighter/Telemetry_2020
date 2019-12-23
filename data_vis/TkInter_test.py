@@ -1,40 +1,40 @@
 import os
 import wx
+import webbrowser
+
+class MyApp(wx.App):
+    def __init__(self):
+        super().__init__(clearSigInt=True)
+
+        self.InitFrame()
+
+    def InitFrame(self):
+        frame = MyFrame(parent=None, title="Telemetry Data Vis", pos=(50,50), size=(720,480))
+        frame.Show()
 
 
-class MainWindow(wx.Frame):
-    def __init__(self, parent, title):
-        wx.Frame.__init__(self, parent, title=title, size=(200,100))
-        self.control = wx.TextCtrl(self, style=wx.TE_MULTILINE)
-        self.CreateStatusBar() # A StatusBar in the bottom of the window
+class MyFrame(wx.Frame):
+    def __init__(self, parent, title, pos, size):
+        super().__init__(parent=parent, title=title, pos=pos, size=size)
+        self.OnInit()
 
-        # Setting up the menu.
-        filemenu= wx.Menu()
+    def OnInit(self):
+        panel = MyPanel(parent=self)
 
-        # wx.ID_ABOUT and wx.ID_EXIT are standard ids provided by wxWidgets.
-        menuAbout = filemenu.Append(wx.ID_ABOUT, "&About"," Information about this program")
-        menuExit = filemenu.Append(wx.ID_EXIT,"E&xit"," Terminate the program")
+class MyPanel(wx.Panel):
+    def __init__(self, parent):
+        super().__init__(parent=parent)
 
-        # Creating the menubar.
-        menuBar = wx.MenuBar()
-        menuBar.Append(filemenu,"&File") # Adding the "filemenu" to the MenuBar
-        self.SetMenuBar(menuBar)  # Adding the MenuBar to the Frame content.
+        welcomeText = wx.StaticText(self, id=wx.ID_ANY, label="Blæ", pos=(20,20))
+        
+        button = wx.Button(parent=self, label="Click here", pos=(20, 80))
+        button.Bind(event=wx.EVT_BUTTON, handler=self.OnSubmit)
 
-        # Set events.
-        self.Bind(wx.EVT_MENU, self.OnAbout, menuAbout)
-        self.Bind(wx.EVT_MENU, self.OnExit, menuExit)
+    def OnSubmit(self, event):
+        webbrowser.open('https://www.google.com')
 
-        self.Show(True)
+if __name__ == "__main__":
+    app = MyApp()
+    app.MainLoop()
 
-    def OnAbout(self,e):
-        # A message dialog box with an OK button. wx.OK is a standard ID in wxWidgets.
-        dlg = wx.MessageDialog( self, "A small text editor", "About Sample Editor", wx.OK)
-        dlg.ShowModal() # Show it
-        dlg.Destroy() # finally destroy it when finished.
 
-    def OnExit(self,e):
-        self.Close(True)  # Close the frame.
-
-app = wx.App(False)
-frame = MainWindow(None, "Sample editor")
-app.MainLoop()
