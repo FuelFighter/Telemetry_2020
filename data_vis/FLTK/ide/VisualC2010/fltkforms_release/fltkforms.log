@@ -1,0 +1,8 @@
+﻿  forms_bitmap.cxx
+  forms_compatability.cxx
+  forms_free.cxx
+  forms_fselect.cxx
+  forms_pixmap.cxx
+  forms_timer.cxx
+  Generating Code...
+  fltkforms.vcxproj -> C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\data_vis\Telemetry_data_vis_v.0.1\Telemetry_data_vis_v.0.1\FLTK\ide\VisualC2010\..\..\lib\fltkforms.lib

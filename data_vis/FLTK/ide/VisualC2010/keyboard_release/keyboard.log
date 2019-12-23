@@ -1,0 +1,6 @@
+﻿  Create .cxx and .h file with fluid
+  Compiling fluid files ...
+  keyboard.cxx
+  keyboard_ui.cxx
+  Generating Code...
+  keyboard.vcxproj -> C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\data_vis\Telemetry_data_vis_v.0.1\Telemetry_data_vis_v.0.1\FLTK\ide\VisualC2010\..\..\test\keyboard.exe

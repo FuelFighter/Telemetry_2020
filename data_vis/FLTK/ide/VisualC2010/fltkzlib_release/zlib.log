@@ -1,0 +1,17 @@
+﻿  adler32.c
+  compress.c
+  crc32.c
+  deflate.c
+  gzclose.c
+  gzlib.c
+  gzread.c
+  gzwrite.c
+  infback.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  trees.c
+  uncompr.c
+  zutil.c
+  Generating Code...
+  zlib.vcxproj -> C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\data_vis\Telemetry_data_vis_v.0.1\Telemetry_data_vis_v.0.1\FLTK\ide\VisualC2010\..\..\lib\fltkzlib.lib

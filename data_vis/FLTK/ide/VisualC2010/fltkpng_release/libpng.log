@@ -1,0 +1,17 @@
+﻿  png.c
+  pngerror.c
+  pngget.c
+  pngmem.c
+  pngpread.c
+  pngread.c
+  pngrio.c
+  pngrtran.c
+  pngrutil.c
+  pngset.c
+  pngtrans.c
+  pngwio.c
+  pngwrite.c
+  pngwtran.c
+  pngwutil.c
+  Generating Code...
+  libpng.vcxproj -> C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\data_vis\Telemetry_data_vis_v.0.1\Telemetry_data_vis_v.0.1\FLTK\ide\VisualC2010\..\..\lib\fltkpng.lib
