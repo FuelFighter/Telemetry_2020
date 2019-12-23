@@ -192,8 +192,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "native-filechooser", "nativ
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unittests", "unittests.vcxproj", "{86C52ED6-C710-40E6-86A2-61F757B20CF7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_proj", "..\Test_proj\Test_proj.vcxproj", "{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Cairo|Win32 = Debug Cairo|Win32
@@ -1154,22 +1152,6 @@ Global
 		{86C52ED6-C710-40E6-86A2-61F757B20CF7}.Release|Win32.ActiveCfg = Release|Win32
 		{86C52ED6-C710-40E6-86A2-61F757B20CF7}.Release|Win32.Build.0 = Release|Win32
 		{86C52ED6-C710-40E6-86A2-61F757B20CF7}.Release|x64.ActiveCfg = Release|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Debug Cairo|Win32.ActiveCfg = Debug|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Debug Cairo|Win32.Build.0 = Debug|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Debug Cairo|x64.ActiveCfg = Debug|x64
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Debug Cairo|x64.Build.0 = Debug|x64
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Debug|Win32.ActiveCfg = Debug|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Debug|Win32.Build.0 = Debug|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Debug|x64.ActiveCfg = Debug|x64
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Debug|x64.Build.0 = Debug|x64
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Release Cairo|Win32.ActiveCfg = Release|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Release Cairo|Win32.Build.0 = Release|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Release Cairo|x64.ActiveCfg = Release|x64
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Release Cairo|x64.Build.0 = Release|x64
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Release|Win32.ActiveCfg = Release|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Release|Win32.Build.0 = Release|Win32
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Release|x64.ActiveCfg = Release|x64
-		{13EF74BE-F6E5-436F-B43D-D30C5C51EC9C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
