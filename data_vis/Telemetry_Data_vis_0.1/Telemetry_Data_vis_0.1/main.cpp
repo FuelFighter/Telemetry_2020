@@ -16,32 +16,31 @@ using namespace std;
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Multiline_Output.H>
 
+constexpr int width = 1280;
+constexpr int height = 720;
 
 int main() {
-	Fl_Window *window = new Fl_Window(340, 180);
+	Fl_Window *window = new Fl_Window(width, height);
 
-	Fl_Multiline_Output *outputBox = new Fl_Multiline_Output(40, 40, 100, 100, "Yo");
+	Fl_Output *outputBox = new Fl_Output(40, 40, 50, 20, "Yo");
 	outputBox->insert("test\n", 5);
 	outputBox->insert("Test 2", 6);
 	outputBox->box(FL_THIN_DOWN_BOX);
 
-	/*Fl_Box *box = new Fl_Box(20, 40, 300, 100, "Hello, World!");
-	box->box(FL_UP_BOX);
-	box->labelfont(FL_BOLD + FL_ITALIC);
-	box->labelsize(36);
-	box->labeltype(FL_SHADOW_LABEL); */
-
+	window->resizable(outputBox);
 	window->end();
 	window->show();
 	
 	while (window->shown()) {
-		outputBox->insert("k", 1);
+		//outputBox->insert("k", 1);
 		
 		Fl::check();
+		//cout << Fl::check();
 		Fl::redraw();
 
-		Sleep(16);
+		Sleep(100);
 		
+
 		//std::this_thread::sleep_until(next);
 		//next += std::chrono::microseconds(1000000 / 60);
 	}
