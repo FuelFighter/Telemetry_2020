@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2020-01-03T20:33:51. -->
+<!-- Written by QtCreator 4.11.0, 2019-12-27T00:06:10. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{cb23b9a5-2220-441d-905e-66f5f61cbbe6}</value>
+  <value type="QByteArray">{b1f13b97-f636-4476-aafa-eec51bd92e44}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -64,9 +64,9 @@
  <data>
   <variable>ProjectExplorer.Project.Target.0</variable>
   <valuemap type="QVariantMap">
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop (x86-windows-msvc2017-pe-64bit)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop (x86-windows-msvc2017-pe-64bit)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{658962f5-b9f4-46cf-98bb-6c792d011054}</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop (x86-windows-msvc2017-pe-32bit)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop (x86-windows-msvc2017-pe-32bit)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{f012ca9f-79a4-4f44-a312-f238b65660d4}</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">-1</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
@@ -144,10 +144,10 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">main</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/BOB/Documents/Fuel_Fighter_Telemetry_2020/data_vis/QT/QT_data_vis/main.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/BOB/Documents/Fuel_Fighter_Telemetry_2020/data_vis/QT/QT_data_vis/main.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{d771bbed-f6f9-48b1-8d0d-d73e0e9ece26}</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\BOB\Documents\Fuel_Fighter_Telemetry_2020\data_vis\QT\QT_data_vis\main.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/Magnus/Documents/Fuel_Fighter_Telemetry/data_vis/QT/QT_data_vis/main.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Magnus/Documents/Fuel_Fighter_Telemetry/data_vis/QT/QT_data_vis/main.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{5824cb72-61e6-418f-a32f-fe6a74267665}</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\data_vis\QT\QT_data_vis\main.py</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
@@ -157,7 +157,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/BOB/Documents/Fuel_Fighter_Telemetry_2020/data_vis/QT/QT_data_vis</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Magnus/Documents/Fuel_Fighter_Telemetry/data_vis/QT/QT_data_vis</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
