@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=+24in Pin=P1-1
+Removed Pin From Net: NetName=+24 Pin=P8-1
+Removed Pin From Net: NetName=+24 Pin=R5-2
+Removed Pin From Net: NetName=+24in Pin=U1-1
+Removed Pin From Net: NetName=+24in Pin=U1-2
+Added Pin To Net: NetName=+24 Pin=P1-1
+Added Pin To Net: NetName=+24in Pin=P8-1
+Added Pin To Net: NetName=+24in Pin=R5-2
+Added Pin To Net: NetName=+24 Pin=U1-1
+Added Pin To Net: NetName=+24 Pin=U1-2
+Change Net Name : Old Net Name=+24 New Net Name=+24in
+Change Net Name : Old Net Name=+24in New Net Name=+24
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R6 SMD

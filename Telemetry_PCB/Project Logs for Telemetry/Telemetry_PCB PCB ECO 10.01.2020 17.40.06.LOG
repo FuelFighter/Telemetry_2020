@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=+24in Pin=C3-1
+Removed Pin From Net: NetName=GND Pin=C3-2
+Change Component Footprint: Designator=C3 Old Footprint=C_SMD_0805_pcb New Footprint=C_EL_SMT_Ø6.3
+Change Component Footprint: Designator=C4 Old Footprint=C_SMD_0805_pcb New Footprint=C_EL_SMT_Ø6.3
+Change Component Comment : Designator=C3 Old Comment=SMD New Comment=C_EL_SMT_Ø6.3
+Change Component Comment : Designator=C4 Old Comment=SMD New Comment=C_EL_SMT_Ø6.3
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=+24in Pin=C3-2
