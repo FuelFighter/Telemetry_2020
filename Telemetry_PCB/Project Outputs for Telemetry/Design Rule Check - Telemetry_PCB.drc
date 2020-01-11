@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_PCB.PcbDoc
-Date     : 10.01.2020
-Time     : 17.44.40
+Date     : 11.01.2020
+Time     : 09.03.36
 
 Processing Rule : Clearance Constraint (Gap=7mil) (All),(All)
 Rule Violations :0
@@ -41,7 +41,7 @@ Rule Violations :0
 Processing Rule : Net Antennae (Tolerance=0mil) (All)
 Rule Violations :0
 
-Processing Rule : Room Telemetry_schematic (Bounding Region = (2039mil, 2364mil, 7157mil, 6556mil) (InComponentClass('Telemetry_schematic'))
+Processing Rule : Room Telemetry_schematic (Bounding Region = (2039mil, 2364mil, 7157mil, 6145mil) (InComponentClass('Telemetry_schematic'))
 Rule Violations :0
 
 Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
