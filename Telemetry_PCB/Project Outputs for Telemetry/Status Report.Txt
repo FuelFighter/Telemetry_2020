@@ -1,30 +1,33 @@
-Output: Gerber Files
-Type  : Gerber
-From  : Variant [[No Variations]] of Project [Telemetry.PrjPcb]
-   Generated File[Telemetry_PCB.GTO]
-   Generated File[Telemetry_PCB.GTP]
-   Generated File[Telemetry_PCB.GTS]
-   Generated File[Telemetry_PCB.GTL]
-   Generated File[Telemetry_PCB.GBL]
-   Generated File[Telemetry_PCB.GBS]
-   Generated File[Telemetry_PCB.GBP]
-   Generated File[Telemetry_PCB.GBO]
-   Generated File[Telemetry_PCB.GM1]
-   Generated File[Telemetry_PCB.GM2]
-   Generated File[Telemetry_PCB.GM3]
-   Generated File[Telemetry_PCB.GM13]
-   Generated File[Telemetry_PCB.GM15]
-   Generated File[Telemetry_PCB.GKO]
-   Generated File[Telemetry_PCB.GPT]
-   Generated File[Telemetry_PCB.GPB]
-   Generated File[Telemetry_PCB.1]
-   Generated File[Telemetry_PCB.GML]
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Project [Telemetry.PrjPcb]
+   Generated File[Telemetry_PCB_Copper_Signal_Top.gbr]
+   Generated File[Telemetry_PCB_Copper_Signal_Bot.gbr]
+   Generated File[Telemetry_PCB_Pads_Bot.gbr]
+   Generated File[Telemetry_PCB_Pads_Top.gbr]
+   Generated File[Telemetry_PCB_Legend_Bot.gbr]
+   Generated File[Telemetry_PCB_Soldermask_Bot.gbr]
+   Generated File[Telemetry_PCB_Paste_Bot.gbr]
+   Generated File[Telemetry_PCB_Legend_Top.gbr]
+   Generated File[Telemetry_PCB_Paste_Top.gbr]
+   Generated File[Telemetry_PCB_Soldermask_Top.gbr]
+   Generated File[Telemetry_PCB_Keep-out.gbr]
+   Generated File[Telemetry_PCB_Mechanical_13.gbr]
+   Generated File[Telemetry_PCB_Mechanical_2.gbr]
+   Generated File[Telemetry_PCB_Mechanical_1.gbr]
+   Generated File[Telemetry_PCB_Mechanical_3.gbr]
+   Generated File[Telemetry_PCB_Mechanical_15.gbr]
+   Generated File[Telemetry_PCB_Profile.gbr]
+   Generated File[Telemetry_PCB_NPTH_Drill.gbr]
+   Generated File[Telemetry_PCB_PTH_Drill.gbr]
+   Generated File[Telemetry_PCB_Drawing_1.gbr]
+   Generated File[Telemetry_PCB_Drillmap_1.gbr]
    Generated File[Telemetry_PCB.RUL]
    Generated File[Telemetry_PCB.EXTREP]
    Generated File[Telemetry_PCB.REP]
 
 
-Files Generated   : 21
+Files Generated   : 24
 Documents Printed : 0
 
-Finished Output Generation At 15.53.49 On 07.01.2020
+Finished Output Generation At 21.37.14 On 14.01.2020
