@@ -1,0 +1,152 @@
+Added Component: Designator=3(teensy_3.6)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P1(JST_SE_2PIN)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P2(JST_SE_2PIN)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P3(PIN_HEADER_M_1x24)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P4(PIN_HEADER_M_2x3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P5(PIN_HEADER_M_2x3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R1(R_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=R2(R_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=U1(LAMBDA62_SMT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V3 Pin=P5-1
+Added Pin To Net: NetName=+3V3 Pin=P5-2
+Added Pin To Net: NetName=+3V3 Pin=P5-3
+Added Pin To Net: NetName=+3V3 Pin=P5-4
+Added Pin To Net: NetName=+3V3 Pin=P5-5
+Added Pin To Net: NetName=+3V3 Pin=P5-6
+Added Pin To Net: NetName=+3V3 Pin=U1-3
+Added Net: Name=+3V3
+Added Pin To Net: NetName=GND Pin=3-GND
+Added Pin To Net: NetName=GND Pin=3-GND
+Added Pin To Net: NetName=GND Pin=P4-1
+Added Pin To Net: NetName=GND Pin=P4-2
+Added Pin To Net: NetName=GND Pin=P4-3
+Added Pin To Net: NetName=GND Pin=P4-4
+Added Pin To Net: NetName=GND Pin=P4-5
+Added Pin To Net: NetName=GND Pin=P4-6
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R2-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=Net3_10 Pin=3-10
+Added Pin To Net: NetName=Net3_10 Pin=U1-16
+Added Net: Name=Net3_10
+Added Pin To Net: NetName=Net3_11 Pin=3-11
+Added Pin To Net: NetName=Net3_11 Pin=U1-15
+Added Net: Name=Net3_11
+Added Pin To Net: NetName=Net3_12 Pin=3-12
+Added Pin To Net: NetName=Net3_12 Pin=U1-14
+Added Net: Name=Net3_12
+Added Pin To Net: NetName=Net3_13 Pin=3-13
+Added Pin To Net: NetName=Net3_13 Pin=P3-11
+Added Net: Name=Net3_13
+Added Pin To Net: NetName=Net3_14 Pin=3-14
+Added Pin To Net: NetName=Net3_14 Pin=P3-12
+Added Net: Name=Net3_14
+Added Pin To Net: NetName=Net3_15 Pin=3-15
+Added Pin To Net: NetName=Net3_15 Pin=P3-13
+Added Net: Name=Net3_15
+Added Pin To Net: NetName=Net3_16 Pin=3-16
+Added Pin To Net: NetName=Net3_16 Pin=P1-1
+Added Pin To Net: NetName=Net3_16 Pin=P3-14
+Added Net: Name=Net3_16
+Added Pin To Net: NetName=Net3_17 Pin=3-17
+Added Pin To Net: NetName=Net3_17 Pin=P2-1
+Added Pin To Net: NetName=Net3_17 Pin=P3-15
+Added Net: Name=Net3_17
+Added Pin To Net: NetName=Net3_18 Pin=3-18
+Added Pin To Net: NetName=Net3_18 Pin=P3-16
+Added Net: Name=Net3_18
+Added Pin To Net: NetName=Net3_19 Pin=3-19
+Added Pin To Net: NetName=Net3_19 Pin=P3-17
+Added Net: Name=Net3_19
+Added Pin To Net: NetName=Net3_20 Pin=3-20
+Added Pin To Net: NetName=Net3_20 Pin=P3-18
+Added Net: Name=Net3_20
+Added Pin To Net: NetName=Net3_21 Pin=3-21
+Added Pin To Net: NetName=Net3_21 Pin=P3-19
+Added Net: Name=Net3_21
+Added Pin To Net: NetName=Net3_22 Pin=3-22
+Added Pin To Net: NetName=Net3_22 Pin=P3-20
+Added Net: Name=Net3_22
+Added Pin To Net: NetName=Net3_23 Pin=3-23
+Added Pin To Net: NetName=Net3_23 Pin=P3-21
+Added Net: Name=Net3_23
+Added Pin To Net: NetName=Net3_24 Pin=3-24
+Added Pin To Net: NetName=Net3_24 Pin=U1-12
+Added Net: Name=Net3_24
+Added Pin To Net: NetName=Net3_28 Pin=3-28
+Added Pin To Net: NetName=Net3_28 Pin=U1-13
+Added Net: Name=Net3_28
+Added Pin To Net: NetName=Net3_33 Pin=3-33
+Added Pin To Net: NetName=Net3_33 Pin=P3-1
+Added Net: Name=Net3_33
+Added Pin To Net: NetName=Net3_34 Pin=3-34
+Added Pin To Net: NetName=Net3_34 Pin=P3-2
+Added Net: Name=Net3_34
+Added Pin To Net: NetName=Net3_35 Pin=3-35
+Added Pin To Net: NetName=Net3_35 Pin=P3-3
+Added Net: Name=Net3_35
+Added Pin To Net: NetName=Net3_36 Pin=3-36
+Added Pin To Net: NetName=Net3_36 Pin=P3-4
+Added Net: Name=Net3_36
+Added Pin To Net: NetName=Net3_37 Pin=3-37
+Added Pin To Net: NetName=Net3_37 Pin=P3-5
+Added Net: Name=Net3_37
+Added Pin To Net: NetName=Net3_38 Pin=3-38
+Added Pin To Net: NetName=Net3_38 Pin=P3-6
+Added Net: Name=Net3_38
+Added Pin To Net: NetName=Net3_39 Pin=3-39
+Added Pin To Net: NetName=Net3_39 Pin=P3-7
+Added Net: Name=Net3_39
+Added Pin To Net: NetName=Net3_+3V3 Pin=3-+3V3
+Added Pin To Net: NetName=Net3_+3V3 Pin=3-+3V3
+Added Pin To Net: NetName=Net3_+3V3 Pin=P3-22
+Added Net: Name=Net3_+3V3
+Added Pin To Net: NetName=Net3_A21 Pin=3-A21
+Added Pin To Net: NetName=Net3_A21 Pin=P3-8
+Added Net: Name=Net3_A21
+Added Pin To Net: NetName=Net3_A22 Pin=3-A22
+Added Pin To Net: NetName=Net3_A22 Pin=P3-9
+Added Net: Name=Net3_A22
+Added Pin To Net: NetName=Net3_AGND Pin=3-AGND
+Added Pin To Net: NetName=Net3_AGND Pin=P3-23
+Added Net: Name=Net3_AGND
+Added Pin To Net: NetName=Net3_GND Pin=3-GND
+Added Pin To Net: NetName=Net3_GND Pin=3-GND
+Added Pin To Net: NetName=Net3_GND Pin=P3-10
+Added Net: Name=Net3_GND
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP1_2 Pin=R1-2
+Added Net: Name=NetP1_2
+Added Pin To Net: NetName=NetP2_2 Pin=P2-2
+Added Pin To Net: NetName=NetP2_2 Pin=R2-2
+Added Net: Name=NetP2_2
+Added Class: Name=ReceiverPCB
+Added Room: Name=ReceiverPCB
