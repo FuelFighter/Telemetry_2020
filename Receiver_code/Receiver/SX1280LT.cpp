@@ -66,27 +66,21 @@ void SX1280Class::pinInit(int8_t _NSS, int8_t _NRESET, int8_t _RFBUSY, int8_t _D
   if (_DIO1 >= 0)
   {
     pinMode( _DIO1, INPUT);
-  }
-  else
-  {
+  }  else  {
     //Serial.println(F("DIO1 not used"));
   }
 
   if (_DIO2 >= 0)
   {
     pinMode( _DIO2, INPUT);
-  }
-  else
-  {
+  }  else  {
     //Serial.println(F("DIO2 not used"));
   }
 
   if (_DIO3 >= 0)
   {
     pinMode( _DIO3, INPUT);
-  }
-  else
-  {
+  }  else   {
     //Serial.println(F("DIO3 not used"));
   }
 }

@@ -207,6 +207,16 @@ void setup(void)
   SPI.begin();
   SPI.beginTransaction(SPISettings(4000000, MSBFIRST, SPI_MODE0));
 
+
+
+  while (!SX1280LT.begin(NSS, NRESET, RFBUSY, DIO1, DIO2, DIO3)){
+    Serial.println(F("Device not found"));
+    led_Flash(2, 125);
+    delay(10);
+  }
+
+  Serial.println(F("Device found"));
+  /*
   if (SX1280LT.begin(NSS, NRESET, RFBUSY, DIO1, DIO2, DIO3))
   {
     Serial.println(F("Device found"));
@@ -221,7 +231,7 @@ void setup(void)
       led_Flash(50, 50);                                            //long fast speed flash indicates device error
     }
   }
-
+  */
   setup_FLRC();
 
   Serial.print(F("Receiver ready - RXBUFFER_SIZE "));

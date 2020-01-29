@@ -21,9 +21,9 @@ To Do:
 //your own setup
 
 #define NSS 9
-#define RFBUSY -1
+#define RFBUSY 23
 #define NRESET 24
-#define LED1 -1
+#define LED1 32
 #define DIO1 -1
 #define DIO2 -1                 //not used 
 #define DIO3 -1                 //not used                      
