@@ -195,182 +195,186 @@ DocumentPath=Project Outputs for Telemetry\Design Rule Check - Telemetry_PCB.htm
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.1
+DocumentPath=Project Outputs for Telemetry\Footprint Comparison - Telemetry_PCB.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.DRR
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.1
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.EXTREP
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GBL
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GBO
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GBP
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GBS
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GKO
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM1
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GKO
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM2
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM3
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM2
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM13
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM3
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM15
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM13
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GML
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GM15
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GPB
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GML
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GPT
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GPB
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GTL
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GPT
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GTO
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GTP
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GTS
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.LDP
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.REP
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.RUL
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.REP
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.TXT
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.RUL
 DItemRevisionGUID=
 
 [GeneratedDocument26]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Copper_Signal_Bot.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Copper_Signal_Top.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument28]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Drawing_1.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument29]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Drillmap_1.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Drawing_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument30]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Keep-out.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Drillmap_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument31]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Legend_Bot.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument32]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Legend_Top.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument33]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_1.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument34]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_2.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument35]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_3.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_2.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument36]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_13.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_3.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_15.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_13.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument38]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_NPTH_Drill.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Mechanical_15.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument39]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Pads_Bot.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_NPTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument40]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Pads_Top.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument41]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Paste_Bot.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument42]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Paste_Top.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument43]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Profile.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument44]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_PTH_Drill.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument45]
-DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument46]
+DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument47]
 DocumentPath=Project Outputs for Telemetry\Telemetry_PCB_Soldermask_Top.gbr
 DItemRevisionGUID=
 
