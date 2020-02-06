@@ -17,11 +17,11 @@ To Do:
 //These are the pin definitions for one of my own boards, be sure to change them to match
 //your own setup
 
-#define NSS 9
-#define RFBUSY 23
+#define NSS 10
+#define RFBUSY 25
 #define NRESET 24
-#define LED1 32
-#define DIO1 2
+#define LED1 21
+#define DIO1 -1
 #define DIO2 -1                 //not used 
 #define DIO3 -1                 //not used                      
 #define BUZZER A0               //connect a buzzer here if wanted                      

@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1e665e4-d2f1-4792-a965-e76ab8b4dd96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialComboBox.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialDesigner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialDesigner.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialMenuBar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialMenuBar.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialPicture.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialPopup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialComboBox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialPicture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/ey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/lmao.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QT/QT_data_vis/main.pyproject.user.b1f13b9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SerialRead2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TechWithTimTutorial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QT/QT_data_vis/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/QT/QT_data_vis/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QT/QT_data_vis/main.pyproject.user" beforeDir="false" afterPath="$PROJECT_DIR$/QT/QT_data_vis/main.pyproject.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Qt_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Qt_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serial_read.py" beforeDir="false" afterPath="$PROJECT_DIR$/serial_read.py" afterDir="false" />
-    </list>
+    <list default="true" id="b1e665e4-d2f1-4792-a965-e76ab8b4dd96" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +13,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SerialRead2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="391">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -43,32 +22,16 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/OneDrive/FuelFighter/702_2019_07_03_16_15_raw_attempt2_old_gear.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TechWithTimTutorial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialPopup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="56" column="66" lean-forward="true" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialComboBox.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="272">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -102,9 +65,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1057" />
+    <option name="x" value="952" />
+    <option name="width" value="975" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -112,6 +75,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,17 +88,10 @@
               <item name="data_vis" type="462c0819:PsiDirectoryNode" />
               <item name="QT" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="data_vis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data_vis" type="462c0819:PsiDirectoryNode" />
-              <item name="QT" type="462c0819:PsiDirectoryNode" />
-              <item name="QT_data_vis" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,9 +257,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15911485" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15862525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -371,67 +328,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/396595383/PyQt5/QtWidgets/QWidget.py" />
+    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialDesigner.py" />
+    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialMenuBar.py" />
+    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialPicture.py" />
+    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialPopup.py" />
+    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialComboBox.py" />
     <entry file="file://$PROJECT_DIR$/SerialRead2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/396595383/PyQt5/QtWidgets/QWidget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="1025" column="8" selection-start-line="1025" selection-start-column="8" selection-end-line="1025" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TechWithTimTutorial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialDesigner.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialMenuBar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialPicture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialPopup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="56" column="66" lean-forward="true" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialComboBox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
+    <entry file="file://$USER_HOME$/OneDrive/FuelFighter/702_2019_07_03_16_15_raw_attempt2_old_gear.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
   </component>
 </project>

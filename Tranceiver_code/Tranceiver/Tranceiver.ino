@@ -19,21 +19,23 @@
 ******************************************************************************************************
 */
 
-#define programversion "V1.0"
-#define Serial_Monitor_Baud 115200
+/*
 
-#include <SPI.h>
-#include "Settings.h"
-#include "SX1280LT.h"
+  #define programversion "V1.0"
+  #define Serial_Monitor_Baud 115200
 
-SX1280Class SX1280LT;
+  #include <SPI.h>
+  #include "Settings.h"
+  #include "SX1280LT.h"
 
-boolean SendOK;
-int8_t TestPower;
-uint8_t TXPacketL;
+  SX1280Class SX1280LT;
 
-void loop()
-{
+  boolean SendOK;
+  int8_t TestPower;
+  uint8_t TXPacketL;
+
+  void loop()
+  {
   Serial.print("YOOOO");
   digitalWrite(LED1, HIGH);
   Serial.print(PowerTX);
@@ -51,19 +53,19 @@ void loop()
   }
   Serial.println();
   delay(packet_delay);
-}
+  }
 
 
-void packet_is_OK()
-{
+  void packet_is_OK()
+  {
   Serial.print(F(" "));
   Serial.print(TXPacketL);
   Serial.print(F(" Bytes SentOK"));
-}
+  }
 
 
-void packet_is_Error()
-{
+  void packet_is_Error()
+  {
   uint16_t IRQStatus;
   IRQStatus = SX1280LT.readIrqStatus();                    //get the IRQ status
   Serial.print(F("SendError,"));
@@ -73,35 +75,35 @@ void packet_is_Error()
   Serial.print(IRQStatus, HEX);
   SX1280LT.printIrqStatus();
   digitalWrite(LED1, LOW);                       //this leaves the LED on slightly longer for a packet error
-}
+  }
 
 
-bool Send_Test_Packet()
-{
-  uint8_t bufffersize;
+  bool Send_Test_Packet()
+  {
+  uint8_t buffersize;
   uint8_t buff[] = "Hello World!";
   buff[12] = '#';                                //overwrite null character at end of buffer so we can see it in RX
-  
+
   if (sizeof(buff) > TXBUFFER_SIZE)
   {
-    bufffersize = TXBUFFER_SIZE;
+    buffersize = TXBUFFER_SIZE;
   }
   else
   {
-    bufffersize = sizeof(buff);
+    buffersize = sizeof(buff);
   }
 
   Serial.println();
   Serial.print(F("buffsize "));
   Serial.println(sizeof(buff));
 
-  TXPacketL = bufffersize;
+  TXPacketL = buffersize;
 
-  SX1280LT.printASCIIPacket(buff, bufffersize);
+  SX1280LT.printASCIIPacket(buff, buffersize);
 
   digitalWrite(LED1, HIGH);
 
-  if (SX1280LT.sendPacketFLRC(buff, bufffersize, 1000, PowerTX, DIO1))
+  if (SX1280LT.sendPacketFLRC(buff, buffersize, 1000, PowerTX, DIO1))
   {
     digitalWrite(LED_BUILTIN, LOW);
     return true;
@@ -110,11 +112,11 @@ bool Send_Test_Packet()
   {
     return false;
   }
-}
+  }
 
 
-void led_Flash(uint16_t flashes, uint16_t delaymS)
-{
+  void led_Flash(uint16_t flashes, uint16_t delaymS)
+  {
   unsigned int index;
   for (index = 1; index <= flashes; index++)
   {
@@ -123,11 +125,11 @@ void led_Flash(uint16_t flashes, uint16_t delaymS)
     digitalWrite(LED1, LOW);
     delay(delaymS);
   }
-}
+  }
 
 
-void setup_FLRC()
-{
+  void setup_FLRC()
+  {
   SX1280LT.setStandby(MODE_STDBY_RC);
   SX1280LT.setRegulatorMode(USE_LDO);
   SX1280LT.setPacketType(PACKET_TYPE_FLRC);
@@ -137,11 +139,11 @@ void setup_FLRC()
   SX1280LT.setPacketParams(PREAMBLE_LENGTH_32_BITS, FLRC_SYNC_WORD_LEN_P32S, RADIO_RX_MATCH_SYNCWORD_1, RADIO_PACKET_VARIABLE_LENGTH, 127, RADIO_CRC_3_BYTES, RADIO_WHITENING_OFF);
   SX1280LT.setDioIrqParams(IRQ_RADIO_ALL, (IRQ_TX_DONE + IRQ_RX_TX_TIMEOUT), 0, 0);              //set for IRQ on TX done and timeout on DIO1
   SX1280LT.setSyncWord1(Sample_Syncword);
-}
+  }
 
 
-void setup()
-{
+  void setup()
+  {
   pinMode(LED1, OUTPUT);
   led_Flash(2, 125);
 
@@ -158,12 +160,14 @@ void setup()
   SPI.begin();
   SPI.beginTransaction(SPISettings(4000000, MSBFIRST, SPI_MODE0));
 
+  digitalWrite(LED1, HIGH);
   while (!SX1280LT.begin(NSS, NRESET, RFBUSY, DIO1, DIO2, DIO3)){
     Serial.println(F("Device not found"));
-    led_Flash(2, 125);
-    delay(10);
+    //led_Flash(1, 1);
+    delay(1);
   }
-  
+  digitalWrite(LED1, LOW);
+
   Serial.println(F("Device found"));
 
   /*
@@ -181,9 +185,113 @@ void setup()
       led_Flash(50, 50);                                            //long fast speed flash indicates device error
     }
   }
-  */
+*/
+/*
   setup_FLRC();
 
   Serial.println(F("FLRC Transmitter ready"));
   Serial.println();
+  }
+
+*/
+
+//*******  Setup hardware pin definitions here ! ***************
+
+//These are the pin definitions for one of my own boards, be sure to change them to match
+//your own setup
+
+#define NSS 10
+#define RFBUSY 25
+#define NRESET 24
+#define LED1 21
+#define DIO1 -1
+#define DIO2 -1                 //not used 
+#define DIO3 -1                 //not used                      
+#define BUZZER A0
+
+
+#define programversion "V1.0"
+#define Serial_Monitor_Baud 115200              //serial monitor baud rate 
+
+#include <SPI.h>
+#include "SX1280LT.h"
+#include "Settings.h"
+
+SX1280Class SX1280LT;
+
+void loop()
+{
+  uint32_t frequency;
+  frequency = SX1280LT.getFreqInt();
+  Serial.print(F("Frequency at reset "));
+  Serial.println(frequency);
+
+  digitalWrite(LED1, HIGH);
+  SX1280LT.printRegisters(0x800, 0x9FF);
+  SX1280LT.setPacketType(PACKET_TYPE_LORA);
+  SX1280LT.setRfFrequency(2445000000, 0);
+  frequency = SX1280LT.getFreqInt();
+  Serial.print(F("Changed Frequency "));
+  Serial.println(frequency);
+  Serial.println();
+  Serial.println();
+  digitalWrite(LED1, LOW);
+  delay(5000);
+  SX1280LT.resetDevice();
+}
+
+
+void led_Flash(uint16_t flashes, uint16_t delaymS)
+{
+  unsigned int index;
+  for (index = 1; index <= flashes; index++)
+  {
+    digitalWrite(LED1, HIGH);
+    delay(delaymS);
+    digitalWrite(LED1, LOW);
+    delay(delaymS);
+  }
+}
+
+
+void setup()
+{
+  pinMode(LED1, OUTPUT);
+  led_Flash(2, 125);
+
+  Serial.begin(Serial_Monitor_Baud);
+  Serial.println();
+  Serial.print(__TIME__);
+  Serial.print(F(" "));
+  Serial.println(__DATE__);
+  Serial.println(F(programversion));
+  Serial.println();
+
+  Serial.println(F("1_SX1280LT_LoRa_Register_Test Starting"));
+
+  SPI.begin();
+  SPI.beginTransaction(SPISettings(4000000, MSBFIRST, SPI_MODE0));
+
+  digitalWrite(LED1, HIGH);
+  while (!SX1280LT.begin(NSS, NRESET, RFBUSY, DIO1, DIO2, DIO3)) {
+    Serial.println(F("Device not found"));
+    //led_Flash(1, 1);
+    delay(100);
+  }
+
+  if (SX1280LT.begin(NSS, NRESET, RFBUSY, DIO1, DIO2, DIO3))
+  {
+    Serial.println(F("Device found"));
+    led_Flash(2, 125);
+    delay(1000);
+  }
+  else
+  {
+    Serial.println(F("No device responding"));
+    while (1)
+    {
+      led_Flash(50, 50);                                            //long fast speed flash indicates device error
+    }
+  }
+
 }

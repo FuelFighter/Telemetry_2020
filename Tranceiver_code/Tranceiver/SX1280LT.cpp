@@ -1,7 +1,7 @@
 #include "SX1280LT.h"
 #include <SPI.h>
 
-//#define SX1280DEBUG             //enable debug messages
+#define SX1280DEBUG             //enable debug messages
 
 
 SX1280Class::SX1280Class()
@@ -12,22 +12,7 @@ SX1280Class::SX1280Class()
 
 bool SX1280Class::begin(int8_t pinNSS, int8_t pinNRESET, int8_t pinRFBUSY, int8_t pinDIO1, int8_t pinDIO2, int8_t pinDIO3)
 {
-#ifdef SX1280DEBUG
-  Serial.println(F("begin()"));
-  Serial.println(F("SX1280Class constructor instantiated successfully"));
-  Serial.print(F("NSS "));
-  Serial.println(_NSS);
-  Serial.print(F("NRESET "));
-  Serial.println(_NRESET);
-  Serial.print(F("RFBUSY "));
-  Serial.println(_RFBUSY);
-  Serial.print(F("DIO1 "));
-  Serial.println(_DIO1);
-  Serial.print(F("DIO2 "));
-  Serial.println(_DIO2);
-  Serial.print(F("DIO3 "));
-  Serial.println(_DIO3);
-#endif
+
 
   pinInit(pinNSS, pinNRESET, pinRFBUSY, pinDIO1, pinDIO2, pinDIO3);
 
@@ -41,11 +26,26 @@ bool SX1280Class::begin(int8_t pinNSS, int8_t pinNRESET, int8_t pinRFBUSY, int8_
 
 
   resetDevice();
+  #ifdef SX1280DEBUG
+    Serial.println(F("begin()"));
+    Serial.println(F("SX1280Class constructor instantiated successfully"));
+    Serial.print(F("NSS "));
+    Serial.println(_NSS);
+    Serial.print(F("NRESET "));
+    Serial.println(_NRESET);
+    Serial.print(F("RFBUSY "));
+    Serial.println(_RFBUSY);
+    Serial.print(F("DIO1 "));
+    Serial.println(_DIO1);
+    Serial.print(F("DIO2 "));
+    Serial.println(_DIO2);
+    Serial.print(F("DIO3 "));
+    Serial.println(_DIO3);
+  #endif
   if (checkDevice())
   {
     return true;
   }
-
   return false;
 }
 

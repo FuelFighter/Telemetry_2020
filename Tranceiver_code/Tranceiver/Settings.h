@@ -20,8 +20,8 @@ To Do:
 //These are the pin definitions for one of my own boards, be sure to change them to match
 //your own setup
 
-#define NSS 9
-#define RFBUSY 23
+#define NSS 10
+#define RFBUSY 25
 #define NRESET 24
 #define LED1 21
 #define DIO1 -1

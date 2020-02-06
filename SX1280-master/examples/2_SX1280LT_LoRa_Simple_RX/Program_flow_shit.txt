@@ -1,0 +1,40 @@
+Kodefølgedrittfaenskapihelvete
+- begin() - kaller pinInit
+ 	- pinInit() - printer alle pinsene
+	- resetDevice() - Setter Reset low og high
+	- checkDevice()
+		- readRegister(0x0907)
+			- readRegisters() 
+				- checkBusy() - while(_RFBUSY) antar den ikke hopper inn her pga BUSY TIMEOUT
+					- hopper ut av pissen her
+				- printer "ReadRegisters - 1426" også addr_h, addr_l
+				- selecter chippen
+				- SPI.transfer() - ingen feil her
+				- unselecter chippen
+				- checkBusy() 
+			--------- FINITO ----------
+		- writeRegister(0x0907, (Regdata1 +1)), addresse , value
+			- writeRegisters(addresse, value, 1), addresse, *buffer, size
+				- checkBusy() - hopper ut, ingen error
+			- buffer = 0
+			- SPI.transfer(buffer[i])
+				- checkBusy()	
+				-------- FINITO ---------
+		- REGDATA2 = readRegister(0x0907)
+			- printer readRegister()
+			- readRegisters(adresse, &data, 1);
+				- checkBusy(), hopper ut igjen
+				- printer shit. 
+				- SPI transfer, RADIO_READ_REGISTER, addr_h, addr_l, 0xFF
+				- *(buffer + index) = SPI.transfer(0xFF);
+				- checkBusy(), hopper ut igjen
+			- return data
+		- writeRegister(0x0907, Regdata1)
+			- writeRegisters(addresse, value, 1), addresse, *buffer, size
+				- checkBusy(), ingenting
+				- print addr_h, addr_l
+				- SPI.transfer RADIO_WRITE_REGISTER, addr_h= 97, addr_l=255
+				- SPI.transfer(buffer[i]) sender data fra buffer
+				- checkBusy() ferdig
+			- Print EYO 1612
+			
