@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=5V Pin=C6-1
+Removed Pin From Net: NetName=5V Pin=C7-1
+Removed Pin From Net: NetName=5V Pin=L1-1
+Removed Pin From Net: NetName=5V Pin=R1-2
+Removed Pin From Net: NetName=5V Pin=R3-2
+Added Component: Designator=D2(D_SC-76)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier Link 1"; Value = "https://www.digikey.no/product-detail/en/toshiba-semiconductor-and-storage/CUS10S30H3F/CUS10S30H3FCT-ND/5114377"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "CUS10S30H3FCT-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=D2-2
+Added Pin To Net: NetName=NetC6_1 Pin=C6-1
+Added Pin To Net: NetName=NetC6_1 Pin=C7-1
+Added Pin To Net: NetName=NetC6_1 Pin=D2-1
+Added Pin To Net: NetName=NetC6_1 Pin=L1-1
+Added Pin To Net: NetName=NetC6_1 Pin=R1-2
+Added Pin To Net: NetName=NetC6_1 Pin=R3-2
+Added Net: Name=NetC6_1
+Added Member To Class: ClassName=Telemetry_schematic Member=Component D2 D_CUS10S30
