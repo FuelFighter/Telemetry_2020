@@ -42,7 +42,7 @@
 SX1280Class SX1280LT;
 
 boolean SendOK;
-int8_t TXPower = 1;
+int8_t TXPower = 10;
 uint8_t TXPacketL;
 float temp;
 

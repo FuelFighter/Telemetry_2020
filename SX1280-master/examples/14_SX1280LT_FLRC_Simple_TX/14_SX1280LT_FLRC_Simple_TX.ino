@@ -36,11 +36,13 @@
 
 #include <SPI.h>
 #include "Settings.h"
-#include <SX1280LT.h>
+#include "SX1280LT.h"
+#include "SX1280LT_Includes.h"
 
 SX1280Class SX1280LT;
 
-boolean SendOK;
+bool SendOK;
+uint8_t PowerTX = 10;
 int8_t TestPower;
 uint8_t TXPacketL;
 
@@ -77,10 +79,10 @@ void packet_is_Error()
 {
   uint16_t IRQStatus;
   IRQStatus = SX1280LT.readIrqStatus();                    //get the IRQ status
-  Serial.print(F("SendError,"));
-  Serial.print(F("Length,"));
+  Serial.print(F("SendError, "));
+  Serial.print(F("Length: "));
   Serial.print(TXPacketL);
-  Serial.print(F(",IRQreg,"));
+  Serial.print(F(", IRQreg: "));
   Serial.print(IRQStatus, HEX);
   SX1280LT.printIrqStatus();
   digitalWrite(LED1, LOW);                       //this leaves the LED on slightly longer for a packet error
@@ -89,31 +91,32 @@ void packet_is_Error()
 
 bool Send_Test_Packet()
 {
-  uint8_t bufffersize;
+  uint8_t buffersize;
   uint8_t buff[] = "Hello World!";
   buff[12] = '#';                                //overwrite null character at end of buffer so we can see it in RX
   
   if (sizeof(buff) > TXBUFFER_SIZE)
   {
-    bufffersize = TXBUFFER_SIZE;
+    buffersize = TXBUFFER_SIZE;
   }
   else
   {
-    bufffersize = sizeof(buff);
+    buffersize = sizeof(buff);
   }
 
   Serial.println();
   Serial.print(F("buffsize "));
   Serial.println(sizeof(buff));
 
-  TXPacketL = bufffersize;
+  TXPacketL = buffersize;
 
-  SX1280LT.printASCIIPacket(buff, bufffersize);
+  SX1280LT.printASCIIPacket(buff, buffersize);
 
   digitalWrite(LED1, HIGH);
 
-  if (SX1280LT.sendPacketFLRC(buff, bufffersize, 1000, PowerTX, DIO1))
+  if (SX1280LT.sendPacketFLRC(buff, buffersize, 1000, PowerTX, DIO1))
   {
+    //Serial.println("Vi kom hit 118");
     digitalWrite(LED1, LOW);
     return true;
   }
@@ -139,15 +142,20 @@ void led_Flash(uint16_t flashes, uint16_t delaymS)
 
 void setup_FLRC()
 {
+  uint8_t BandwidthBitRate = FLRC_BR_1_000_BW_1_2;
+  uint8_t CodingRate = FLRC_CR_1_0;
+  uint8_t BT = BT_DIS;
+  uint8_t Sample_Syncword = FLRC_Default_SyncWordLength;
+  
   SX1280LT.setStandby(MODE_STDBY_RC);
   SX1280LT.setRegulatorMode(USE_LDO);
   SX1280LT.setPacketType(PACKET_TYPE_FLRC);
   SX1280LT.setRfFrequency(Frequency, Offset);
   SX1280LT.setBufferBaseAddress(0, 0);
-  SX1280LT.setModulationParams(BandwidthBitRate, CodingRate, BT);
+  SX1280LT.setModulationParams(BandwidthBitRate, CodingRate, BT); // missing BT
   SX1280LT.setPacketParams(PREAMBLE_LENGTH_32_BITS, FLRC_SYNC_WORD_LEN_P32S, RADIO_RX_MATCH_SYNCWORD_1, RADIO_PACKET_VARIABLE_LENGTH, 127, RADIO_CRC_3_BYTES, RADIO_WHITENING_OFF);
   SX1280LT.setDioIrqParams(IRQ_RADIO_ALL, (IRQ_TX_DONE + IRQ_RX_TX_TIMEOUT), 0, 0);              //set for IRQ on TX done and timeout on DIO1
-  SX1280LT.setSyncWord1(Sample_Syncword);
+  SX1280LT.setSyncWord1(Sample_Syncword); // missing params
 }
 
 
@@ -189,4 +197,3 @@ void setup()
   Serial.println(F("FLRC Transmitter ready"));
   Serial.println();
 }
-

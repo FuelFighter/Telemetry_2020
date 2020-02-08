@@ -48,11 +48,12 @@ int8_t  PacketSNR;                               //stores signal to noise ratio 
 
 
 void loop()
-{
+{ 
+  //Serial.println("WE IN DA LOOP");
   SX1280LT.setRx(PERIOBASE_01_MS, 0);            //set no SX1280 RX timeout
-
-  while (!digitalRead(DIO1));                    //wait for RxDone or timeout interrupt activating DIO1
-
+  //Serial.println("WE SKIPPED DA FIRST FUNCTION");
+  //while (!digitalRead(DIO1));                    //wait for RxDone or timeout interrupt activating DIO1
+  
   digitalWrite(LED1, HIGH);
 /*
   if (ENABLEBUZZER)
@@ -74,13 +75,13 @@ void loop()
   {
     packet_is_Error();
   }
-
+  //Serial.println("KJEM VI HIT DA?"); 
   digitalWrite(LED1, LOW);
-
+  /*
   if (ENABLEBUZZER)
   {
     digitalWrite(BUZZER, LOW);
-  }
+  }*/
   Serial.println();
 }
 

@@ -1,7 +1,7 @@
 #include "SX1280LT.h"
 #include <SPI.h>
 
-//#define SX1280DEBUG             //enable debug messages
+#define SX1280DEBUG             //enable debug messages
 
 
 SX1280Class::SX1280Class()
@@ -178,12 +178,13 @@ void SX1280Class::setStandby(uint8_t standbyconfig)
 #endif
 
   uint8_t Opcode = 0x80;
-
+  Serial.println(181);
   checkBusy();
   digitalWrite(_NSS, LOW);
   SPI.transfer(Opcode);
   SPI.transfer(standbyconfig);
   digitalWrite(_NSS, HIGH);
+  Serial.println(187);
   checkBusy();
 }
 
@@ -233,6 +234,7 @@ void SX1280Class::writeCommand(uint8_t Opcode, uint8_t *buffer, uint16_t size)
 #endif
 
   uint8_t index;
+  Serial.println(237);
   checkBusy();
   digitalWrite(_NSS, LOW);
   SPI.transfer(Opcode);
@@ -245,6 +247,7 @@ void SX1280Class::writeCommand(uint8_t Opcode, uint8_t *buffer, uint16_t size)
 
   if (Opcode != RADIO_SET_SLEEP)
   {
+    Serial.println(250);
     checkBusy();
   }
 }
@@ -806,6 +809,7 @@ uint8_t SX1280Class::readPacketAddressedLoRa(uint8_t *RXbuffer, uint8_t size)
     RXbuffer[index] = RegData;
   }
   digitalWrite(_NSS, HIGH);
+  Serial.println(812);
   checkBusy();
   return _RXPacketL;
 }
@@ -850,6 +854,7 @@ uint8_t SX1280Class::readPacketAddressedFLRC(uint8_t *RXbuffer, uint8_t size)
     RXbuffer[index] = RegData;
   }
   digitalWrite(_NSS, HIGH);
+  Serial.println(857);
   checkBusy();
   return _RXPacketL;
 }
@@ -888,6 +893,7 @@ uint8_t SX1280Class::readPacketLoRa(uint8_t *RXbuffer, uint8_t size)
   }
 
   digitalWrite(_NSS, HIGH);
+  Serial.println(896);
   checkBusy();
   return _RXPacketL;                     
 }
@@ -982,6 +988,7 @@ bool SX1280Class::sendPacketLoRa(uint8_t *txbuffer, uint8_t size, int32_t txtime
   
   setStandby(MODE_STDBY_RC);
   setBufferBaseAddress(0, 0);
+  Serial.println(991);
   checkBusy();
   digitalWrite(_NSS, LOW);
   SPI.transfer(RADIO_WRITE_BUFFER);
@@ -994,6 +1001,7 @@ bool SX1280Class::sendPacketLoRa(uint8_t *txbuffer, uint8_t size, int32_t txtime
   }
   
   digitalWrite(_NSS, HIGH);
+  Serial.println(1004);
   checkBusy();
   _TXPacketL = size;  
   writeRegister(REG_LR_PAYLOADLENGTH, size);
@@ -1035,6 +1043,7 @@ bool SX1280Class::sendPacketFLRC(uint8_t *TXbuffer, uint8_t size, int32_t txtime
   
   setStandby(MODE_STDBY_RC);
   setBufferBaseAddress(0, 0);
+  Serial.println(1046);
   checkBusy();
   digitalWrite(_NSS, LOW);
   SPI.transfer(RADIO_WRITE_BUFFER);
@@ -1048,6 +1057,7 @@ bool SX1280Class::sendPacketFLRC(uint8_t *TXbuffer, uint8_t size, int32_t txtime
   }
 
   digitalWrite(_NSS, HIGH);
+  Serial.println(1060);
   checkBusy();
   _TXPacketL = size;
   setPacketParams(savedPacketParam1, savedPacketParam2, savedPacketParam3, savedPacketParam4, size, savedPacketParam6, savedPacketParam7);
@@ -1084,6 +1094,7 @@ bool SX1280Class::sendPacketAddressedLoRa(uint8_t *TXbuffer, uint8_t size, char 
   txpacketL = size + 3;
   setStandby(MODE_STDBY_RC);
   setBufferBaseAddress(0, 0);
+  Serial.println(1097);
   checkBusy();
   digitalWrite(_NSS, LOW);
   SPI.transfer(RADIO_WRITE_BUFFER);
@@ -1100,6 +1111,7 @@ bool SX1280Class::sendPacketAddressedLoRa(uint8_t *TXbuffer, uint8_t size, char 
   }
 
   digitalWrite(_NSS, HIGH);
+  Serial.println(1114);
   checkBusy();
   _TXPacketL = size;
   writeRegister(REG_LR_PAYLOADLENGTH, txpacketL);
@@ -1142,6 +1154,7 @@ bool SX1280Class::sendPacketAddressedFLRC(uint8_t *TXbuffer, uint8_t size, char 
 
   setStandby(MODE_STDBY_RC);
   setBufferBaseAddress(0, 0);
+  Serial.println(1157);
   checkBusy();
   digitalWrite(_NSS, LOW);
   SPI.transfer(RADIO_WRITE_BUFFER);
@@ -1158,6 +1171,7 @@ bool SX1280Class::sendPacketAddressedFLRC(uint8_t *TXbuffer, uint8_t size, char 
   }
 
   digitalWrite(_NSS, HIGH);
+  Serial.println(1174);
   checkBusy();
   _TXPacketL = size;
   setPacketParams(savedPacketParam1, savedPacketParam2, savedPacketParam3, savedPacketParam4, txpacketL, savedPacketParam6, savedPacketParam7);
@@ -1420,6 +1434,7 @@ void SX1280Class::readRegisters(uint16_t address, uint8_t *buffer, uint16_t size
 
   addr_h = address >> 8;
   addr_l = address & 0x00FF;
+  Serial.println(1437);
   checkBusy();
 
 #ifdef SX1280DEBUG
@@ -1447,6 +1462,7 @@ void SX1280Class::readRegisters(uint16_t address, uint8_t *buffer, uint16_t size
   Serial.println();
 #endif
   digitalWrite(_NSS, HIGH);
+  Serial.println(1465);
   checkBusy();
 }
 
@@ -1485,6 +1501,7 @@ void SX1280Class::readCommand(uint8_t Opcode, uint8_t *buffer, uint16_t size)
 #endif
 
   uint8_t i;
+  Serial.println(1504);
   checkBusy();
 
   digitalWrite(_NSS, LOW);
@@ -1496,7 +1513,7 @@ void SX1280Class::readCommand(uint8_t Opcode, uint8_t *buffer, uint16_t size)
     *(buffer + i) = SPI.transfer(0xFF);
   }
   digitalWrite(_NSS, HIGH);
-
+  Serial.println(1516);
   checkBusy();
 }
 
@@ -1573,6 +1590,7 @@ void SX1280Class::writeRegisters(uint16_t address, uint8_t *buffer, uint16_t siz
 
   addr_l = address & 0xff;
   addr_h = address >> 8;
+  Serial.println(1593);
   checkBusy();
 
 #ifdef SX1280DEBUG
@@ -1601,6 +1619,7 @@ void SX1280Class::writeRegisters(uint16_t address, uint8_t *buffer, uint16_t siz
   Serial.println();
 #endif
   digitalWrite(_NSS, HIGH);
+  Serial.println(1622);
   checkBusy();
 }
 
@@ -1622,6 +1641,7 @@ void SX1280Class::setSleep(uint8_t sleepconfig)
   Serial.println(F("setSleep()"));
 #endif
   setStandby(MODE_STDBY_RC);
+  Serial.println(1644);
   checkBusy();
   digitalWrite(_NSS, LOW);
   SPI.transfer(RADIO_SET_SLEEP);
@@ -2037,6 +2057,7 @@ void SX1280Class::startWriteFIFO()
   _TXcount = 0;                            //this variable used to keep track of bytes written
   setStandby(MODE_STDBY_RC);
   setBufferBaseAddress(0, 0);
+  Serial.println(2060);
   checkBusy();
   digitalWrite(_NSS, LOW);
   SPI.transfer(RADIO_WRITE_BUFFER);
@@ -2052,6 +2073,7 @@ void SX1280Class::endWriteFIFO()
 #endif
   _TXPacketL = _TXcount;
   digitalWrite(_NSS, HIGH);
+  Serial.println(2076);
   checkBusy();
 }
 
@@ -2069,6 +2091,7 @@ void SX1280Class::startReadFIFO()
   readCommand(RADIO_GET_RXBUFFERSTATUS, buffer, 2);
   _RXPacketL = buffer[0];
   rxstart = buffer[1];
+  Serial.println(2094);
   checkBusy();
   digitalWrite(_NSS, LOW);                     //start the burst read
   SPI.transfer(RADIO_READ_BUFFER);
@@ -2087,6 +2110,7 @@ void SX1280Class::endReadFIFO()
 #endif
 
   digitalWrite(_NSS, HIGH);
+  Serial.println(2113);
   checkBusy();
 }
 

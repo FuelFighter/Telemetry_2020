@@ -28,11 +28,12 @@
 
 
 #define programversion "V1.0"
-#define Serial_Monitor_Baud 115300
+#define Serial_Monitor_Baud 115200
 
 #include <SPI.h>
 #include "Settings.h"
-#include <SX1280LT.h>
+#include "SX1280LT.h"
+#include "SX1280LT_Includes.h"
 
 
 SX1280Class SX1280LT;
@@ -51,21 +52,24 @@ void loop()
 {
   SX1280LT.setRx(PERIOBASE_01_MS, 0);            //set no SX1280 RX timeout
 
-  while (!digitalRead(DIO1));                    //wait for RxDone or timeout interrupt activating DIO1
+  //while (!digitalRead(DIO1));                    //wait for RxDone or timeout interrupt activating DIO1
 
   digitalWrite(LED1, HIGH);
-
+/*
   if (ENABLEBUZZER)
   {
     digitalWrite(BUZZER, HIGH);
   }
-
+*/
   SX1280LT.readPacketReceptionFLRC();
   RXPacketL = SX1280LT.readRXPacketL();
   PacketRSSI = SX1280LT.readPacketRSSI();
 
+  Serial.println(SX1280LT.readIrqStatus());
+  
   if (SX1280LT.readIrqStatus() == (IRQ_RX_DONE + IRQ_SYNCWORD_VALID))
   {
+    
     packet_is_OK();
   }
   else
@@ -74,17 +78,20 @@ void loop()
   }
 
   digitalWrite(LED1, LOW);
-
+/*
   if (ENABLEBUZZER)
   {
     digitalWrite(BUZZER, LOW);
   }
+*/
   Serial.println();
+  //delay(packet_delay);
 }
 
 
 void packet_is_OK()
 {
+  Serial.println("Packet is gucci gang mate");
   uint16_t IRQStatus;
   uint8_t len;
 
@@ -100,14 +107,14 @@ void packet_is_OK()
     SX1280LT.printASCIIPacket(RXBUFFER, len);                 //len same as RXPacketL
   }
 
-  Serial.print(",RSSI,");
+  Serial.print(",RSSI: ");
 
   Serial.print(PacketRSSI);
-  Serial.print(F("dBm,Length,"));
+  Serial.print(F("dBm, Length: "));
   Serial.print(RXPacketL);
-  Serial.print(F(",Packets,"));
+  Serial.print(F(", Packets: "));
   Serial.print(RXpacketCount);
-  Serial.print(F(",Errors,"));
+  Serial.print(F(", Errors: "));
   Serial.print(errors);
 
   IRQStatus = SX1280LT.readIrqStatus();
@@ -119,7 +126,8 @@ void packet_is_OK()
 void packet_is_Error()
 {
   uint16_t IRQStatus;
-
+  Serial.println("PACKET IS ERRORR!!!!!!!!!!!!!");
+  /*
   if (ENABLEBUZZER)
   {
     delay(50);
@@ -127,24 +135,25 @@ void packet_is_Error()
     delay(50);
     digitalWrite(BUZZER, LOW);
   }
-
+*/
   IRQStatus = SX1280LT.readIrqStatus();                    //get the IRQ status
   errors++;
-  Serial.print(F("PacketError,RSSI"));
+  Serial.print(F("PacketError, RSSI: "));
   Serial.print(PacketRSSI);
-  Serial.print(F("dB,Length,"));
+  Serial.print(F("dB, Length: "));
   Serial.print(RXPacketL);
-  Serial.print(F(",IRQreg,"));
+  Serial.print(F(", IRQreg: "));
   Serial.print(IRQStatus, HEX);
   SX1280LT.printIrqStatus();
   digitalWrite(LED1, LOW);
-
+/*
   if (ENABLEBUZZER)
   {
     digitalWrite(BUZZER, LOW);
     delay(100);
     digitalWrite(BUZZER, HIGH);
   }
+  */
 }
 
 
@@ -170,6 +179,11 @@ void led_Flash(uint16_t flashes, uint16_t delaymS)
 
 void setup_FLRC()
 {
+  uint8_t BandwidthBitRate = FLRC_BR_1_000_BW_1_2;
+  uint8_t CodingRate = FLRC_CR_1_0;
+  uint8_t BT = BT_DIS;
+  uint8_t Sample_Syncword = FLRC_Default_SyncWordLength;
+  
   SX1280LT.setStandby(MODE_STDBY_RC);
   SX1280LT.setRegulatorMode(USE_LDO);
   SX1280LT.setPacketType(PACKET_TYPE_FLRC);
@@ -237,6 +251,3 @@ void setup(void)
   Serial.println(RXBUFFER_SIZE);
   Serial.println();
 }
-
-
-
