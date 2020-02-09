@@ -1,10 +1,10 @@
-from PyQt4 import QtGui  # (the example applies equally well to PySide)
+from PyQt5 import QtGui  # (the example applies equally well to PySide)
 import pyqtgraph as pg
 from pyqtgraph import PlotWidget, plot
 import pandas as pd
 import csv
 import numpy as np
-import PySide
+import PySide2
 import serial
 import time
 

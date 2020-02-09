@@ -27,7 +27,7 @@ To Do:
 #define RFBUSY 25
 #define NRESET 24
 #define LED1 21
-#define DIO1 -1
+#define DIO1 26
 #define DIO2 -1                 //not used 
 #define DIO3 -1                 //not used                      
 #define BUZZER -1

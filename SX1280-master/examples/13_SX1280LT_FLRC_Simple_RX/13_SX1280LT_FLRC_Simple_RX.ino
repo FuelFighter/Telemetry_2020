@@ -1,6 +1,4 @@
 /*
-******************************************************************************************************
-
   lora Programs for Arduino
 
   Copyright of the author Stuart Robinson 24/10/19
@@ -52,7 +50,7 @@ void loop()
 {
   SX1280LT.setRx(PERIOBASE_01_MS, 0);            //set no SX1280 RX timeout
 
-  //while (!digitalRead(DIO1));                    //wait for RxDone or timeout interrupt activating DIO1
+  while (!digitalRead(DIO1));                    //wait for RxDone or timeout interrupt activating DIO1
 
   digitalWrite(LED1, HIGH);
 /*
