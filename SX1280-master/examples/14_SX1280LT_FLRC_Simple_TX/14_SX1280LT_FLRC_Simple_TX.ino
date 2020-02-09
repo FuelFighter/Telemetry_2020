@@ -42,7 +42,7 @@
 SX1280Class SX1280LT;
 
 bool SendOK;
-uint8_t PowerTX = 10;
+uint8_t PowerTX = 12;
 int8_t TestPower;
 uint8_t TXPacketL;
 
@@ -92,8 +92,8 @@ void packet_is_Error()
 bool Send_Test_Packet()
 {
   uint8_t buffersize;
-  uint8_t buff[] = "Hello World!";
-  buff[12] = '#';                                //overwrite null character at end of buffer so we can see it in RX
+  uint8_t buff[] = "1234123412341234123412341234123412341234123412341234123412341234";
+  buff[63] = '#';                                //overwrite null character at end of buffer so we can see it in RX
   
   if (sizeof(buff) > TXBUFFER_SIZE)
   {
@@ -142,7 +142,7 @@ void led_Flash(uint16_t flashes, uint16_t delaymS)
 
 void setup_FLRC()
 {
-  uint8_t BandwidthBitRate = FLRC_BR_1_000_BW_1_2;
+  uint8_t BandwidthBitRate = FLRC_BR_1_300_BW_1_2;
   uint8_t CodingRate = FLRC_CR_1_0;
   uint8_t BT = BT_DIS;
   uint8_t Sample_Syncword = FLRC_Default_SyncWordLength;

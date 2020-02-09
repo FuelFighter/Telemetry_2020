@@ -42,7 +42,7 @@ To Do:
 
 const uint8_t TXpower = -18;                     //Start power for transmissions in dBm
 
-#define packet_delay 1000                        //mS delay between packets
+#define packet_delay 10                        //mS delay between packets
 
-#define TXBUFFER_SIZE 16
-#define RXBUFFER_SIZE 16
+#define TXBUFFER_SIZE 64
+#define RXBUFFER_SIZE 64

@@ -177,7 +177,7 @@ void led_Flash(uint16_t flashes, uint16_t delaymS)
 
 void setup_FLRC()
 {
-  uint8_t BandwidthBitRate = FLRC_BR_1_000_BW_1_2;
+  uint8_t BandwidthBitRate = FLRC_BR_1_300_BW_1_2;
   uint8_t CodingRate = FLRC_CR_1_0;
   uint8_t BT = BT_DIS;
   uint8_t Sample_Syncword = FLRC_Default_SyncWordLength;

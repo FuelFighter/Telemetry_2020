@@ -224,7 +224,7 @@ void SX1280Class::setPacketType(uint8_t packettype )
   Serial.println(F("setPacketType()"));
 #endif
   savedPacketType = packettype;
-  Serial.println(" WC 224");
+  //Serial.println(" WC 224");
   writeCommand(RADIO_SET_PACKETTYPE, &packettype, 1);
 }
 
@@ -298,7 +298,7 @@ void SX1280Class::setRegulatorMode(uint8_t mode)
 #endif
 
   savedRegulatorMode = mode;
-  Serial.println(" WC 298");
+  //Serial.println(" WC 298");
   writeCommand(RADIO_SET_REGULATORMODE, &mode, 1);
 }
 
@@ -1234,7 +1234,7 @@ void SX1280Class::setRfFrequency(uint32_t frequency, int32_t offset)
   buffer[0] = ( uint8_t )( ( freqtemp >> 16 ) & 0xFF );
   buffer[1] = ( uint8_t )( ( freqtemp >> 8 ) & 0xFF );
   buffer[2] = ( uint8_t )( freqtemp & 0xFF );
-  Serial.println(" WC 1233");
+  //Serial.println(" WC 1233");
   writeCommand(RADIO_SET_RFFREQUENCY, buffer, 3);
 }
 
@@ -1307,7 +1307,7 @@ void SX1280Class::setTxParams(int8_t TXpower, uint8_t RampTime)
   //power register is set to 0 to 31 which is -18dBm to +12dBm
   buffer[0] = (TXpower + 18);
   buffer[1] = (uint8_t)RampTime;
-  Serial.println(" WC 1306");
+  //Serial.println(" WC 1306");
   writeCommand(RADIO_SET_TXPARAMS, buffer, 2);
 }
 
@@ -1322,7 +1322,7 @@ void SX1280Class::setBufferBaseAddress(uint8_t txBaseAddress, uint8_t rxBaseAddr
 
   buffer[0] = txBaseAddress;
   buffer[1] = rxBaseAddress;
-  Serial.println(" WC 1321");
+  //Serial.println(" WC 1321");
   writeCommand(RADIO_SET_BUFFERBASEADDRESS, buffer, 2);
 }
 
@@ -1348,7 +1348,7 @@ void SX1280Class::setDioIrqParams(uint16_t irqMask, uint16_t dio1Mask, uint16_t 
   buffer[5] = (uint8_t) (dio2Mask & 0xFF);
   buffer[6] = (uint8_t) (dio3Mask >> 8);
   buffer[7] = (uint8_t) (dio3Mask & 0xFF);
-  Serial.println(" WC 1347");
+  //Serial.println(" WC 1347");
   writeCommand(RADIO_SET_DIOIRQPARAMS, buffer, 8);
 }
 
@@ -1392,7 +1392,7 @@ void SX1280Class::setRx(uint8_t _periodBase, uint16_t _periodBaseCount)
   buffer[0] = _periodBase;
   buffer[1] = ( uint8_t ) ((_periodBaseCount >> 8 ) & 0x00FF);
   buffer[2] = ( uint8_t ) (_periodBaseCount & 0x00FF);
-  Serial.println(" WC 1391");
+  //Serial.println(" WC 1391");
   writeCommand(RADIO_SET_RX, buffer, 3);
 }
 
@@ -1499,7 +1499,7 @@ void SX1280Class::clearIrqStatus(uint16_t irqMask)
 
   buffer[0] = (uint8_t) (irqMask >> 8);
   buffer[1] = (uint8_t) (irqMask & 0xFF);
-  Serial.println(" WC 1498");
+  //Serial.println(" WC 1498");
   writeCommand(RADIO_CLR_IRQSTATUS, buffer, 2);
 }
 
@@ -1679,7 +1679,7 @@ void SX1280Class::setTx(uint8_t _periodBase, uint16_t _periodBaseCount)
   buffer[0] = _periodBase;
   buffer[1] = ( uint8_t )( ( _periodBaseCount >> 8 ) & 0x00FF );
   buffer[2] = ( uint8_t )( _periodBaseCount & 0x00FF );
-  Serial.println(" WC 1678");
+  //Serial.println(" WC 1678");
   writeCommand(RADIO_SET_TX, buffer, 3 );
 }
 
@@ -1773,7 +1773,7 @@ void SX1280Class::setPacketParams(uint8_t packetParam1, uint8_t  packetParam2, u
   buffer[4] = packetParam5;
   buffer[5] = packetParam6;
   buffer[6] = packetParam7;
-  Serial.println(" WC 1772");
+  //Serial.println(" WC 1772");
   writeCommand(RADIO_SET_PACKETPARAMS, buffer, 7);
 
 }
@@ -1794,7 +1794,7 @@ void SX1280Class::setModulationParams(uint8_t modParam1, uint8_t modParam2, uint
   buffer[0] = modParam1;
   buffer[1] = modParam2;
   buffer[2] = modParam3;
-  Serial.println(" WC 1793");
+  //Serial.println(" WC 1793");
   writeCommand(RADIO_SET_MODULATIONPARAMS, buffer, 3);
 }
 
@@ -1953,7 +1953,7 @@ void SX1280Class::setRangingRole(uint8_t role)
   uint8_t buffer[1];
 
   buffer[0] = role;
-  Serial.println(" WC 1952");
+  //Serial.println(" WC 1952");
   writeCommand(RADIO_SET_RANGING_ROLE, buffer, 1 );
 }
 
