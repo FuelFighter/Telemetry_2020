@@ -10,6 +10,7 @@ import time
 
 #Serial takes two parameters: serial device and baudrate
 ser = serial.Serial('/dev/ttyACM0', 9600) #ttyACM0 is the port name it might change based on the device
+#alt: ser = serial.Serial('COMxx', 9600), #swap x with numbers
 ser.flushInput() #flush input buffer
 
 ##read data from file
