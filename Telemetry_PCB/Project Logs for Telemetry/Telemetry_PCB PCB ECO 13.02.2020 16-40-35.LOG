@@ -1,0 +1,18 @@
+Change component parameters: Designator = "C12"; Footprint = "C_SMD_0805_pcb"; UniqueID = "\NUPFAPKX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "47u"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R12"; Footprint = "R_SMD_0805_pcb"; UniqueID = "\NMCPGGLJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "0.001"; VariantName = "[No Variations]"
+Added Component: Designator=C11(C_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10u"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=5V Pin=C11-2
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C11 SMD

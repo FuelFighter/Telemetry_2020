@@ -1,0 +1,8 @@
+Removed Member From Class: ClassName=Telemetry_schematic Member=D3
+Removed Member From Class: ClassName=Telemetry_schematic Member=D4
+Removed Member From Class: ClassName=Telemetry_schematic Member=R10
+Removed Member From Class: ClassName=Telemetry_schematic Member=R11
+Added Member To Class: ClassName=Telemetry_canbus Member=Component D3 LED
+Added Member To Class: ClassName=Telemetry_canbus Member=Component D4 LED
+Added Member To Class: ClassName=Telemetry_canbus Member=Component R10 SMD
+Added Member To Class: ClassName=Telemetry_canbus Member=Component R11 SMD
