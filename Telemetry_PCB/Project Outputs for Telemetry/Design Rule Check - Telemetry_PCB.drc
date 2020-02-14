@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_PCB.PcbDoc
-Date     : 09.02.2020
-Time     : 20:53:57
+Date     : 14.02.2020
+Time     : 18:58:54
 
 Processing Rule : Clearance Constraint (Gap=0.178mm) (All),(All)
 Rule Violations :0
@@ -28,7 +28,11 @@ Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Minimum Solder Mask Sliver (Gap=0.076mm) (All),(All)
-Rule Violations :0
+   Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.076mm) Between Pad U6-1(18.25mm,44.9mm) on Top Layer And Pad U6-2(18.25mm,44.25mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.076mm) Between Pad U6-2(18.25mm,44.25mm) on Top Layer And Pad U6-3(18.25mm,43.6mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.076mm) Between Pad U7-1(18.25mm,26.65mm) on Top Layer And Pad U7-2(18.25mm,26mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.076mm) Between Pad U7-2(18.25mm,26mm) on Top Layer And Pad U7-3(18.25mm,25.35mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
+Rule Violations :4
 
 Processing Rule : Silk To Solder Mask (Clearance=0.178mm) (IsPad),(All)
 Rule Violations :0
@@ -43,6 +47,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 0
+Violations Detected : 4
 Waived Violations : 0
-Time Elapsed        : 00:00:00
+Time Elapsed        : 00:00:01

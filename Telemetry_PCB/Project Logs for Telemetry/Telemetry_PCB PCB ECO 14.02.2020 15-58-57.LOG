@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=GND Pin=C14-1
+Removed Pin From Net: NetName=GND Pin=C14-2
+Removed Pin From Net: NetName=GND Pin=C17-1
+Removed Pin From Net: NetName=GND Pin=C17-2
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=C14
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=C17

@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=V_REF Pin=R18-1
+Removed Pin From Net: NetName=NetR18_2 Pin=R18-2
+Removed Pin From Net: NetName=V_REF Pin=R25-1
+Removed Pin From Net: NetName=NetR25_2 Pin=R25-2
+Change Component Comment : Designator=P16 Old Comment=JST_SE_2PIN New Comment=Temp L
+Change Component Comment : Designator=P15 Old Comment=JST_SE_2PIN New Comment=Temp R
+Added Pin To Net: NetName=NetR18_2 Pin=R18-1
+Added Pin To Net: NetName=V_REF Pin=R18-2
+Added Pin To Net: NetName=NetR25_2 Pin=R25-1
+Added Pin To Net: NetName=V_REF Pin=R25-2
+Change Net Name : Old Net Name=NetR18_2 New Net Name=NetR18_1
+Change Net Name : Old Net Name=NetR25_2 New Net Name=NetR25_1
