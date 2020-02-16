@@ -1,0 +1,8 @@
+Change Physical Footprint: Designator=3 Old Footprint=teensy_3.6 New Footprint=teensy_3.6
+Change Physical Footprint: Designator=C1 Old Footprint=C_SMD_0805_pcb New Footprint=C_SMD_0805_pcb
+Change Physical Footprint: Designator=P1 Old Footprint=JST_SE_2PIN New Footprint=JST_SE_2PIN
+Change Physical Footprint: Designator=P2 Old Footprint=JST_SE_2PIN New Footprint=JST_SE_2PIN
+Change Physical Footprint: Designator=P3 Old Footprint=PIN_HEADER_M_1x24 New Footprint=PIN_HEADER_M_1x24
+Change Physical Footprint: Designator=P4 Old Footprint=PIN_HEADER_M_2x3 New Footprint=PIN_HEADER_M_2x3
+Change Physical Footprint: Designator=P5 Old Footprint=PIN_HEADER_M_2x3 New Footprint=PIN_HEADER_M_2x3
+Change Physical Footprint: Designator=U1 Old Footprint=LAMBDA62_SMT New Footprint=LAMBDA62_SMT

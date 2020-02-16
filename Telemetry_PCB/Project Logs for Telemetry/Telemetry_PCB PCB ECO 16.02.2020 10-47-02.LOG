@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=GND Pin=C13-2
+Removed Pin From Net: NetName=GND Pin=C16-2
+Removed Pin From Net: NetName=NetC15_1 Pin=R21-1
+Removed Pin From Net: NetName=NetC18_1 Pin=R28-1
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=C13
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=C16
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=R21
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=R28
+Change Component Footprint: Designator=U6 Old Footprint=SC70-5 New Footprint=SOT-23-5
+Change Component Footprint: Designator=U7 Old Footprint=SC70-5 New Footprint=SOT-23-5
+Change Component Comment : Designator=U6 Old Comment=OPA837 New Comment=AD8286
+Change Component Comment : Designator=U7 Old Comment=OPA837 New Comment=AD8286
+Change component parameters: Designator = "U6"; Footprint = "SOT-23-5"; UniqueID = "\BVNLJTTP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Supplier Link 1"; Value = "https://www.digikey.com/product-detail/en/analog-devices-inc/AD8628WAUJZ-R7/AD8628WAUJZ-R7CT-ND/2467896"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "AD8628WAUJZ-R7CT-ND"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U7"; Footprint = "SOT-23-5"; UniqueID = "\NZZOXBUV"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Supplier Link 1"; Value = "https://www.digikey.com/product-detail/en/analog-devices-inc/AD8628WAUJZ-R7/AD8628WAUJZ-R7CT-ND/2467896"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "AD8628WAUJZ-R7CT-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC18_1 Pin=U5-16
+Added Pin To Net: NetName=NetC15_1 Pin=U5-17
