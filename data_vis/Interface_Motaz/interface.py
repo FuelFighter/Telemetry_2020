@@ -4,15 +4,16 @@ from pyqtgraph import PlotWidget, plot
 import pandas as pd
 import csv
 import numpy as np
-import PySide2
+import PySide
 import serial
 import time
+import os,sys # to add the picture
 
+'''
 #Serial takes two parameters: serial device and baudrate
 ser = serial.Serial('/dev/ttyACM0', 9600) #ttyACM0 is the port name it might change based on the device
-#alt: ser = serial.Serial('COMxx', 9600), #swap x with numbers
 ser.flushInput() #flush input buffer
-
+'''
 ##read data from file
 ##method #1
 #f=open("data.csv", "r")
@@ -45,11 +46,15 @@ app = QtGui.QApplication([])
 #w = QtGui.QWidget()
 win = pg.GraphicsWindow(title="Read data")
 
+
 ## Create some widgets to be placed inside
 btn = QtGui.QPushButton('star')
 text = QtGui.QLineEdit('enter text')
-listw = QtGui.QListWidget()
+listW = QtGui.QListWidget()
 Plot = pg.PlotWidget()
+pic = QtGui.QLabel()
+pic.setGeometry(0,0,200,100)
+pic.setPixmap(QtGui.QPixmap("/home/motaz/Pictures/images.png"))
 
 ##list items
 #newItem = QListWidgetItem()
@@ -59,20 +64,34 @@ Plot = pg.PlotWidget()
 
 ##data part
 #here it's a pre-defined values for testing
-#hour = [1,2,3,4,5]#,6,7,8,9,10]
-#temperature = [30,32,34,32,33,31,29,32,35,45]
+hour = [1,2,3,4,5,6,7,8,9,10]
+temperature = [30,32,34,32,33,31,29,32,35,45]
 
+######
+#Resize width and height
+listW.resize(300,120)
+
+listW.addItem("Item 1"); 
+listW.addItem("Item 2");
+listW.addItem("Item 3");
+listW.addItem("Item 4");
+
+listW.setWindowTitle('PyQT QListwidget Demo')
 
 ## Create a grid layout to manage the widgets size and position
 layout = QtGui.QGridLayout()
 win.setLayout(layout)
+#win.setStyleSheet("background-image: url(/home/motaz/drawing.svg.png)")
 
 ## Add widgets to the layout in their proper positions
 layout.addWidget(btn, 0, 0)   # button goes in upper-left
 layout.addWidget(text, 1,0)   # text edit goes in middle-left
-layout.addWidget(listw, 2, 0)  # list widget goes in bottom-left
-layout.addWidget(Plot, 0, 1, 3, 1)  # plot goes on right side, spanning 3 rows
+layout.addWidget(listW, 0, 1)  # list widget goes in bottom-left
+layout.addWidget(Plot, 1, 1,2,1)  # plot goes on right side, spanning 3 rows
+#layout.addWidget(pic)
+layout.addWidget(pic,2,0)
 
+'''
 plot_window = 50
 y_var = np.array(np.zeros([plot_window]))
 x_var = np.array(np.zeros([plot_window]))
@@ -92,9 +111,9 @@ while itt<plot_window :
 		itt = itt + 1	
 #debugging
 print(x_var,y_var)
-
+'''
 ## plot the data on the PlotWidget
-Plot.plot(x_var, y_var)
+Plot.plot(hour,temperature) #x_var, y_var)
 	
 ## Display the widget as a new window
 win.show()
