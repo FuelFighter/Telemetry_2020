@@ -4,7 +4,6 @@ from pyqtgraph import PlotWidget, plot
 import pandas as pd
 import csv
 import numpy as np
-import PySide
 import serial
 import time
 import os,sys # to add the picture
@@ -49,6 +48,10 @@ win = pg.GraphicsWindow(title="Read data")
 
 ## Create some widgets to be placed inside
 btn = QtGui.QPushButton('star')
+qbtn = QtGui.QPushButton('Quit')
+qbtn.clicked.connect(app.instance().quit)
+qbtn.resize(qbtn.sizeHint())
+qbtn.move(0, 0)  
 text = QtGui.QLineEdit('enter text')
 listW = QtGui.QListWidget()
 Plot = pg.PlotWidget()
@@ -85,7 +88,8 @@ win.setLayout(layout)
 
 ## Add widgets to the layout in their proper positions
 layout.addWidget(btn, 0, 0)   # button goes in upper-left
-layout.addWidget(text, 1,0)   # text edit goes in middle-left
+layout.addWidget(qbtn, 1, 0)   # button goes in upper-left
+layout.addWidget(text, 2,0)   # text edit goes in middle-left
 layout.addWidget(listW, 0, 1)  # list widget goes in bottom-left
 layout.addWidget(Plot, 1, 1,2,1)  # plot goes on right side, spanning 3 rows
 #layout.addWidget(pic)
