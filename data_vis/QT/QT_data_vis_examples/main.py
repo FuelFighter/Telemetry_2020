@@ -161,7 +161,7 @@ if __name__ == "__main__":
     widget = Widget()
     # QMainWindow using QWidget as central widget
     window = MainWindow(widget)
-    window.resize(8900, 600)
+    window.resize(800, 600)
     window.show()
 
     # Execute application

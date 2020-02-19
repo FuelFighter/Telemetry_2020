@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1e665e4-d2f1-4792-a965-e76ab8b4dd96" name="Default Changelist" comment="" />
+    <list default="true" id="b1e665e4-d2f1-4792-a965-e76ab8b4dd96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/History/000000002BD04AA2/FF_pcb_lib.~(373).PcbLib.Zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/History/Telemetry.~(20).PrjPcb.Zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry.PrjPcb" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry.PrjPcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry_PCB.PcbDoc.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry_PCB.PcbDoc.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry_temp_meas.SchDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry_temp_meas.SchDoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/__Previews/Telemetry_schematic.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/__Previews/Telemetry_schematic.SchDocPreview" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/__Previews/Telemetry_temp_meas.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/__Previews/Telemetry_temp_meas.SchDocPreview" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QT/QT_data_vis_examples/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/QT/QT_data_vis_examples/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerialRead2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SerialRead2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serial_read.py" beforeDir="false" afterPath="$PROJECT_DIR$/serial_read.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SerialRead2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="238">
+              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -22,9 +33,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/OneDrive/FuelFighter/702_2019_07_03_16_15_raw_attempt2_old_gear.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serial_read.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="51" column="7" lean-forward="true" selection-end-line="52" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -53,21 +71,21 @@
       <list>
         <option value="$PROJECT_DIR$/TkInter_test.py" />
         <option value="$PROJECT_DIR$/mainwindow.ui" />
-        <option value="$PROJECT_DIR$/serial_read.py" />
         <option value="$PROJECT_DIR$/Qt_test.py" />
-        <option value="$PROJECT_DIR$/SerialRead2.py" />
         <option value="$PROJECT_DIR$/TechWithTimTutorial.py" />
         <option value="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialMenuBar.py" />
         <option value="$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialPicture.py" />
         <option value="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialPopup.py" />
         <option value="$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialComboBox.py" />
+        <option value="$PROJECT_DIR$/serial_read.py" />
+        <option value="$PROJECT_DIR$/SerialRead2.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="952" />
-    <option name="width" value="975" />
-    <option name="height" value="1058" />
+    <option name="width" value="977" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -75,7 +93,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -83,18 +100,15 @@
               <item name="data_vis" type="b2602c69:ProjectViewProjectNode" />
               <item name="data_vis" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="data_vis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data_vis" type="462c0819:PsiDirectoryNode" />
-              <item name="QT" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.20413436" />
   </component>
@@ -110,8 +124,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TeechWithTimTutorialComboBox">
-    <configuration name="TechWithTimTutorialDesigner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.SerialRead2">
+    <configuration name="SerialRead2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="data_vis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,32 +133,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/QT/QT_data_vis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialDesigner.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TechWithTimTutorialMenuBar" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="data_vis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/QT/QT_data_vis" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialMenuBar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SerialRead2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -216,13 +209,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="serial_read" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="data_vis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/serial_read.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SerialRead2" />
+        <item itemvalue="Python.serial_read" />
         <item itemvalue="Python.TeechWithTimTutorialComboBox" />
         <item itemvalue="Python.TechWithTimTutorialPopup" />
         <item itemvalue="Python.TeechWithTimTutorialPicture" />
-        <item itemvalue="Python.TechWithTimTutorialMenuBar" />
-        <item itemvalue="Python.TechWithTimTutorialDesigner" />
       </list>
     </recent_temporary>
   </component>
@@ -257,20 +271,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <frame x="762" y="0" width="781" height="840" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15862525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17607526" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.227224" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4180791" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32909605" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32475883" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32402235" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32909605" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -291,13 +305,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frekresp.csv" />
-    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/main.py" />
     <entry file="file://$PROJECT_DIR$/TkInter_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -318,32 +326,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serial_read.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/396595383/PyQt5/QtWidgets/QWidget.py" />
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialDesigner.py" />
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialMenuBar.py" />
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialPicture.py" />
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialPopup.py" />
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialComboBox.py" />
-    <entry file="file://$PROJECT_DIR$/SerialRead2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TechWithTimTutorial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -352,7 +340,31 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/OneDrive/FuelFighter/702_2019_07_03_16_15_raw_attempt2_old_gear.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="91" selection-start-line="8" selection-start-column="91" selection-end-line="8" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serial_read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="51" column="7" lean-forward="true" selection-end-line="52" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SerialRead2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
