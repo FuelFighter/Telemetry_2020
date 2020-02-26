@@ -74,7 +74,7 @@ x_var = list()
 y_var = list()
 np.array(x_var).astype(np.float)
 np.array(y_var).astype(np.float)
-
+t0 = time.time()
 
 
 def quit():
@@ -90,7 +90,6 @@ def start():
 def multitimes ():
 	for i in range(0,20):
 	#while(1):
-		t0 = time.time()
 		plot()
 
 
@@ -112,7 +111,7 @@ def plot():
 			table.scrollToBottom()	
 		
 			y_var.append(float(data_serial)) #= np.insert(y_var,49,data_serial)
-			x_var.append(time.time()-0) #= np.insert(x_var,49,time.time()-t0) 
+			x_var.append(time.time()-t0) #= np.insert(x_var,49,time.time()-t0) 
 			y_var
 			w3.plot(x_var, y_var)
 		
