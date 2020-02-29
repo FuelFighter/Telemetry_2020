@@ -12,7 +12,8 @@ from pyqtgraph.dockarea import *
 
 #Serial takes two parameters: serial device and baudrate
 ser = serial.Serial('/dev/ttyACM0', 115200) #ttyACM0 is the port name it might change based on the device
-#ser = serial.Serial('COMXX', 115200)
+
+#ser = serial.Serial('COM11', 9600)
 ser.flushInput() #flush input buffer
 
 
@@ -40,9 +41,9 @@ w3 = pg.PlotWidget(title="reading")
 
 
 label = QtGui.QLabel(""" -- DNV GL FuelFighters -- 
-Why you should join FF???
-because of our princess Magnus
-""")
+						Why you should join FF???
+						because of our princess Magnus
+						""")
 label2 = QtGui.QLabel("test")
 hour = [1,2,3,4,5,6,7,8,9,10]
 temperature = [30,32,34,32,33,31,29,32,35,45]
