@@ -2,16 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1e665e4-d2f1-4792-a965-e76ab8b4dd96" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/History/000000002BD04AA2/FF_pcb_lib.~(373).PcbLib.Zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/History/Telemetry.~(20).PrjPcb.Zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry.PrjPcb" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry.PrjPcb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry_PCB.PcbDoc.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry_PCB.PcbDoc.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry_temp_meas.SchDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/Telemetry_temp_meas.SchDoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/__Previews/Telemetry_schematic.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/__Previews/Telemetry_schematic.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Telemetry_PCB/__Previews/Telemetry_temp_meas.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemetry_PCB/__Previews/Telemetry_temp_meas.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QT/QT_data_vis_examples/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/QT/QT_data_vis_examples/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testing/Testing.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface_Motaz/Interface2.0.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface_Motaz/Interface2.0.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SerialRead2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SerialRead2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serial_read.py" beforeDir="false" afterPath="$PROJECT_DIR$/serial_read.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serial_write/Serial_write.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/.vs/Telemetry_Data_vis_0.1/v15/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/.vs/Telemetry_Data_vis_0.1/v15/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/.vs/Telemetry_Data_vis_0.1/v15/ipch/AutoPCH/47a550ab2b382150/MAIN.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/.vs/Telemetry_Data_vis_0.1/v15/ipch/AutoPCH/57d5deb41007e472/SERIALPORT.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Debug/Telemetry_Data_vis_0.1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Debug/Telemetry_Data_vis_0.1.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Debug/Telemetry_Data_vis_0.1.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/SerialPort.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/Telemetr.E7A50335.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/Telemetr.E7A50335.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/Telemetr.E7A50335.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/Telemetr.E7A50335.tlog/Telemetry_Data_vis_0.1.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/Telemetr.E7A50335.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/Telemetr.E7A50335.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/Telemetr.E7A50335.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/Telemetry_Data_vis_0.1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/vc141.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Debug/vc141.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/SerialPort.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/SerialPort.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telemetry_Data_vis_0.1/Telemetry_Data_vis_0.1/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkInter_test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SerialRead2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="224">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -33,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serial_read.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="51" column="7" lean-forward="true" selection-end-line="52" />
+            <state relative-caret-position="437">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -48,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TechWithTimTutorial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="256">
               <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
             </state>
           </provider>
@@ -271,9 +293,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="840" extended-state="0" />
+    <frame x="952" y="0" width="977" height="1050" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17607526" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17571884" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -306,16 +328,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frekresp.csv" />
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/main.py" />
-    <entry file="file://$PROJECT_DIR$/TkInter_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TkInter_test.py" />
     <entry file="file://$PROJECT_DIR$/Qt_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -332,34 +345,28 @@
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialPicture.py" />
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TechWithTimTutorialPopup.py" />
     <entry file="file://$PROJECT_DIR$/QT/QT_data_vis/TeechWithTimTutorialComboBox.py" />
-    <entry file="file://$PROJECT_DIR$/TechWithTimTutorial.py">
+    <entry file="file://$USER_HOME$/OneDrive/FuelFighter/702_2019_07_03_16_15_raw_attempt2_old_gear.csv" />
+    <entry file="file://$PROJECT_DIR$/SerialRead2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/OneDrive/FuelFighter/702_2019_07_03_16_15_raw_attempt2_old_gear.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="91" selection-start-line="8" selection-start-column="91" selection-end-line="8" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serial_read.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="51" column="7" lean-forward="true" selection-end-line="52" />
+        <state relative-caret-position="224">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SerialRead2.py">
+    <entry file="file://$PROJECT_DIR$/TechWithTimTutorial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="256">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serial_read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

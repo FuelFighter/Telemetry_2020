@@ -12,6 +12,7 @@ from pyqtgraph.dockarea import *
 
 #Serial takes two parameters: serial device and baudrate
 ser = serial.Serial('/dev/ttyACM0', 115200) #ttyACM0 is the port name it might change based on the device
+#ser = serial.Serial('COMXX', 115200)
 ser.flushInput() #flush input buffer
 
 

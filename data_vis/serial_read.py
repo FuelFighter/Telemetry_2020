@@ -1,52 +1,30 @@
 import serial
 import numpy as np
 from matplotlib import pyplot as plt
-# ser = serial.Serial('/dev/ttyACM0', 9600)
-ser = serial.Serial('COM4', 9600)
+
+# ser = serial.Serial('/dev/ttyACM0', 9600) # linux/ubuntu alternative
+ser = serial.Serial('COM11', 9600)
 ser.flush()
-
-# plt.ion()  # set plot to animated
-
-# ydata = [0] * 50
-# ax1 = plt.axes()
-
-# make plot
-# line, = plt.plot(ydata)
-# plt.ylim([10, 40])
-
+buffArray = []
+packLen = 128
+packCount = 0
 # start data collection
-while True:
-    # print("we up in dis bish")
-    # data = ser.readline().rstrip() # read data from serial
-    if ser.read():
-        d = str(ser.read())
-        print(d)
+
+#def countFirstofArray():
+dumpReading = ser.read()  # need to dump first reading!
+
+
+def readSerialToArray(ser, arr, lenOfArr, packCount):
+
+    if len(arr) < lenOfArr:
+        arr.append(str(ser.read())[2])
+
+    if len(arr) == lenOfArr:
+        packCount += 1
+        print(arr, " - ", packCount, ' - ', len(arr))
         ser.flush()
-        d = ""
-    else:
-        continue
-# port and strip line endings
-    '''
-    if d[2:4] == "Yo":
-        print(d[2:-2])
-
-    else:
-        ser.close()
-        print("This be the shit: ", d[2:4])
-        ser = serial.Serial('COM4', 9600)
+        arr = []
 
 
-    d = ""
-    print('\n')
-    '''
-    '''
-    if len(data.split(".")) == 2:
-        ymin = float(min(ydata))-10
-        ymax = float(max(ydata))+10
-        plt.ylim([ymin, ymax])
-        ydata.append(data)
-        del ydata[0]
-    line.set_xdata(np.arange(len(ydata)))
-    line.set_ydata(ydata) # update the data
-    plt.draw() # update the plot
-    '''
+while True:
+    readSerialToArray(ser, buffArray, packLen, packCount)
