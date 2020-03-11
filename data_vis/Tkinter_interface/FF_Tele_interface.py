@@ -18,7 +18,7 @@ y_var = list()
 
 
 #Serial takes two parameters: serial device and baudrate
-ser = serial.Serial('/dev/ttyACM1', 9600, timeout=5) #ttyACM0 is the port name it might change based on the device
+ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5) #ttyACM0 is the port name it might change based on the device
 ser.flushInput() #flush input buffer
 
 mixer.init()
@@ -74,10 +74,11 @@ def clicked():
 	if ser.inWaiting():
 		#print("here")
 		data_serial = ser.readline()
+		reads = float(data_serial)
 		#print(data_serial)
 		#lbl2.configure(text= data_serial)
-                log.insert('0.0', data_serial)
-		
+                log.insert('0.0', reads)
+                log.insert('0.0', '\n')
 		x_var.append(time.time())
  		y_var.append(float(data_serial))
 
