@@ -1,3 +1,5 @@
+
+
 /*
   lora Programs for Arduino
 
@@ -89,7 +91,7 @@ void loop()
 
 void packet_is_OK()
 {
-  Serial.println("Packet is gucci gang mate");
+  Serial.println("Packet is OK");
   uint16_t IRQStatus;
   uint8_t len;
 
@@ -124,7 +126,7 @@ void packet_is_OK()
 void packet_is_Error()
 {
   uint16_t IRQStatus;
-  Serial.println("PACKET IS ERRORR!!!!!!!!!!!!!");
+  Serial.println("PACKET ERROR!!");
   /*
   if (ENABLEBUZZER)
   {
