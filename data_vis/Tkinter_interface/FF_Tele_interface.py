@@ -22,12 +22,15 @@ x_var = []
 y_var = []
 
 buffArray = []
-packLen = 0
+baudrate = 9600
+arrLen = 128
 packCount = 0
 #print(list_ports.comports())
 
-ser = SerialRead.SerialRead('COM4', 9600, 128)					# this is now imported from SerialRead.py to make it more readable
-ser.readSerialToArray(ser, buffArray, packLen, packCount)
+# this is now imported from SerialRead.py to make it more readable
+# change 'COM4' to 'dev..' whatever for linux
+ser = SerialRead.SerialRead('COM4', baudrate, arrLen)					
+ser.readSerialToArray(ser, buffArray, arrLen, packCount)
 
 mixer.init()
 #mixer.music.load('song.mp3')
