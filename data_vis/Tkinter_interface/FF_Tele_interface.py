@@ -1,33 +1,41 @@
+import sys
+import SerialRead
+
 import time
 import threading
-import Tkinter
-import ttk
+import tkinter
+from tkinter import ttk
 from tkinter import *
 import serial
+from serial.tools import list_ports
+#from serial import tools
 from PIL import Image, ImageTk
 from playsound import playsound
 from pygame import mixer  # Load the popular external library
 
 import matplotlib
 matplotlib.use("TkAgg")
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
 
-x_var = list()
-y_var = list()
+x_var = []
+y_var = []
 
+buffArray = []
+packLen = 0
+packCount = 0
+#print(list_ports.comports())
 
-#Serial takes two parameters: serial device and baudrate
-ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5) #ttyACM0 is the port name it might change based on the device
-ser.flushInput() #flush input buffer
+ser = SerialRead.SerialRead('COM4', 9600, 128)					# this is now imported from SerialRead.py to make it more readable
+ser.readSerialToArray(ser, buffArray, packLen, packCount)
 
 mixer.init()
-mixer.music.load('song.mp3')
-mixer.music.play()
+#mixer.music.load('song.mp3')
+#mixer.music.play()
 
 window = Tk()
 window.title("FuelFighters cool interface")
-window.geometry('1000x500')
+window.geometry('1000x600')
 
 # make a scrollbar
 scrollbar = Scrollbar(window)
@@ -35,18 +43,18 @@ scrollbar.pack(side=LEFT, fill=Y)
 
 
 
-load = Image.open("images.png")
+load = Image.open("dnvglFFlogo.png")
 render = ImageTk.PhotoImage(load)
 panel =Label(window, image = render)
 panel.pack(side = "top", fill = "both", expand = "yes")
 
 # make a text box to put the serial output
-log = Text ( window, width=10, height=30, takefocus=0)
+log = Text (window, width=10, height=30, takefocus=0)
 log.pack(side="left",fill="y")
 
 # attach text box to scrollbar
 log.config(yscrollcommand=scrollbar.set)
-scrollbar.config(command=log.yview)
+scrollbar.config(command=log.xview)
 
 lbl=Label(window, text="Fuel Figters new interface",font=("Arial Bold", 18))
 #lbl.grid(column=0, row=0)
@@ -77,15 +85,14 @@ def clicked():
 		reads = float(data_serial)
 		#print(data_serial)
 		#lbl2.configure(text= data_serial)
-                log.insert('0.0', reads)
-                log.insert('0.0', '\n')
+		log.insert('0.0', reads)
+		log.insert('0.0', '\n')
 		x_var.append(time.time())
- 		y_var.append(float(data_serial))
-
-      		a.plot(x_var,y_var)#[1,2,3,4,5,6,7,8],[5,6,1,3,8,9,3,5])
+		y_var.append(float(data_serial))
+		a.plot(x_var,y_var)#[1,2,3,4,5,6,7,8],[5,6,1,3,8,9,3,5])
 		canvas.show()
 		toolbar.update()
-        	window.after(1000, clicked)
+		window.after(1000, clicked)
 
 def close():
 	window.destroy()
@@ -118,7 +125,7 @@ canvas = FigureCanvasTkAgg(f, window)
 canvas.get_tk_widget().pack(side=BOTTOM, fill=Y, expand=False)
 
 
-toolbar = NavigationToolbar2TkAgg(canvas, window)
+toolbar = NavigationToolbar2Tk(canvas, window)
 canvas._tkcanvas.pack(side=BOTTOM, fill=Y, expand=False)
 
 

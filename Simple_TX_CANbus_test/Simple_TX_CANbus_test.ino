@@ -70,7 +70,6 @@ void setup(void)
 // -------------------------------------------------------------
 void loop(void)
 {
-
-  Can0.write(msg);  
+  Can0.write(msg);            // send 100 msgs pr. sec
   delay(10);
 }
