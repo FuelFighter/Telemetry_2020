@@ -207,15 +207,48 @@ class Table:
 		self.frame = tk.Frame(master)
 
 
-class MainApp():
+class MainApp:
 	def __init__(self, master):
+		
 		self.master = master
-		self.frame = tk.Frame(master)
-		self.frame.configure(background='gray12')
-		self.frame.pack(expand=True, fill='both')
+		#self.frame = tk.Frame(master)
+		#self.frame.configure(background='gray12')
+		#self.frame.pack(expand=True, fill='both')
+		self.master_frame = tk.Frame(self.master)
+		self.master_frame.configure(bg='gray12')
+		self.master_frame.grid(sticky=tk.E+tk.N+tk.W+tk.S)
 
-		self.menubar = MenuBar(self.master)
-		self.live_plot = LivePlot(self.master)
+
+		self.fr_plot = tk.Frame(self.master_frame, width=0.6*self.master.winfo_width(), height=0.6*self.master.winfo_height())
+		self.fr_plot.grid(row=0,column=1, sticky=tk.E+tk.N)
+		self.fr_plot.configure(bg='blue')
+		
+		self.fr_table = tk.Frame(self.master_frame, width=0.4*self.master.winfo_width(), height=0.6*self.master.winfo_height())
+		self.fr_table.grid(row=0, column=0, sticky=tk.W+tk.N)
+		self.fr_table.configure(bg='green')
+
+		self.fr_canmsg = tk.Frame(self.master_frame, width=0.6*self.master.winfo_width(), height=0.4*self.master.winfo_height())
+		self.fr_canmsg.grid(row=1, column=1, sticky=tk.E+tk.S)
+		self.fr_canmsg.configure(bg='black')
+
+		self.fr_steering = tk.Frame(self.master_frame, width=0.4*self.master.winfo_width(), height=0.4*self.master.winfo_height())
+		self.fr_steering.grid(row=1, column=0, sticky=tk.S+tk.W)
+		self.fr_steering.configure(bg='red')
+
+		self.master.grid_rowconfigure(0, weight=1)
+		self.master.grid_columnconfigure(1, weight=1)
+
+		self.master.grid_rowconfigure(0, weight=1)
+		self.master.grid_columnconfigure(0, weight=1)
+
+		self.master.grid_rowconfigure(1, weight=1)
+		self.master.grid_columnconfigure(0, weight=1)
+		
+		self.master.grid_rowconfigure(1, weight=1)
+		self.master.grid_columnconfigure(1, weight=1)
+		
+		#self.menubar = MenuBar(self.master)
+		#self.live_plot = LivePlot(self.master)
 
 		#self.live_plot.pack(side=tk.RIGHT, fill="x")
 
@@ -229,8 +262,12 @@ if __name__ == '__main__':
 	root.title("DNV GL Fuel Fighters Data Visualization")
 	
 	#sets the opening size of the GUI to window_scaling * "your_monitor_resolution". need to slize string to remove ".0" after multiplication
-	root.geometry(str(window_scaling * monitor_width)[:-2] + 'x' + str(window_scaling * monitor_height)[:-2]) # this is now decided with mainApp frame size
+	
+	win_width = int(window_scaling * monitor_width)
+	win_height = int(window_scaling * monitor_height)
+	root.geometry(str(win_width) + 'x' + str(win_height)) # this is now decided with mainApp frame size
 	root.maxsize(monitor_width, monitor_height)					# now you cant have a bigger window than your monitor resolution
+	root.update()
 	MainApp(root)
 	root.mainloop()
 
