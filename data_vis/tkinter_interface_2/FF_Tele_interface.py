@@ -54,7 +54,7 @@ class SerialRead:
 		else:
 			self.ser.port = port
 
-		#self.error = False				# set true if something is wrong
+		self.error = False				# set true if something is wrong
 		self.com_open = False			# set true if reading COM ports
 		self.pack_count = 0
 		self.pack_len = pack_len
@@ -63,11 +63,15 @@ class SerialRead:
 	def init_serial_read(self):
 		self.com_open = True
 		if not self.error:
-			self.ser.open()
-			self.ser.flush()
-			print(self.ser.is_open)
-			# need to dump first reading! "why?" you may ask. ¯\_(ツ)_/¯ it just works ¯\_(ツ)_/¯
-			dumpReading = self.ser.read()  
+			try:
+				self.ser.open()
+				self.ser.flush()
+				print(self.ser.is_open)
+				# need to dump first reading! "why?" you may ask. ¯\_(ツ)_/¯ it just works ¯\_(ツ)_/¯
+				dumpReading = self.ser.read()  
+			except(serial.serialutil.SerialException): 			# this error occurs if one serial parametere is wrong
+				print("YO THIS GENTLEMAN EATING BEANS")
+			
 		
 	def end_serial_read(self):
 		self.ser.close()
@@ -109,6 +113,9 @@ class MenuBar:
 
 	def start_serial_com(self):
 		com_win = tk.Toplevel(self.master, bg='gray12')
+
+		
+		
 		ser.init_serial_read()
 
 	def end_serial_com(self):
