@@ -103,20 +103,45 @@ class MenuBar:
 		self.menubar.add_cascade(label="File", menu=self.filemenu)		
 		
 		self.serialmenu = tk.Menu(self.menubar, tearoff=0)
-		self.serialmenu.add_command(label='Start serial communication', command=self.start_serial_com)
-		self.serialmenu.add_command(label='End serial com.', command=self.end_serial_com)
-		self.menubar.add_cascade(label="Serial com.", menu=self.serialmenu)
+		self.serialmenu.add_command(label='Start serial', command=self.start_serial_com)
+		self.serialmenu.add_command(label='End serial', command=self.end_serial_com)
+		self.menubar.add_cascade(label="Serial", menu=self.serialmenu)
 		self.master.config(menu=self.menubar) 			# needed to actually show the menubar
 
 	def donothing(self):								
 		filewin = tk.Toplevel(self.master)
 
-	def start_serial_com(self):
-		com_win = tk.Toplevel(self.master, bg='gray12')
+	def set_serial_port(self):
+		self.index = self.port_box.curselection() 	#this returns a tuple with the index of the comport
+		ser.port = self.com_ls[self.index[0]]		# set com port to selected port in listbox.
+		print(self.com_ls[self.index[0]])
+		print(type(self.index))
+		print('Serial port set to: ' )
 
+	def start_serial_com(self):
+		self.com_win = tk.Toplevel(self.master, bg='gray12')
+		self.com_win.geometry('200x100')
+
+		self.ports = list_ports.comports() 				# get a list of com-ports
+		self.port_box = tk.Listbox(self.com_win, width=50, height=12, selectmode=tk.SINGLE)
+
+		self.com_ls = []
+		if(len(self.ports) > 0):
+			for i in range(len(self.ports)):
+				self.com_ls.append(self.ports[i].device)			# com_ls holds strings with names of com ports. needed for setting the serial port, 
+				self.port_box.insert(i, self.ports[i].device)		# as port_box is a listbox item (hard to index and only returns indexes)
+		else:
+			self.port_box.insert(0, "no ports found")
 		
+		self.select_but = tk.Button(self.com_win, text='Select', command=self.set_serial_port)
+		self.select_but.pack(side=tk.BOTTOM)
+
+		self.port_box.pack()
 		
-		ser.init_serial_read()
+
+
+
+		# ser.init_serial_read()
 
 	def end_serial_com(self):
 		ser.end_serial_read()
@@ -148,7 +173,6 @@ packCount = 0
 # this is now imported from SerialRead.py to make it more readable
 # change 'COM4' to 'dev..' whatever for linux
 ser = SerialRead('COM4', baudrate, arrLen) # this needs to be global ( i know this is bad practice, but i didnt know of any other way to do this)
-
 
 
 if __name__ == '__main__':
