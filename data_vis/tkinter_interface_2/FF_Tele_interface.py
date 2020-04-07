@@ -176,7 +176,7 @@ class MenuBar:
 		print("Ended serial read")
 
 
-class Plot:
+class LivePlot:
 	#https://matplotlib.org/2.1.2/gallery/user_interfaces/embedding_in_tk_sgskip.html
 	
 	def __init__(self, master):
@@ -189,7 +189,7 @@ class Plot:
 
 		self.canvas = FigureCanvasTkAgg(self.f, master=self.master)
 		self.canvas.draw()
-		self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
+		self.canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.Y, expand=1)
 		
 		# extra option
 		#self.toolbar = NavigationToolbar2Tk(self.canvas, self.master)
@@ -215,7 +215,9 @@ class MainApp():
 		self.frame.pack(expand=True, fill='both')
 
 		self.menubar = MenuBar(self.master)
-		self.Plot = Plot(self.master)
+		self.live_plot = LivePlot(self.master)
+
+		#self.live_plot.pack(side=tk.RIGHT, fill="x")
 
 
 if __name__ == '__main__':
