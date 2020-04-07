@@ -1,5 +1,5 @@
 import sys
-
+import numpy as np
 try:
 	import Tkinter as tk				# used for puthon 2 ( i think )
 except:
@@ -20,6 +20,18 @@ from win32api import GetSystemMetrics
 monitor_width = GetSystemMetrics(0) 						# requires pypiwin32 package
 monitor_height = GetSystemMetrics(1)
 window_scaling = 0.6										# needs to be between 0 and 1 
+
+# for serial reading
+
+#buffArray = []
+baudrate = 9600
+arrLen = 128
+packCount = 0
+
+#INITIALIZING SERIAL. 
+# this is now imported from SerialRead.py to make it more readable
+# change 'COM4' to 'dev..' whatever for linux
+#ser = SerialRead('COM4', baudrate, arrLen) # this needs to be global ( i know this is bad practice, but i didnt know of any other way to do this)
 
 
 
@@ -54,6 +66,7 @@ class SerialRead:
 		else:
 			self.ser.port = port
 
+		
 		self.error = False				# set true if something is wrong
 		self.com_open = False			# set true if reading COM ports
 		self.pack_count = 0
@@ -61,16 +74,18 @@ class SerialRead:
 
 
 	def init_serial_read(self):
-		self.com_open = True
+		
 		if not self.error:
 			try:
 				self.ser.open()
 				self.ser.flush()
-				print(self.ser.is_open)
+				self.com_open = True
+
+				print("Serial reading initialized.")
 				# need to dump first reading! "why?" you may ask. ¯\_(ツ)_/¯ it just works ¯\_(ツ)_/¯
 				dumpReading = self.ser.read()  
 			except(serial.serialutil.SerialException): 			# this error occurs if one serial parametere is wrong
-				print("YO THIS GENTLEMAN EATING BEANS")
+				print("Serial port error. Have you chosen a valid COM-port?")
 			
 		
 	def end_serial_read(self):
@@ -103,27 +118,35 @@ class MenuBar:
 		self.menubar.add_cascade(label="File", menu=self.filemenu)		
 		
 		self.serialmenu = tk.Menu(self.menubar, tearoff=0)
+		self.serialmenu.add_command(label='Choose serial port', command=self.choose_serial_com)
 		self.serialmenu.add_command(label='Start serial', command=self.start_serial_com)
 		self.serialmenu.add_command(label='End serial', command=self.end_serial_com)
 		self.menubar.add_cascade(label="Serial", menu=self.serialmenu)
 		self.master.config(menu=self.menubar) 			# needed to actually show the menubar
 
+		self.comport_chosen = False
+
+
 	def donothing(self):								
-		filewin = tk.Toplevel(self.master)
+		print("donothing")
+
 
 	def set_serial_port(self):
 		self.index = self.port_box.curselection() 	#this returns a tuple with the index of the comport
 		ser.port = self.com_ls[self.index[0]]		# set com port to selected port in listbox.
-		print(self.com_ls[self.index[0]])
-		print(type(self.index))
-		print('Serial port set to: ' )
+		self.com_win.destroy()
+		self.comport_chosen = True
+		# print(self.com_ls[self.index[0]])
+		# print(type(self.index))
+		# print('Serial port set to: ' )
 
-	def start_serial_com(self):
+
+	def choose_serial_com(self):
 		self.com_win = tk.Toplevel(self.master, bg='gray12')
 		self.com_win.geometry('200x100')
 
 		self.ports = list_ports.comports() 				# get a list of com-ports
-		self.port_box = tk.Listbox(self.com_win, width=50, height=12, selectmode=tk.SINGLE)
+		self.port_box = tk.Listbox(self.com_win, width=50, height=120, selectmode=tk.SINGLE)
 
 		self.com_ls = []
 		if(len(self.ports) > 0):
@@ -138,14 +161,45 @@ class MenuBar:
 
 		self.port_box.pack()
 		
-
-
-
 		# ser.init_serial_read()
 
+	def start_serial_com(self):
+		if self.comport_chosen:
+			ser.init_serial_read()
+			print("Started serial read")
+		else:
+			print("Serial port not chosen!")
+
 	def end_serial_com(self):
+		self.comport_chosen = False
 		ser.end_serial_read()
-		print(1)
+		print("Ended serial read")
+
+
+class Plot:
+	#https://matplotlib.org/2.1.2/gallery/user_interfaces/embedding_in_tk_sgskip.html
+	
+	def __init__(self, master):
+		self.master = master
+		self.f = Figure(figsize=(5, 4), dpi=100)
+		self.a = self.f.add_subplot(111)
+		self.t = np.arange(0.0, 3.0, 0.01)
+		self.s = np.sin(2*np.pi*self.t)
+		self.a.plot(self.t, self.s)
+
+		self.canvas = FigureCanvasTkAgg(self.f, master=self.master)
+		self.canvas.draw()
+		self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
+		
+		# extra option
+		#self.toolbar = NavigationToolbar2Tk(self.canvas, self.master)
+		#self.toolbar.update()
+		#self.canvas._tkcanvas.pack(side=tk.RIGHT, fill=tk.BOTH, expand=1)
+
+
+class SteeringAngle:
+	def __init__(self, master):
+		self.master = master
 
 
 class Table:
@@ -161,34 +215,20 @@ class MainApp():
 		self.frame.pack(expand=True, fill='both')
 
 		self.menubar = MenuBar(self.master)
-
-# for serial reading
-
-#buffArray = []
-baudrate = 9600
-arrLen = 128
-packCount = 0
-
-#INITIALIZING SERIAL. 
-# this is now imported from SerialRead.py to make it more readable
-# change 'COM4' to 'dev..' whatever for linux
-ser = SerialRead('COM4', baudrate, arrLen) # this needs to be global ( i know this is bad practice, but i didnt know of any other way to do this)
+		self.Plot = Plot(self.master)
 
 
 if __name__ == '__main__':
 	root = tk.Tk()
 	
-
 	# http://www.science.smith.edu/dftwiki/index.php/File:TkInterColorCharts.png
 	#root.configure(background='gray12')							# change this number to a lower one if you want darker background		
-	
 	root.iconbitmap('Resources/logo.ico')						# sets the icon for the application
 	root.title("DNV GL Fuel Fighters Data Visualization")
-	
 	
 	#sets the opening size of the GUI to window_scaling * "your_monitor_resolution". need to slize string to remove ".0" after multiplication
 	root.geometry(str(window_scaling * monitor_width)[:-2] + 'x' + str(window_scaling * monitor_height)[:-2]) # this is now decided with mainApp frame size
 	root.maxsize(monitor_width, monitor_height)					# now you cant have a bigger window than your monitor resolution
-	main_app = MainApp(root)
+	MainApp(root)
 	root.mainloop()
 
