@@ -50,7 +50,7 @@ class SerialRead:
 
 		self.ser.flush()
 		print(self.ser.is_open)
-		# need to dump first reading! why you may ask? ¯\_(ツ)_/¯ it just works ¯\_(ツ)_/¯
+		# need to dump first reading! "why?" you may ask. ¯\_(ツ)_/¯ it just works ¯\_(ツ)_/¯
 		dumpReading = self.ser.read()  
 		
 				
