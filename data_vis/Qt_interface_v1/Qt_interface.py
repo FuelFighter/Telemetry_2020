@@ -89,6 +89,9 @@ class Widget(QWidget):
 	def __init__(self):
 		QWidget.__init__(self)
 		
+		#self.pal = Qt.QPalette()
+		#self.pal.setColor(QPalette.Backgroun, Qt.)
+
 		self.table = QTableWidget()
 		self.table.setColumnCount(3)
 		self.table.setHorizontalHeaderLabels(['Data', 'Value', 'Unit'])
@@ -97,16 +100,20 @@ class Widget(QWidget):
 		self.plot_widget = pg.PlotWidget(name="Plot 1")
 
 
-		self.draw_label = QLabel()
-		self.draw_label.sizeHint()
-		self.steering_canvas = QtGui.QPixmap(100, 100)
-		#self.steering_canvas.scaled(1,1, Qt.KeepAspectRatio, Qt.FastTransformation)
+
+		#self.draw_label = QLabel()
+		#self.draw_label.setScaledContents(True)
+		#self.draw_label.sizeHint()
+		#self.steering_canvas = QtGui.QPixmap(100, 500)
+		#self.scaled = self.steering_canvas.scaled(100,100, Qt.KeepAspectRatio, Qt.FastTransformation)
 		#self.label_w = self.draw_label.width()
 		#self.label_h = self.draw_label.height()
 		#print(self.label_w, self.label_h)
 
-		self.draw_label.setPixmap(self.steering_canvas.scaled(100, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation))
-		self.draw_something()
+		#self.draw_label.setPixmap(self.steering_canvas.scaled(350, 350, Qt.KeepAspectRatio, Qt.SmoothTransformation)) 
+		#self.draw_label.setPixmap(self.scaled)
+		#self.draw_label.setPixmap(QtGui.QPixmap('logo.png'))
+		#self.draw_something()
 
 	
 		self.can_table = QTableWidget()
@@ -127,8 +134,8 @@ class Widget(QWidget):
 
 		self.grid_layout.addWidget(self.table, 0, 0, 1, 1)  # row, column, rowspan, colspan
 		self.grid_layout.addWidget(self.plot_widget, 0, 1, 1, 1)
-		self.grid_layout.addWidget(self.draw_label, 1, 1, 1, 1)
-		self.grid_layout.addWidget(self.can_table, 1, 1, 1, 1)
+		#self.grid_layout.addWidget(self.draw_label, 1, 1, 1, 1)
+		self.grid_layout.addWidget(self.can_table, 1, 0, 1, 2)
 		self.setLayout(self.grid_layout)
 		'''
 		self.hbox_layout_top = QHBoxLayout()
@@ -143,7 +150,7 @@ class Widget(QWidget):
 		self.vbox_layout = QVBoxLayout()
 		self.vbox_layout.addLayout(self.hbox_layout_top)
 		self.vbox_layout.addLayout(self.hbox_layout_bot)
-
+		
 		self.setLayout(self.vbox_layout)
 		'''
 
@@ -175,11 +182,14 @@ if __name__ == "__main__":
 	widget = Widget()
 	#QMainwindow using Qwidget as central widget
 	window = MainWindow(widget)
+	
 	win_width = int(window_scaling * monitor_width)
 	win_height = int(window_scaling * monitor_height)
 
 	window.resize(win_width, win_height)
 	window.show()
-	
+	# set icon of window
+	app.setWindowIcon(QtGui.QIcon('logo.png'))	
+
 
 	sys.exit(app.exec_())
