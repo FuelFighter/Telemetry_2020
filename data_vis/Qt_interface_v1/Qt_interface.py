@@ -88,19 +88,25 @@ arr = []
 class Widget(QWidget):
 	def __init__(self):
 		QWidget.__init__(self)
-		
-		#self.pal = Qt.QPalette()
-		#self.pal.setColor(QPalette.Backgroun, Qt.)
 
+		#set background color
+		self.setAutoFillBackground(True)
+		p = self.palette()
+		p.setColor(self.backgroundRole(), Qt.darkGray)
+		self.setPalette(p)
+
+		# data table for raw data
 		self.table = QTableWidget()
 		self.table.setColumnCount(3)
 		self.table.setHorizontalHeaderLabels(['Data', 'Value', 'Unit'])
 		self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
+		# plotting data
 		self.plot_widget = pg.PlotWidget(name="Plot 1")
 
 
 
+		# this was intended for some fancy steering graphics. Does not scale as it should after resizing the window
 		#self.draw_label = QLabel()
 		#self.draw_label.setScaledContents(True)
 		#self.draw_label.sizeHint()
@@ -115,7 +121,7 @@ class Widget(QWidget):
 		#self.draw_label.setPixmap(QtGui.QPixmap('logo.png'))
 		#self.draw_something()
 
-	
+		# can translation. 
 		self.can_table = QTableWidget()
 		self.can_table.setColumnCount(4)
 		self.can_table.setHorizontalHeaderLabels(['CAN ID', 'Len', 'Data', 'Translated data'])
