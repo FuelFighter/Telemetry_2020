@@ -1,0 +1,42 @@
+Removed Pin From Net: NetName=NetC15_1 Pin=C15-1
+Removed Pin From Net: NetName=NetC15_2 Pin=C15-2
+Removed Pin From Net: NetName=NetC18_1 Pin=C18-1
+Removed Pin From Net: NetName=NetC18_2 Pin=C18-2
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=C15
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=C18
+Change component parameters: Designator = "R18" ("R18"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\XOFMOHXK" ("\XOFMOHXK")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R20" ("R20"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\JHAOPQCJ" ("\JHAOPQCJ")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R22" ("R22"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\GCESEUYN" ("\GCESEUYN")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R23" ("R23"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\FYLXYYIW" ("\FYLXYYIW")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R25" ("R25"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\AKHYVBJJ" ("\AKHYVBJJ")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R27" ("R27"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\GOZTYEHX" ("\GOZTYEHX")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R29" ("R29"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\USXCPLIP" ("\USXCPLIP")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R30" ("R30"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\FZDJESFE" ("\FZDJESFE")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetC15_1 New Net Name=NetR22_2
+Change Net Name : Old Net Name=NetC15_2 New Net Name=NetR22_1
+Change Net Name : Old Net Name=NetC18_1 New Net Name=NetR29_2
+Change Net Name : Old Net Name=NetC18_2 New Net Name=NetR29_1
