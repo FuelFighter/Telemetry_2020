@@ -1,0 +1,12 @@
+Added Component: Designator=P6(PIN_HEADER_M_2x3)
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=P3-22
+Added Pin To Net: NetName=5V Pin=P6-1
+Added Pin To Net: NetName=5V Pin=P6-2
+Added Pin To Net: NetName=5V Pin=P6-3
+Added Pin To Net: NetName=5V Pin=P6-4
+Added Pin To Net: NetName=5V Pin=P6-5
+Added Pin To Net: NetName=5V Pin=P6-6
+Added Pin To Net: NetName=NetU1_13 Pin=U2-13
+Added Member To Class: ClassName=ReceiverPCB Member=Component P6 5V

@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import (QAction, QApplication, QHeaderView, QHBoxLayout, QL
 
 import pyqtgraph as pg
 
-
+# used to set window size when starting the program.
 monitor_width = GetSystemMetrics(0)                         # requires pypiwin32 package
 monitor_height = GetSystemMetrics(1)
 window_scaling = 0.6                                        # needs to be between 0 and 1
@@ -33,6 +33,7 @@ class SerialRead:
 		# check if acceptable baud rate is set
 		self.ser = serial.Serial()
 		self.port_name = port
+		# allowed baudrates. Defaults to 9600.
 		self.baudrate_list = [300, 600, 1200, 2400, 4800,
 							  9600, 14400, 19200, 28800, 38400, 57600, 115200]
 		if(baudrate in self.baudrate_list):
@@ -82,9 +83,11 @@ class SerialRead:
 			self.pack_count += 1
 			print(arr, " - ", self.pack_count, ' - ', len(arr))
 			self.ser.flush()
-arr = []
+#dont know why this is here so i hope i can comment it out
+# arr = []
 
 
+# follows standard setup for Qt
 class Widget(QWidget):
 	def __init__(self):
 		QWidget.__init__(self)
@@ -107,6 +110,7 @@ class Widget(QWidget):
 
 
 		# this was intended for some fancy steering graphics. Does not scale as it should after resizing the window
+		# may be unnecessary if we're not keeping the potmeter for autonomous in the car anyways.
 		#self.draw_label = QLabel()
 		#self.draw_label.setScaledContents(True)
 		#self.draw_label.sizeHint()
@@ -127,7 +131,7 @@ class Widget(QWidget):
 		self.can_table.setHorizontalHeaderLabels(['CAN ID', 'Len', 'Data', 'Translated data'])
 		self.can_table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
-		
+		# set layout.
 		self.grid_layout = QtWidgets.QGridLayout()
 		self.grid_layout.setHorizontalSpacing(20)
 		self.grid_layout.setVerticalSpacing(20)
@@ -143,6 +147,8 @@ class Widget(QWidget):
 		#self.grid_layout.addWidget(self.draw_label, 1, 1, 1, 1)
 		self.grid_layout.addWidget(self.can_table, 1, 0, 1, 2)
 		self.setLayout(self.grid_layout)
+		
+		# alternative layout. Does not look as good IMO
 		'''
 		self.hbox_layout_top = QHBoxLayout()
 		self.hbox_layout_top.addWidget(self.table)
@@ -159,12 +165,13 @@ class Widget(QWidget):
 		
 		self.setLayout(self.vbox_layout)
 		'''
-
+	# used in the pixmap thingy. Not needed if not
+	'''
 	def draw_something(self):
 		painter = QtGui.QPainter(self.draw_label.pixmap())
 		painter.drawLine(10, 10, 300, 200)
 		painter.end()
-
+	'''
 
 
 

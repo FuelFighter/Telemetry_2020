@@ -18,7 +18,7 @@
 #include "FlexCAN.h"
 
 #ifndef __MK66FX1M0__
-  #error "Teensy 3.6 with dual CAN bus is required to run this example"
+#error "Teensy 3.6 with dual CAN bus is required to run this example"
 #endif
 
 #define CAN_BAUDRATE 500000                                         //CANbus in the FF car runs at 500k
@@ -30,10 +30,10 @@ static uint8_t hex[17] = "0123456789abcdef";
 static void hexDump(uint8_t dumpLen, uint8_t *bytePtr)
 {
   uint8_t working;
-  while( dumpLen-- ) {
+  while ( dumpLen-- ) {
     working = *bytePtr++;
-    Serial.write( hex[ working>>4 ] );
-    Serial.write( hex[ working&15 ] );
+    Serial.write( hex[ working >> 4 ] );
+    Serial.write( hex[ working & 15 ] );
   }
   Serial.write('\r');
   Serial.write('\n');
@@ -46,7 +46,7 @@ void setup(void)
   delay(1000);
   Serial.println(F("Hello Teensy 3.6 CAN Test."));
 
-  Can0.begin(CAN_BAUDRATE);  
+  Can0.begin(CAN_BAUDRATE);
 
   //if using enable pins on a transceiver they need to be set on
   //pinMode(2, OUTPUT);
@@ -61,11 +61,11 @@ void setup(void)
 // -------------------------------------------------------------
 void loop(void)
 {
+  
   CAN_message_t inMsg;
-    while (Can0.available()) 
+  while (Can0.available())
   {
     Can0.read(inMsg);
     Serial.print("CAN bus 0: "); hexDump(8, inMsg.buf);
   }
-
 }

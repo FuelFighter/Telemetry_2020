@@ -16,7 +16,7 @@
 #include "FlexCAN.h"
 
 #ifndef __MK66FX1M0__
-  #error "Teensy 3.6 with dual CAN bus is required to run this example"
+#error "Teensy 3.6 with dual CAN bus is required to run this example"
 #endif
 
 #define CAN_BAUDRATE 500000                                         //CANbus in the FF car runs at 500k
@@ -28,10 +28,10 @@ static uint8_t hex[17] = "0123456789abcdef";
 static void hexDump(uint8_t dumpLen, uint8_t *bytePtr)
 {
   uint8_t working;
-  while( dumpLen-- ) {
+  while ( dumpLen-- ) {
     working = *bytePtr++;
-    Serial.write( hex[ working>>4 ] );
-    Serial.write( hex[ working&15 ] );
+    Serial.write( hex[ working >> 4 ] );
+    Serial.write( hex[ working & 15 ] );
   }
   Serial.write('\r');
   Serial.write('\n');
@@ -43,7 +43,7 @@ void setup(void)
   delay(1000);
   Serial.println(F("Hello Teensy 3.6 CAN Test."));
 
-  Can0.begin(CAN_BAUDRATE);    
+  Can0.begin(CAN_BAUDRATE);
   //Can1.begin();
 
   //if using enable pins on a transceiver they need to be set on
@@ -56,20 +56,23 @@ void setup(void)
   msg.ext = 0;
   msg.id = 0x100;
   msg.len = 8;
-  msg.buf[0] = 10;            // decimal value
-  msg.buf[1] = 10;
-  msg.buf[2] = 10;
-  msg.buf[3] = 10;
-  msg.buf[4] = 10;
-  msg.buf[5] = 10;
-  msg.buf[6] = 10;
-  msg.buf[7] = 10;
+  msg.buf[0] = 101;            // decimal value
+  msg.buf[1] = 101;
+  msg.buf[2] = 101;
+  msg.buf[3] = 101;
+  msg.buf[4] = 101;
+  msg.buf[5] = 101;
+  msg.buf[6] = 101;
+  msg.buf[7] = 101;
 }
 
 
 // -------------------------------------------------------------
 void loop(void)
 {
-  Can0.write(msg);            // send 100 msgs pr. sec
-  delay(10);
+  Can0.write(msg);            // send 4 msgs pr. sec
+  Serial.println("Sent msg");
+  delay(250);
+  msg.buf[0]++;
+
 }

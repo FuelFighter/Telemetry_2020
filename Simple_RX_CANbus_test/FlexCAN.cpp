@@ -709,7 +709,7 @@ void FlexCAN::setMask (uint32_t mask, uint8_t mbox)
 uint32_t FlexCAN::available (void)
 {
     irqLock();
-    uint32_t result=(ringBufferCount (rxRing));
+    uint32_t result = (ringBufferCount (rxRing));
     irqRelease();
     
     return result;
