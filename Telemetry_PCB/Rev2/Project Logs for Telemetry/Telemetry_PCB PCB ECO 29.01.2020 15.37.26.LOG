@@ -1,0 +1,17 @@
+Change Physical Footprint: Designator=C3 Old Footprint=C_EL_SMT_Ø6.3 New Footprint=C_EL_SMT_Ø6.3
+Change Physical Footprint: Designator=C4 Old Footprint=C_EL_SMT_Ø6.3 New Footprint=C_EL_SMT_Ø6.3
+Change Physical Footprint: Designator=P1 Old Footprint=XT-60 New Footprint=XT-60
+Change Physical Footprint: Designator=P2 Old Footprint=XT-60 New Footprint=XT-60
+Change Physical Footprint: Designator=P3 Old Footprint=XT-60 New Footprint=XT-60
+Change Physical Footprint: Designator=P4 Old Footprint=PIN_HEADER_M_1x3 New Footprint=PIN_HEADER_M_1x3
+Change Physical Footprint: Designator=P5 Old Footprint=PIN_HEADER_M_1x24 New Footprint=PIN_HEADER_M_1x24
+Change Physical Footprint: Designator=P8 Old Footprint=XT-60 New Footprint=XT-60
+Change Physical Footprint: Designator=P9 Old Footprint=PIN_HEADER_M_1x5 New Footprint=PIN_HEADER_M_1x5
+Change Physical Footprint: Designator=P10 Old Footprint=PIN_HEADER_M_1x5 New Footprint=PIN_HEADER_M_1x5
+Change Physical Footprint: Designator=P11 Old Footprint=PIN_HEADER_M_1x5 New Footprint=PIN_HEADER_M_1x5
+Change Physical Footprint: Designator=P12 Old Footprint=PIN_HEADER_M_1x5 New Footprint=PIN_HEADER_M_1x5
+Change Physical Footprint: Designator=P13 Old Footprint=PIN_HEADER_M_1x5 New Footprint=PIN_HEADER_M_1x5
+Change Physical Footprint: Designator=P14 Old Footprint=PIN_HEADER_M_1x5 New Footprint=PIN_HEADER_M_1x5
+Change Physical Footprint: Designator=P15 Old Footprint=PIN_HEADER_M_1x3 New Footprint=PIN_HEADER_M_1x3
+Change Physical Footprint: Designator=U4 Old Footprint=LAMBDA62_SMT New Footprint=LAMBDA62_SMT
+Change Physical Footprint: Designator=U5 Old Footprint=teensy_3.6 New Footprint=teensy_3.6

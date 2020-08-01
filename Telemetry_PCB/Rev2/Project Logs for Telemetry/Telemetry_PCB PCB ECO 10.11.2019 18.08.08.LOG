@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=P1 NewDesignator=P2
+Change Component Designator: OldDesignator=P2 NewDesignator=P1
+Change Component Designator: OldDesignator=P4 NewDesignator=P8
+Change Component Designator: OldDesignator=P8 NewDesignator=P4
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P2 XT-60
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P8 XT-60

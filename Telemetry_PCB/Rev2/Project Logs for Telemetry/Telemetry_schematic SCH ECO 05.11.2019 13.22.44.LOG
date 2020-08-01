@@ -1,0 +1,6 @@
+Replace Part C1 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Altium\Telemetry\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Part C2 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Altium\Telemetry\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Part P1 XT-60 in C:\Users\Magnus\Documents\Fuel_Fighter_Altium\Telemetry\Telemetry_schematic.SchDoc with XT-60 from FF_component_lib.SchLib
+Replace Part P2 XT-60 in C:\Users\Magnus\Documents\Fuel_Fighter_Altium\Telemetry\Telemetry_schematic.SchDoc with XT-60 from FF_component_lib.SchLib
+Replace Part teensy_3.6? teensy_3.6_ in C:\Users\Magnus\Documents\Fuel_Fighter_Altium\Telemetry\Telemetry_schematic.SchDoc with teensy_3.6_ from FF_component_lib.SchLib
+Replace Part U? ACS712_SMD in C:\Users\Magnus\Documents\Fuel_Fighter_Altium\Telemetry\Telemetry_schematic.SchDoc with ACS712_SMD from FF_component_lib.SchLib

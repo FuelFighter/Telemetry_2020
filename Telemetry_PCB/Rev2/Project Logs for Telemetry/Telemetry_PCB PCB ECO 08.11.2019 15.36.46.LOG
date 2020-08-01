@@ -1,0 +1,46 @@
+Removed Pin From Net: NetName=GND Pin=U5-3.3V1
+Added Component: Designator=P4(PIN_HEADER_M_1x3)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P5(PIN_HEADER_M_1x24)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U6(SN65HVD231D_SMD)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetP4_1 Pin=P4-1
+Added Pin To Net: NetName=NetP4_2 Pin=P4-2
+Added Pin To Net: NetName=+5 Pin=P5-1
+Added Pin To Net: NetName=GND Pin=P5-2
+Added Pin To Net: NetName=GND Pin=P5-3
+Added Pin To Net: NetName=NetP5_4 Pin=P5-4
+Added Pin To Net: NetName=NetP5_5 Pin=P5-5
+Added Pin To Net: NetName=NetP5_6 Pin=P5-6
+Added Pin To Net: NetName=NetP5_7 Pin=P5-7
+Added Pin To Net: NetName=NetP5_8 Pin=P5-8
+Added Pin To Net: NetName=NetP5_9 Pin=P5-9
+Added Pin To Net: NetName=NetP5_10 Pin=P5-10
+Added Pin To Net: NetName=NetP5_11 Pin=P5-11
+Added Pin To Net: NetName=NetP5_12 Pin=P5-12
+Added Pin To Net: NetName=NetP5_14 Pin=P5-14
+Added Pin To Net: NetName=GND Pin=P5-15
+Added Pin To Net: NetName=NetP5_16 Pin=P5-16
+Added Pin To Net: NetName=NetP5_17 Pin=P5-17
+Added Pin To Net: NetName=NetP5_18 Pin=P5-18
+Added Pin To Net: NetName=NetP5_19 Pin=P5-19
+Added Pin To Net: NetName=NetP5_20 Pin=P5-20
+Added Pin To Net: NetName=NetP5_21 Pin=P5-21
+Added Pin To Net: NetName=NetP5_22 Pin=P5-22
+Added Pin To Net: NetName=NetP5_23 Pin=P5-23
+Added Pin To Net: NetName=NetP5_24 Pin=P5-24
+Added Pin To Net: NetName=NetU5_3 Pin=U6-1
+Added Pin To Net: NetName=GND Pin=U6-2
+Added Pin To Net: NetName=+3V3 Pin=U6-3
+Added Pin To Net: NetName=NetU5_4 Pin=U6-4
+Added Pin To Net: NetName=NetP6_2 Pin=U6-6
+Added Pin To Net: NetName=NetP4_1 Pin=U6-7
+Added Pin To Net: NetName=NetR3_1 Pin=U6-8
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P4 1x3_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P5 1x24_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component U6 SN65GVD231d

@@ -1,0 +1,28 @@
+Change Value of Parameter Value in Part C1 Old=1n New=
+Change Value of Parameter Value in Part C2 Old=100n New=
+Change Value of Parameter Value in Part C3 Old=10u New=
+Change Value of Parameter Value in Part C4 Old=10u New=
+Change Value of Parameter Value in Part C5 Old=100n New=
+Change Value of Parameter Value in Part C6 Old=10u New=
+Change Value of Parameter Value in Part C7 Old=10u New=
+Change Value of Parameter Value in Part C8 Old=1u New=
+Change Value of Parameter Value in Part L1 Old=22u New=
+Change Value of Parameter Value in Part R1 Old=52.3k New=
+Change Value of Parameter Value in Part R2 Old=10k New=
+Replace Symbol from C1 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from C2 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from C3 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from C4 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from C5 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from C6 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from C7 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from C8 C_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with C_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from L1 L_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with L_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from P1 XT-60 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with XT-60 from FF_component_lib.SchLib
+Replace Symbol from P2 XT-60 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with XT-60 from FF_component_lib.SchLib
+Replace Symbol from R1 R_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with R_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from R2 R_SMD_0805 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with R_SMD_0805 from FF_component_lib.SchLib
+Replace Symbol from teensy_3.6? teensy_3.6_ in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with teensy_3.6_ from FF_component_lib.SchLib
+Replace Symbol from U1 ACS712_SMD in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with ACS712_SMD from FF_component_lib.SchLib
+Replace Symbol from U2 LD1117SC33TR_SOT-223 in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with LD1117SC33TR_SOT-223 from FF_component_lib.SchLib
+Replace Symbol from U3 MCP16311/2_SMD in C:\Users\Magnus\Documents\Fuel_Fighter_Telemetry\Telemetry_PCB\Telemetry_schematic.SchDoc with MCP16311/2_SMD from FF_component_lib.SchLib

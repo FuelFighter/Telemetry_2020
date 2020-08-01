@@ -1,0 +1,59 @@
+Removed Pin From Net: NetName=NetC10_1 Pin=C10-1
+Removed Pin From Net: NetName=5V_CAN Pin=C10-2
+Removed Pin From Net: NetName=3V3 Pin=C11-1
+Removed Pin From Net: NetName=GND Pin=C11-2
+Removed Pin From Net: NetName=NetC10_1 Pin=P6-1
+Removed Pin From Net: NetName=NetP4_1 Pin=P6-3
+Removed Pin From Net: NetName=NetP6_4 Pin=P6-4
+Removed Pin From Net: NetName=NetP6_5 Pin=P6-5
+Removed Pin From Net: NetName=5V_CAN Pin=P6-6
+Removed Pin From Net: NetName=NetC10_1 Pin=P7-1
+Removed Pin From Net: NetName=NetP6_2 Pin=P7-2
+Removed Pin From Net: NetName=NetP4_1 Pin=P7-3
+Removed Pin From Net: NetName=NetP6_4 Pin=P7-4
+Removed Pin From Net: NetName=NetP6_5 Pin=P7-5
+Removed Pin From Net: NetName=NetP6_2 Pin=R4-1
+Removed Pin From Net: NetName=NetP4_2 Pin=R4-2
+Removed Pin From Net: NetName=NetU5_16 Pin=U5-16
+Removed Pin From Net: NetName=GND Pin=U6-2
+Removed Pin From Net: NetName=GND Pin=U6-3
+Removed Pin From Net: NetName=NetU5_16 Pin=U6-4
+Removed Pin From Net: NetName=NetR10_1 Pin=U6-5
+Removed Pin From Net: NetName=NetR11_1 Pin=U6-6
+Removed Pin From Net: NetName=3V3 Pin=U6-7
+Removed Pin From Net: NetName=GND Pin=U6-8
+Removed Pin From Net: NetName=NetC10_1 Pin=U6-9
+Removed Pin From Net: NetName=NetP6_2 Pin=U6-11
+Removed Pin From Net: NetName=NetP4_1 Pin=U6-12
+Removed Pin From Net: NetName=5V_CAN Pin=U6-13
+Removed Pin From Net: NetName=NetC10_1 Pin=U6-16
+Removed Member From Class: ClassName=Telemetry_schematic Member=C10
+Removed Member From Class: ClassName=Telemetry_schematic Member=C11
+Removed Member From Class: ClassName=Telemetry_schematic Member=P4
+Removed Member From Class: ClassName=Telemetry_schematic Member=P6
+Removed Member From Class: ClassName=Telemetry_schematic Member=P7
+Removed Member From Class: ClassName=Telemetry_schematic Member=R4
+Removed Member From Class: ClassName=Telemetry_schematic Member=U6
+Change Component Footprint: Designator=P4 Old Footprint=PIN_HEADER_M_1x3 New Footprint=RJ11_Connector
+Change Component Footprint: Designator=P6 Old Footprint=RJ11_Connector New Footprint=PIN_HEADER_M_1x3
+Change Component Comment : Designator=P4 Old Comment=1x3_M New Comment=RJ11
+Change Component Comment : Designator=P6 Old Comment=RJ11 New Comment=1x3_M
+Added Pin To Net: NetName=NetP6_4 Pin=P4-3
+Added Pin To Net: NetName=NetP6_5 Pin=P4-4
+Added Pin To Net: NetName=NetU5_16 Pin=P4-5
+Added Pin To Net: NetName=5V_CAN Pin=P4-6
+Added Pin To Net: NetName=NetC10_1 Pin=P5-11
+Added Pin To Net: NetName=NetP6_4 Pin=P6-1
+Added Pin To Net: NetName=NetP4_1 Pin=P7-1
+Added Pin To Net: NetName=NetP4_2 Pin=P7-2
+Added Pin To Net: NetName=NetP6_4 Pin=P7-3
+Added Pin To Net: NetName=NetP6_5 Pin=P7-4
+Added Pin To Net: NetName=NetU5_16 Pin=P7-5
+Added Pin To Net: NetName=NetP4_2 Pin=R4-1
+Added Pin To Net: NetName=NetP6_2 Pin=R4-2
+Added Pin To Net: NetName=NetC10_1 Pin=U5-16
+Change Net Name : Old Net Name=NetC10_1 New Net Name=NetP5_11
+Change Net Name : Old Net Name=NetP6_4 New Net Name=NetP4_3
+Change Net Name : Old Net Name=NetP6_5 New Net Name=NetP4_4
+Change Net Name : Old Net Name=NetU5_16 New Net Name=NetP4_5
+Added Class: Name=Telemetry_canbus

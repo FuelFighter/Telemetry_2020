@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=GND Pin=U5-3.3V2
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P2 XT-60
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P3 XT-60

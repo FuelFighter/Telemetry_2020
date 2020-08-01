@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=NetC6_1 Pin=D2-1
+Added Component: Designator=C12(C_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1u"; VariantName = "[No Variations]"
+Added Component: Designator=R12(R_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1.2K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=NetC6_1 Pin=R12-1
+Added Pin To Net: NetName=NetC12_1 Pin=C12-1
+Added Pin To Net: NetName=NetC12_1 Pin=D2-1
+Added Pin To Net: NetName=NetC12_1 Pin=R12-2
+Added Net: Name=NetC12_1
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C12 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R12 SMD

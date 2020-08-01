@@ -1,0 +1,42 @@
+Removed Pin From Net: NetName=NetP5_14 Pin=P5-14
+Removed Pin From Net: NetName=NetU5_3 Pin=U5-3
+Removed Pin From Net: NetName=NetU5_4 Pin=U5-4
+Removed Pin From Net: NetName=NetP5_14 Pin=U5-13
+Removed Pin From Net: NetName=NetU2_13 Pin=U5-28
+Removed Pin From Net: NetName=NetU5_4 Pin=U6-5
+Removed Pin From Net: NetName=NetU5_3 Pin=U6-6
+Added Component: Designator=D3(D_LED_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D4(D_LED_0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R10(R_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470"; VariantName = "[No Variations]"
+Added Component: Designator=R11(R_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetP5_14 Pin=D3-1
+Added Pin To Net: NetName=GND Pin=D3-2
+Added Pin To Net: NetName=NetU5_3 Pin=D4-1
+Added Pin To Net: NetName=GND Pin=D4-2
+Added Pin To Net: NetName=NetP5_14 Pin=R10-2
+Added Pin To Net: NetName=NetU5_4 Pin=R11-1
+Added Pin To Net: NetName=NetU5_3 Pin=R11-2
+Added Pin To Net: NetName=NetU5_4 Pin=U5-3
+Added Pin To Net: NetName=NetU5_4 Pin=U6-6
+Change Net Name : Old Net Name=NetP5_14 New Net Name=NetD3_1
+Change Net Name : Old Net Name=NetU5_3 New Net Name=NetD4_1
+Change Net Name : Old Net Name=NetU5_4 New Net Name=NetR11_1
+Added Pin To Net: NetName=NetR10_1 Pin=R10-1
+Added Pin To Net: NetName=NetR10_1 Pin=U5-4
+Added Pin To Net: NetName=NetR10_1 Pin=U6-5
+Added Net: Name=NetR10_1
+Added Member To Class: ClassName=Telemetry_schematic Member=Component D3 LED
+Added Member To Class: ClassName=Telemetry_schematic Member=Component D4 LED
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R10 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R11 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component U3 MCP16311

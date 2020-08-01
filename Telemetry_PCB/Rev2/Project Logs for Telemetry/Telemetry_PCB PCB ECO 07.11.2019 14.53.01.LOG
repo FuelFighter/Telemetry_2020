@@ -1,0 +1,8 @@
+Removed Member From Class: ClassName=Telemetry_schematic Member=teensy_3.6?
+Added Component: Designator=3(teensy_3.6)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP2_1 Pin=P2-1
+Added Pin To Net: NetName=NetP1_2 Pin=P2-2
+Added Member To Class: ClassName=Telemetry_schematic Member=Component 3 teensy_3.6

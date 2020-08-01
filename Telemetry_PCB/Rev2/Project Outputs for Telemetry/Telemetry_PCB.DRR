@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Telemetry_PCB.PcbDoc   17.02.2020  19:41:51
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Telemetry_PCB.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      12mil (0.3mm)                                             Round             68        PTH        0.00inch (0.00mm)
+T2      35mil (0.89mm)          +/-2mil (0.05mm)                  Round             12        PTH        0.00inch (0.00mm)
+T3      35mil (0.9mm)                                             Round             20        PTH        0.00inch (0.00mm)
+T4      40mil (1.016mm)                                           Round             48        PTH        0.00inch (0.00mm)
+T5      40mil (1.02mm)                                            Round             57        PTH        0.00inch (0.00mm)
+T6      177mil (4.5mm)          +/-4mil (0.1mm)                   Round             8         PTH        0.00inch (0.00mm)
+T7      128mil (3.25mm)         +/-2mil (0.05mm)                  Round             4         NPTH       0.00inch (0.00mm)
+T8      160mil (4.064mm)                                          Round             4         NPTH       0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              221
+
+Total Processing Time (hh:mm:ss) : 00:00:00

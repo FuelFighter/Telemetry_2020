@@ -1,0 +1,26 @@
+Added Component: Designator=P9(PIN_HEADER_M_1x4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P10(PIN_HEADER_M_1x4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P11(PIN_HEADER_M_1x4)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+5 Pin=P9-1
+Added Pin To Net: NetName=GND Pin=P9-4
+Added Pin To Net: NetName=+5 Pin=P10-1
+Added Pin To Net: NetName=GND Pin=P10-4
+Added Pin To Net: NetName=+5 Pin=P11-1
+Added Pin To Net: NetName=GND Pin=P11-4
+Added Pin To Net: NetName=NetP9_2 Pin=P9-2
+Added Pin To Net: NetName=NetP9_2 Pin=P10-2
+Added Pin To Net: NetName=NetP9_2 Pin=P11-2
+Added Pin To Net: NetName=NetP9_2 Pin=U5-7
+Added Net: Name=NetP9_2
+Added Pin To Net: NetName=NetP9_3 Pin=P9-3
+Added Pin To Net: NetName=NetP9_3 Pin=P10-3
+Added Pin To Net: NetName=NetP9_3 Pin=P11-3
+Added Pin To Net: NetName=NetP9_3 Pin=U5-8
+Added Net: Name=NetP9_3
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P9 1x4_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P10 1x4_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P11 1x4_M
+Added Room: Name=Telemetry_schematic

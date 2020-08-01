@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=+3V3 Pin=C9-1
+Removed Pin From Net: NetName=+3V3 Pin=U2-2
+Removed Pin From Net: NetName=+3V3 Pin=U4-3
+Added Component: Designator=P16(PIN_HEADER_M_1x3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V3 Pin=P16-1
+Added Pin To Net: NetName=+3V3_Lin Pin=P16-3
+Added Pin To Net: NetName=+3V3_Lin Pin=U2-2
+Added Net: Name=+3V3_Lin
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=NetC9_1 Pin=P16-2
+Added Pin To Net: NetName=NetC9_1 Pin=U4-3
+Added Net: Name=NetC9_1
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P16 1x3_M

@@ -1,0 +1,25 @@
+Change Component Designator: OldDesignator=3 NewDesignator=U5
+Change component parameters: Designator = "U5"; Footprint = "teensy_3.6"; UniqueID = "\NHRVETAM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C9(C_SMD_0805_pcb)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V3 Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=NetU1_7 Pin=U5-14
+Change Net Name : Old Net Name=+24 New Net Name=NetC3_1
+Added Pin To Net: NetName=NetU4_12 Pin=U5-24
+Added Net: Name=NetU4_12
+Added Pin To Net: NetName=NetU4_13 Pin=U5-28
+Added Net: Name=NetU4_13
+Added Pin To Net: NetName=NetU4_14 Pin=U5-12
+Added Net: Name=NetU4_14
+Added Pin To Net: NetName=NetU4_15 Pin=U5-11
+Added Net: Name=NetU4_15
+Added Pin To Net: NetName=NetU4_16 Pin=U5-10
+Added Net: Name=NetU4_16
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C9 SMD
