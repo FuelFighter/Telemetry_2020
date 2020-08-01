@@ -1,0 +1,103 @@
+Removed Pin From Net: NetName=GND Pin=C3-2
+Removed Pin From Net: NetName=GND Pin=C4-2
+Removed Pin From Net: NetName=GND Pin=C6-2
+Removed Pin From Net: NetName=GND Pin=C7-2
+Removed Pin From Net: NetName=5V Pin=D1-2
+Removed Pin From Net: NetName=GND Pin=D2-2
+Removed Pin From Net: NetName=24V_Board Pin=R1-1
+Removed Pin From Net: NetName=GND Pin=R5-1
+Removed Pin From Net: NetName=24V_Board Pin=U1-4
+Removed Pin From Net: NetName=GND Pin=U1-5
+Removed Pin From Net: NetName=GND Pin=U1-8
+Removed Member From Class: ClassName=Telemetry_schematic Member=C6
+Removed Member From Class: ClassName=Telemetry_schematic Member=C7
+Removed Member From Class: ClassName=Telemetry_schematic Member=C8
+Removed Member From Class: ClassName=Telemetry_schematic Member=C9
+Removed Member From Class: ClassName=Telemetry_schematic Member=D4
+Removed Member From Class: ClassName=Telemetry_schematic Member=D5
+Removed Member From Class: ClassName=Telemetry_schematic Member=L1
+Removed Member From Class: ClassName=Telemetry_schematic Member=R10
+Removed Member From Class: ClassName=Telemetry_schematic Member=R11
+Removed Member From Class: ClassName=Telemetry_schematic Member=R12
+Removed Member From Class: ClassName=Telemetry_schematic Member=R27
+Removed Member From Class: ClassName=Telemetry_schematic Member=R28
+Change Component Footprint: Designator=U1 Old Footprint=MCP16311/2_MSOP New Footprint=TSR_0.6-4850WI
+Change Component Comment : Designator=U1 Old Comment=MCP16311 New Comment=TSR_0.6-4850WI
+Change Component Designator: OldDesignator=C1 NewDesignator=C2
+Change Component Designator: OldDesignator=C2 NewDesignator=C3
+Change Component Designator: OldDesignator=C8 NewDesignator=C4
+Change Component Designator: OldDesignator=C9 NewDesignator=C5
+Change Component Designator: OldDesignator=C10 NewDesignator=C6
+Change Component Designator: OldDesignator=D3 NewDesignator=D1
+Change Component Designator: OldDesignator=D4 NewDesignator=D2
+Change Component Designator: OldDesignator=D5 NewDesignator=D3
+Change Component Designator: OldDesignator=D6 NewDesignator=D4
+Change Component Designator: OldDesignator=D7 NewDesignator=D5
+Change Component Designator: OldDesignator=P5 NewDesignator=P4
+Change Component Designator: OldDesignator=P6 NewDesignator=P5
+Change Component Designator: OldDesignator=P7 NewDesignator=P6
+Change Component Designator: OldDesignator=P8 NewDesignator=P7
+Change Component Designator: OldDesignator=P9 NewDesignator=P8
+Change Component Designator: OldDesignator=P10 NewDesignator=P9
+Change Component Designator: OldDesignator=P11 NewDesignator=P10
+Change Component Designator: OldDesignator=P12 NewDesignator=P11
+Change Component Designator: OldDesignator=P13 NewDesignator=P12
+Change Component Designator: OldDesignator=P14 NewDesignator=P13
+Change Component Designator: OldDesignator=P15 NewDesignator=P14
+Change Component Designator: OldDesignator=R6 NewDesignator=R3
+Change Component Designator: OldDesignator=R7 NewDesignator=R5
+Change Component Designator: OldDesignator=R8 NewDesignator=R4
+Change Component Designator: OldDesignator=R9 NewDesignator=R6
+Change Component Designator: OldDesignator=R10 NewDesignator=R7
+Change Component Designator: OldDesignator=R11 NewDesignator=R8
+Change Component Designator: OldDesignator=R12 NewDesignator=R9
+Change Component Designator: OldDesignator=R13 NewDesignator=R10
+Change Component Designator: OldDesignator=R14 NewDesignator=R11
+Change Component Designator: OldDesignator=R15 NewDesignator=R12
+Change Component Designator: OldDesignator=R16 NewDesignator=R13
+Change Component Designator: OldDesignator=R17 NewDesignator=R14
+Change Component Designator: OldDesignator=R18 NewDesignator=R15
+Change Component Designator: OldDesignator=R19 NewDesignator=R16
+Change Component Designator: OldDesignator=R20 NewDesignator=R17
+Change Component Designator: OldDesignator=R21 NewDesignator=R18
+Change Component Designator: OldDesignator=R22 NewDesignator=R19
+Change Component Designator: OldDesignator=R23 NewDesignator=R20
+Change Component Designator: OldDesignator=R24 NewDesignator=R21
+Change Component Designator: OldDesignator=R25 NewDesignator=R22
+Change Component Designator: OldDesignator=R26 NewDesignator=R23
+Change Component Designator: OldDesignator=R27 NewDesignator=R1
+Change Component Designator: OldDesignator=R28 NewDesignator=R2
+Change component parameters: Designator = "U1" ("U1"); Footprint = "MCP16311/2_MSOP"; UniqueID = "\SOZHEZTQ" ("\SOZHEZTQ")
+Added Component: Designator=C1(C_SMD_0805_pcb)
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1u"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=24V_Board Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=5V Pin=U1-3
+Change Net Name : Old Net Name=NetD3_1 New Net Name=NetD1_1
+Change Net Name : Old Net Name=NetD4_1 New Net Name=NetD2_1
+Change Net Name : Old Net Name=NetD5_1 New Net Name=NetD3_1
+Change Net Name : Old Net Name=NetD6_1 New Net Name=NetD4_1
+Change Net Name : Old Net Name=NetD7_1 New Net Name=NetD5_1
+Change Net Name : Old Net Name=NetP11_1 New Net Name=NetP10_1
+Change Net Name : Old Net Name=NetP11_2 New Net Name=NetP10_2
+Change Net Name : Old Net Name=NetP11_3 New Net Name=NetP10_3
+Change Net Name : Old Net Name=NetP12_2 New Net Name=NetP11_2
+Change Net Name : Old Net Name=NetP14_1 New Net Name=NetP13_1
+Change Net Name : Old Net Name=NetP15_1 New Net Name=NetP14_1
+Change Net Name : Old Net Name=NetR7_1 New Net Name=NetR5_1
+Change Net Name : Old Net Name=NetR10_2 New Net Name=NetR7_2
+Change Net Name : Old Net Name=NetR11_2 New Net Name=NetR8_2
+Change Net Name : Old Net Name=NetR12_2 New Net Name=NetR9_2
+Change Net Name : Old Net Name=NetR14_2 New Net Name=NetR11_2
+Change Net Name : Old Net Name=NetR15_1 New Net Name=NetR12_1
+Change Net Name : Old Net Name=NetR16_1 New Net Name=NetR13_1
+Change Net Name : Old Net Name=NetR17_1 New Net Name=NetR14_1
+Change Net Name : Old Net Name=NetR19_1 New Net Name=NetR16_1
+Change Net Name : Old Net Name=NetR19_2 New Net Name=NetR16_2
+Change Net Name : Old Net Name=NetR23_1 New Net Name=NetR20_1
+Change Net Name : Old Net Name=NetR25_1 New Net Name=NetR22_1
+Change Net Name : Old Net Name=NetR25_2 New Net Name=NetR22_2
