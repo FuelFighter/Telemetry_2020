@@ -1,0 +1,726 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">01.08.2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">15:33:33</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc" class="file"><acronym title="E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc">E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">130</td></tr>
+</table>
+</td>
+</table><a name="IDUYTYZFOHPSORGZZVK5UL1W1H2HK4QML2LG04CYOJH21FA44KCVB"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDP0CMYQOUHTLHPICID24WZ54RNJGWDZJQ2V1R5LE4DARGF0ZXOI4I">Clearance Constraint (Gap=0.178mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPCHOD5GKWMHSE44YHFILO4XYYC2CLQPFRAKLI5CVPJFOEEGEEROH">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLDBWK4HAL5W0GVULKCL4LBE5P14UN1VXZ4FSYL2TOT3VPXI3O2">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">86</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3J5X42YWEECTODCFAKDD40RXEDS3FFGGZR2GADBKZR3T4ZBVIBXJ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID55ILGJI0JDZGDBHXGBYZXJHOECOR4I5GJJR3FHGFA03A4NSQ3P2L">Width Constraint (Min=0.254mm) (Max=7.62mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKIGTUPB0NCTNCM1EMRLXPI4ZBKGGQPYFPBALH2NKCYS2OKGJLJMP">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.508mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKGV5H2PZSHX0JB5N3SU4VUJNCIMW3MRTXVETSOYWOXIY5O0QM2O">Hole Size Constraint (Min=0.025mm) (Max=25.4mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDP14PWOELWMOVNPNVY5ZUEXRHUJFXPNWU1KQS5PFB3PQJLRONOK1I">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHOJXF03YMSWDKNFNIYKBBVL4SFCJDYOJ23LTFSLGSUDUMK0VXPLO">Minimum Solder Mask Sliver (Gap=0.076mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJZEYR1KZORTSGBOSCTA030TP0HUJAYPUG1RETBCVZBXQCKTIOX3">Silk To Solder Mask (Clearance=0.178mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRA1JAVAPM3ILHC1LCA3Y20MNJGGMEJH01FXFLPBFUBNIINZXMV1P">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUJW0ISQGBRBQFPJ1N31WXYWYSBAEILIG5BM45EL5M34IOJ1KVFDD">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">43</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDNICUIPEV02MIUSV0OX131JQTHYGAP5AIT15IQ0ASN2VPPB33N">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">130</td>
+</tr>
+</table><br><a name="IDLDBWK4HAL5W0GVULKCL4LBE5P14UN1VXZ4FSYL2TOT3VPXI3O2"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3476.039mil|Location2.X=3635.614mil|Location1.Y=3689.268mil|Location2.Y=4063.409mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3476.039mil|Location2.X=3635.614mil|Location1.Y=3689.268mil|Location2.Y=4063.409mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R22-1(30.75mm,36.925mm) on Top Layer And Pad C10-2(33.25mm,28.675mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3572.496mil|Location2.X=3787.11mil|Location1.Y=3689.268mil|Location2.Y=3889.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3572.496mil|Location2.X=3787.11mil|Location1.Y=3689.268mil|Location2.Y=3889.945mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C10-2(33.25mm,28.675mm) on Top Layer And Pad U2-GND(37.048mm,32.294mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3572.496mil|Location2.X=3665.535mil|Location1.Y=3516.039mil|Location2.Y=3738.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3572.496mil|Location2.X=3665.535mil|Location1.Y=3516.039mil|Location2.Y=3738.606mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C10-2(33.25mm,28.675mm) on Top Layer And Pad U4-2(34.385mm,24.575mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6062.654mil|Location2.X=6861.992mil|Location1.Y=4943.205mil|Location2.Y=5014.197mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6062.654mil|Location2.X=6861.992mil|Location1.Y=4943.205mil|Location2.Y=5014.197mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C2-1(97.4mm,60.8mm) on Top Layer And Pad C1-1(114.3mm,60.8mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6338.244mil|Location2.X=6861.992mil|Location1.Y=4943.205mil|Location2.Y=5734.669mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6338.244mil|Location2.X=6861.992mil|Location1.Y=4943.205mil|Location2.Y=5734.669mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P1-2(106mm,76.7mm) on Multi-Layer And Pad C1-1(114.3mm,60.8mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6728.008mil|Location2.X=6861.992mil|Location1.Y=4659.803mil|Location2.Y=5014.197mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6728.008mil|Location2.X=6861.992mil|Location1.Y=4659.803mil|Location2.Y=5014.197mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C1-1(114.3mm,60.8mm) on Top Layer And Via (115mm,53mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5399.622mil|Location2.X=6196.638mil|Location1.Y=4943.205mil|Location2.Y=5094.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5399.622mil|Location2.X=6196.638mil|Location1.Y=4943.205mil|Location2.Y=5094.394mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R9-1(79.609mm,63.112mm) on Top Layer And Pad C2-1(97.4mm,60.8mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5294.622mil|Location2.X=6397.425mil|Location1.Y=4943.205mil|Location2.Y=5094.393mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5294.622mil|Location2.X=6397.425mil|Location1.Y=4943.205mil|Location2.Y=5094.393mil|Absolute=True">Un-Routed Net Constraint: Net 24V_Board Between Pad R7-2(76.942mm,63.112mm) on Top Layer And Pad C2-2(102.5mm,60.8mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6692.638mil|Location2.X=6802.937mil|Location1.Y=4260.134mil|Location2.Y=4309.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6692.638mil|Location2.X=6802.937mil|Location1.Y=4260.134mil|Location2.Y=4309.472mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (112mm,43mm) from Top Layer to Bottom Layer And Pad C3-2(113.7mm,43.175mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6785.095mil|Location2.X=6962.07mil|Location1.Y=3594.78mil|Location2.Y=3645.93mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6785.095mil|Location2.X=6962.07mil|Location1.Y=3594.78mil|Location2.Y=3645.93mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C6-2(114.85mm,26.275mm) on Top Layer And Pad C4-2(117.742mm,26.321mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6613.898mil|Location2.X=6848.212mil|Location1.Y=3594.78mil|Location2.Y=3777.913mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6613.898mil|Location2.X=6848.212mil|Location1.Y=3594.78mil|Location2.Y=3777.913mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (110mm,30mm) from Top Layer to Bottom Layer And Pad C6-2(114.85mm,26.275mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6436.669mil|Location2.X=6718.291mil|Location1.Y=3288.677mil|Location2.Y=3541.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6436.669mil|Location2.X=6718.291mil|Location1.Y=3288.677mil|Location2.Y=3541.756mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C7-2(106mm,23.675mm) on Top Layer And Pad D2-2(111.7mm,18.6mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6144.346mil|Location2.X=6499.787mil|Location1.Y=3153.835mil|Location2.Y=3541.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6144.346mil|Location2.X=6499.787mil|Location1.Y=3153.835mil|Location2.Y=3541.756mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D5-2(98.5mm,15.1mm) on Top Layer And Pad C7-2(106mm,23.675mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6436.669mil|Location2.X=6558.779mil|Location1.Y=3492.417mil|Location2.Y=3777.913mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6436.669mil|Location2.X=6558.779mil|Location1.Y=3492.417mil|Location2.Y=3777.913mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C7-2(106mm,23.675mm) on Top Layer And Via (108mm,30mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3651.693mil|Location2.X=3953.582mil|Location1.Y=4848.189mil|Location2.Y=4856.418mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3651.693mil|Location2.X=3953.582mil|Location1.Y=4848.189mil|Location2.Y=4856.418mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C8-1(37mm,60.025mm) on Top Layer And Track (39.588mm,47.534mm)(39.588mm,55.154mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4897.495mil|Location2.X=4986.528mil|Location1.Y=2643.44mil|Location2.Y=2890.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4897.495mil|Location2.X=4986.528mil|Location1.Y=2643.44mil|Location2.Y=2890.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C9-2(66.73mm,2.286mm) on Top Layer And Pad U3-2(67.513mm,6.909mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6144.346mil|Location2.X=6201.559mil|Location1.Y=2897.929mil|Location2.Y=3079.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6144.346mil|Location2.X=6201.559mil|Location1.Y=2897.929mil|Location2.Y=3079.157mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D3-2(98.5mm,8.6mm) on Top Layer And Pad D4-2(98.5mm,11.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6144.346mil|Location2.X=6201.559mil|Location1.Y=3027.85mil|Location2.Y=3205.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6144.346mil|Location2.X=6201.559mil|Location1.Y=3027.85mil|Location2.Y=3205.142mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D4-2(98.5mm,11.9mm) on Top Layer And Pad D5-2(98.5mm,15.1mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4107.929mil|Location2.X=4304.905mil|Location1.Y=3322.142mil|Location2.Y=3379.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4107.929mil|Location2.X=4304.905mil|Location1.Y=3322.142mil|Location2.Y=3379.354mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D7-2(46.7mm,19.45mm) on Top Layer And Pad D6-2(50.4mm,19.45mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4253.599mil|Location2.X=4986.528mil|Location1.Y=2823.472mil|Location2.Y=3379.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4253.599mil|Location2.X=4986.528mil|Location1.Y=2823.472mil|Location2.Y=3379.354mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D6-2(50.4mm,19.45mm) on Top Layer And Pad U3-2(67.513mm,6.909mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4015.472mil|Location2.X=4159.236mil|Location1.Y=3322.142mil|Location2.Y=3502.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4015.472mil|Location2.X=4159.236mil|Location1.Y=3322.142mil|Location2.Y=3502.323mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (44mm,23mm) from Top Layer to Bottom Layer And Pad D7-2(46.7mm,19.45mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2551.472mil|Location2.X=2758.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2551.472mil|Location2.X=2758.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P10-1(7.366mm,52.578mm) on Multi-Layer And Pad P9-1(10.922mm,52.578mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.638mil|Location2.X=2505.693mil|Location1.Y=3555.41mil|Location2.Y=4193.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.638mil|Location2.X=2505.693mil|Location1.Y=3555.41mil|Location2.Y=4193.331mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P15-2(4.5mm,25.5mm) on Multi-Layer And Pad P14-2(4.5mm,40mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.638mil|Location2.X=2944.606mil|Location1.Y=3555.41mil|Location2.Y=3667.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.638mil|Location2.X=2944.606mil|Location1.Y=3555.41mil|Location2.Y=3667.677mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P15-2(4.5mm,25.5mm) on Multi-Layer And Via (16.2mm,27.2mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4637.457mil|Location2.X=4923.016mil|Location1.Y=5220.764mil|Location2.Y=5736.638mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4637.457mil|Location2.X=4923.016mil|Location1.Y=5220.764mil|Location2.Y=5736.638mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad P2-1(60.35mm,79.2mm) on Multi-Layer And Pad R27-1(66mm,67.575mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4735.882mil|Location2.X=4923.016mil|Location1.Y=5293.598mil|Location2.Y=5732.701mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4735.882mil|Location2.X=4923.016mil|Location1.Y=5293.598mil|Location2.Y=5732.701mil|Absolute=True">Un-Routed Net Constraint: Net NetP2_2 Between Pad P2-2(62.85mm,79.1mm) on Multi-Layer And Pad R27-2(66mm,69.425mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4834.307mil|Location2.X=4987.11mil|Location1.Y=4422.89mil|Location2.Y=5732.701mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4834.307mil|Location2.X=4987.11mil|Location1.Y=4422.89mil|Location2.Y=5732.701mil|Absolute=True">Un-Routed Net Constraint: Net NetP2_3 Between Pad P2-3(65.35mm,79.1mm) on Multi-Layer And Pad U2-14(67.528mm,47.534mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4932.732mil|Location2.X=5041.126mil|Location1.Y=5220.764mil|Location2.Y=5732.701mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4932.732mil|Location2.X=5041.126mil|Location1.Y=5220.764mil|Location2.Y=5732.701mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P2-4(67.85mm,79.1mm) on Multi-Layer And Pad R28-1(69mm,67.575mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5120.055mil|Location2.X=5458.803mil|Location1.Y=4722.89mil|Location2.Y=5094.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5120.055mil|Location2.X=5458.803mil|Location1.Y=4722.89mil|Location2.Y=5094.394mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P3-15(72.608mm,55.154mm) on Multi-Layer And Pad R9-1(79.609mm,63.112mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3111.472mil|Location2.X=3318.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3111.472mil|Location2.X=3318.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P6-1(21.59mm,52.578mm) on Multi-Layer And Pad P5-1(25.146mm,52.578mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3185mil|Location2.X=3953.582mil|Location1.Y=4555mil|Location2.Y=4856.418mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3185mil|Location2.X=3953.582mil|Location1.Y=4555mil|Location2.Y=4856.418mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P5-1(25.146mm,52.578mm) on Multi-Layer And Track (39.588mm,47.534mm)(39.588mm,55.154mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2971.472mil|Location2.X=3178.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2971.472mil|Location2.X=3178.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P7-1(18.034mm,52.578mm) on Multi-Layer And Pad P6-1(21.59mm,52.578mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2831.472mil|Location2.X=3038.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2831.472mil|Location2.X=3038.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P8-1(14.478mm,52.578mm) on Multi-Layer And Pad P7-1(18.034mm,52.578mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2971.472mil|Location2.X=3040.142mil|Location1.Y=4321.158mil|Location2.Y=4688.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2971.472mil|Location2.X=3040.142mil|Location1.Y=4321.158mil|Location2.Y=4688.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P7-1(18.034mm,52.578mm) on Multi-Layer And Pad U5-2(18.325mm,44.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691.472mil|Location2.X=2898.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2691.472mil|Location2.X=2898.528mil|Location1.Y=4621.472mil|Location2.Y=4688.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad P9-1(10.922mm,52.578mm) on Multi-Layer And Pad P8-1(14.478mm,52.578mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.551mil|Location2.X=3881.677mil|Location1.Y=3124.37mil|Location2.Y=3352.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.551mil|Location2.X=3881.677mil|Location1.Y=3124.37mil|Location2.Y=3352.78mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (28mm,14mm) from Top Layer to Bottom Layer And Pad R14-1(39.675mm,18.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3832.339mil|Location2.X=3881.677mil|Location1.Y=3293.599mil|Location2.Y=3482.638mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3832.339mil|Location2.X=3881.677mil|Location1.Y=3293.599mil|Location2.Y=3482.638mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R14-1(39.675mm,18.75mm) on Top Layer And Via (40mm,22.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2991.787mil|Location2.X=3041.126mil|Location1.Y=4110.528mil|Location2.Y=4352.779mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2991.787mil|Location2.X=3041.126mil|Location1.Y=4110.528mil|Location2.Y=4352.779mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R21-1(18.325mm,39.5mm) on Top Layer And Pad U5-2(18.325mm,44.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2920.984mil|Location2.X=3041.126mil|Location1.Y=3644.055mil|Location2.Y=4169.709mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2920.984mil|Location2.X=3041.126mil|Location1.Y=3644.055mil|Location2.Y=4169.709mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (16.2mm,27.2mm) from Top Layer to Bottom Layer And Pad R21-1(18.325mm,39.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2980.961mil|Location2.X=3046.874mil|Location1.Y=3367.181mil|Location2.Y=3616.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2980.961mil|Location2.X=3046.874mil|Location1.Y=3367.181mil|Location2.Y=3616.559mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U6-2(18.025mm,25.8mm) on Top Layer And Pad R26-2(18.471mm,20.619mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2997.535mil|Location2.X=3172.953mil|Location1.Y=3124.37mil|Location2.Y=3426.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2997.535mil|Location2.X=3172.953mil|Location1.Y=3124.37mil|Location2.Y=3426.362mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R26-2(18.471mm,20.619mm) on Top Layer And Via (22mm,14mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4135mil|Location2.X=4993.425mil|Location1.Y=4775mil|Location2.Y=5345.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4135mil|Location2.X=4993.425mil|Location1.Y=4775mil|Location2.Y=5345.433mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Track (40.132mm,58.166mm)(49.276mm,58.166mm) on Bottom Layer And Pad R27-1(66mm,67.575mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4863.835mil|Location2.X=5041.126mil|Location1.Y=5293.598mil|Location2.Y=5342.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4863.835mil|Location2.X=5041.126mil|Location1.Y=5293.598mil|Location2.Y=5342.937mil|Absolute=True">Un-Routed Net Constraint: Net NetP2_2 Between Pad R27-2(66mm,69.425mm) on Top Layer And Pad R28-2(69mm,69.425mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4487.696mil|Location2.X=4993.425mil|Location1.Y=4750.029mil|Location2.Y=5418.268mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4487.696mil|Location2.X=4993.425mil|Location1.Y=4750.029mil|Location2.Y=5418.268mil|Absolute=True">Un-Routed Net Constraint: Net NetP2_2 Between Track (58.234mm,57.532mm)(64.642mm,57.532mm) on Top Layer And Pad R27-2(66mm,69.425mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4981.945mil|Location2.X=5458.803mil|Location1.Y=5045.055mil|Location2.Y=5270.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4981.945mil|Location2.X=5458.803mil|Location1.Y=5045.055mil|Location2.Y=5270.102mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R28-1(69mm,67.575mm) on Top Layer And Pad R9-1(79.609mm,63.112mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.748mil|Location2.X=6856.087mil|Location1.Y=4567.221mil|Location2.Y=4683.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6806.748mil|Location2.X=6856.087mil|Location1.Y=4567.221mil|Location2.Y=4683.425mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (115mm,53mm) from Top Layer to Bottom Layer And Pad R5-1(115.225mm,51.1mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4753.582mil|Location2.X=5424.213mil|Location1.Y=4366.418mil|Location2.Y=5096.889mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4753.582mil|Location2.X=5424.213mil|Location1.Y=4366.418mil|Location2.Y=5096.889mil|Absolute=True">Un-Routed Net Constraint: Net NetR7_1 Between Track (64.988mm,47.534mm)(64.988mm,47.788mm) on Top Layer And Pad R7-1(76.942mm,61.262mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6585.354mil|Location2.X=6609.961mil|Location1.Y=4235.591mil|Location2.Y=4333.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6585.354mil|Location2.X=6609.961mil|Location1.Y=4235.591mil|Location2.Y=4333.032mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-5(109.25mm,42.7mm) on Top Layer And Via (109.3mm,44.1mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6662.126mil|Location2.X=6716.26mil|Location1.Y=4235.591mil|Location2.Y=4296.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6662.126mil|Location2.X=6716.26mil|Location1.Y=4235.591mil|Location2.Y=4296.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-8(111.2mm,42.7mm) on Top Layer And Via (112mm,43mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3631.945mil|Location2.X=3881.614mil|Location1.Y=3459.016mil|Location2.Y=3589mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3631.945mil|Location2.X=3881.614mil|Location1.Y=3459.016mil|Location2.Y=3589mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U4-2(34.385mm,24.575mm) on Top Layer And Via (40mm,22.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2832.795mil|Location2.X=3097.835mil|Location1.Y=3555.866mil|Location2.Y=3707.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2832.795mil|Location2.X=3097.835mil|Location1.Y=3555.866mil|Location2.Y=3707.559mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (16.2mm,27.2mm) from Top Layer to Bottom Layer And Track (17.852mm,25.973mm)(18.025mm,25.8mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6456.417mil|Location2.X=6519.409mil|Location1.Y=4029.882mil|Location2.Y=4053.504mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6456.417mil|Location2.X=6519.409mil|Location1.Y=4029.882mil|Location2.Y=4053.504mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (106mm,37mm) from Top Layer to Bottom Layer And Via (107mm,37mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6495.787mil|Location2.X=6558.779mil|Location1.Y=3754.291mil|Location2.Y=4053.504mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6495.787mil|Location2.X=6558.779mil|Location1.Y=3754.291mil|Location2.Y=4053.504mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (107mm,37mm) from Top Layer to Bottom Layer And Via (108mm,30mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6495.787mil|Location2.X=6755.63mil|Location1.Y=4029.882mil|Location2.Y=4210.984mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6495.787mil|Location2.X=6755.63mil|Location1.Y=4029.882mil|Location2.Y=4210.984mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (107mm,37mm) from Top Layer to Bottom Layer And Via (113mm,41mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6535.158mil|Location2.X=6598.15mil|Location1.Y=3754.291mil|Location2.Y=3777.913mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6535.158mil|Location2.X=6598.15mil|Location1.Y=3754.291mil|Location2.Y=3777.913mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (108mm,30mm) from Top Layer to Bottom Layer And Via (109mm,30mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6586.339mil|Location2.X=6609.961mil|Location1.Y=4309.409mil|Location2.Y=4388.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6586.339mil|Location2.X=6609.961mil|Location1.Y=4309.409mil|Location2.Y=4388.15mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (109.3mm,44.1mm) from Top Layer to Bottom Layer And Via (109.3mm,45.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6586.339mil|Location2.X=6649.331mil|Location1.Y=4340.905mil|Location2.Y=4388.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6586.339mil|Location2.X=6649.331mil|Location1.Y=4340.905mil|Location2.Y=4388.15mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (109.3mm,45.5mm) from Top Layer to Bottom Layer And Via (110.3mm,44.9mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6574.528mil|Location2.X=6637.52mil|Location1.Y=3754.291mil|Location2.Y=3777.913mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6574.528mil|Location2.X=6637.52mil|Location1.Y=3754.291mil|Location2.Y=3777.913mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (109mm,30mm) from Top Layer to Bottom Layer And Via (110mm,30mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6625.709mil|Location2.X=6688.701mil|Location1.Y=4313.346mil|Location2.Y=4364.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6625.709mil|Location2.X=6688.701mil|Location1.Y=4313.346mil|Location2.Y=4364.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (110.3mm,44.9mm) from Top Layer to Bottom Layer And Via (111.3mm,44.2mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6649.331mil|Location2.X=6724.134mil|Location1.Y=4511.181mil|Location2.Y=4608.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6649.331mil|Location2.X=6724.134mil|Location1.Y=4511.181mil|Location2.Y=4608.622mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (110.9mm,49.225mm) from Top Layer to Bottom Layer And Via (112.2mm,51.1mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6649.331mil|Location2.X=6716.26mil|Location1.Y=4423.583mil|Location2.Y=4534.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6649.331mil|Location2.X=6716.26mil|Location1.Y=4423.583mil|Location2.Y=4534.803mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (110.9mm,49.225mm) from Top Layer to Bottom Layer And Via (112mm,47mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6665.079mil|Location2.X=6735.945mil|Location1.Y=4313.346mil|Location2.Y=4417.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6665.079mil|Location2.X=6735.945mil|Location1.Y=4313.346mil|Location2.Y=4417.677mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (111.3mm,44.2mm) from Top Layer to Bottom Layer And Via (112.5mm,46.25mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6665.079mil|Location2.X=6716.26mil|Location1.Y=4266.102mil|Location2.Y=4336.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6665.079mil|Location2.X=6716.26mil|Location1.Y=4266.102mil|Location2.Y=4336.968mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (111.3mm,44.2mm) from Top Layer to Bottom Layer And Via (112mm,43mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6653.268mil|Location2.X=6724.134mil|Location1.Y=4585mil|Location2.Y=4683.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6653.268mil|Location2.X=6724.134mil|Location1.Y=4585mil|Location2.Y=4683.425mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (111mm,53mm) from Top Layer to Bottom Layer And Via (112.2mm,51.1mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6653.268mil|Location2.X=6834.37mil|Location1.Y=4659.803mil|Location2.Y=4683.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6653.268mil|Location2.X=6834.37mil|Location1.Y=4659.803mil|Location2.Y=4683.425mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (111mm,53mm) from Top Layer to Bottom Layer And Via (115mm,53mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6692.638mil|Location2.X=6735.945mil|Location1.Y=4394.055mil|Location2.Y=4447.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6692.638mil|Location2.X=6735.945mil|Location1.Y=4394.055mil|Location2.Y=4447.205mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (112mm,47mm) from Top Layer to Bottom Layer And Via (112.5mm,46.25mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6712.323mil|Location2.X=6775.315mil|Location1.Y=4392.087mil|Location2.Y=4417.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6712.323mil|Location2.X=6775.315mil|Location1.Y=4392.087mil|Location2.Y=4417.677mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (112.5mm,46.25mm) from Top Layer to Bottom Layer And Via (113.5mm,46.2mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6692.638mil|Location2.X=6755.63mil|Location1.Y=4187.362mil|Location2.Y=4289.724mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6692.638mil|Location2.X=6755.63mil|Location1.Y=4187.362mil|Location2.Y=4289.724mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (112mm,43mm) from Top Layer to Bottom Layer And Via (113mm,41mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6692.638mil|Location2.X=6755.63mil|Location1.Y=4423.583mil|Location2.Y=4447.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6692.638mil|Location2.X=6755.63mil|Location1.Y=4423.583mil|Location2.Y=4447.205mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (112mm,47mm) from Top Layer to Bottom Layer And Via (113mm,47mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6732.008mil|Location2.X=6795mil|Location1.Y=4187.362mil|Location2.Y=4210.984mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6732.008mil|Location2.X=6795mil|Location1.Y=4187.362mil|Location2.Y=4210.984mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (113mm,41mm) from Top Layer to Bottom Layer And Via (114mm,41mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6732.008mil|Location2.X=6795mil|Location1.Y=4423.583mil|Location2.Y=4447.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6732.008mil|Location2.X=6795mil|Location1.Y=4423.583mil|Location2.Y=4447.205mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (113mm,47mm) from Top Layer to Bottom Layer And Via (114mm,47mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6771.378mil|Location2.X=6913.11mil|Location1.Y=4108.622mil|Location2.Y=4210.984mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6771.378mil|Location2.X=6913.11mil|Location1.Y=4108.622mil|Location2.Y=4210.984mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (114mm,41mm) from Top Layer to Bottom Layer And Via (117mm,39mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6771.378mil|Location2.X=6913.11mil|Location1.Y=4384.213mil|Location2.Y=4447.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6771.378mil|Location2.X=6913.11mil|Location1.Y=4384.213mil|Location2.Y=4447.205mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (114mm,47mm) from Top Layer to Bottom Layer And Via (117mm,46mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6810.748mil|Location2.X=6952.48mil|Location1.Y=4659.803mil|Location2.Y=4683.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6810.748mil|Location2.X=6952.48mil|Location1.Y=4659.803mil|Location2.Y=4683.425mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (115mm,53mm) from Top Layer to Bottom Layer And Via (118mm,53mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3149.331mil|Location2.X=3201.496mil|Location1.Y=2996.417mil|Location2.Y=3147.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3149.331mil|Location2.X=3201.496mil|Location1.Y=2996.417mil|Location2.Y=3147.992mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (22mm,14mm) from Top Layer to Bottom Layer And Via (22.725mm,10.75mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3177.874mil|Location2.X=3255.63mil|Location1.Y=2996.417mil|Location2.Y=3020.039mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3177.874mil|Location2.X=3255.63mil|Location1.Y=2996.417mil|Location2.Y=3020.039mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (22.725mm,10.75mm) from Top Layer to Bottom Layer And Via (24.1mm,10.75mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3149.331mil|Location2.X=3291.063mil|Location1.Y=3124.37mil|Location2.Y=3147.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3149.331mil|Location2.X=3291.063mil|Location1.Y=3124.37mil|Location2.Y=3147.992mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (22mm,14mm) from Top Layer to Bottom Layer And Via (25mm,14mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3267.441mil|Location2.X=3409.173mil|Location1.Y=3124.37mil|Location2.Y=3147.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3267.441mil|Location2.X=3409.173mil|Location1.Y=3124.37mil|Location2.Y=3147.992mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (25mm,14mm) from Top Layer to Bottom Layer And Via (28mm,14mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.551mil|Location2.X=3438.701mil|Location1.Y=3015.118mil|Location2.Y=3147.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.551mil|Location2.X=3438.701mil|Location1.Y=3015.118mil|Location2.Y=3147.992mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (28mm,14mm) from Top Layer to Bottom Layer And Via (28.75mm,11.225mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3415.079mil|Location2.X=3505.63mil|Location1.Y=3015.118mil|Location2.Y=3040.709mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3415.079mil|Location2.X=3505.63mil|Location1.Y=3015.118mil|Location2.Y=3040.709mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (28.75mm,11.225mm) from Top Layer to Bottom Layer And Via (30.45mm,11.275mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3857.992mil|Location2.X=3936.732mil|Location1.Y=3459.016mil|Location2.Y=3482.638mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3857.992mil|Location2.X=3936.732mil|Location1.Y=3459.016mil|Location2.Y=3482.638mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (40mm,22.5mm) from Top Layer to Bottom Layer And Via (41.4mm,22.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3913.11mil|Location2.X=3940.669mil|Location1.Y=3459.016mil|Location2.Y=3640.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3913.11mil|Location2.X=3940.669mil|Location1.Y=3459.016mil|Location2.Y=3640.118mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (41.4mm,22.5mm) from Top Layer to Bottom Layer And Via (41.5mm,26.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3913.11mil|Location2.X=3980.039mil|Location1.Y=3459.016mil|Location2.Y=3502.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3913.11mil|Location2.X=3980.039mil|Location1.Y=3459.016mil|Location2.Y=3502.323mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (41.4mm,22.5mm) from Top Layer to Bottom Layer And Via (42.5mm,23mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3917.047mil|Location2.X=3999.724mil|Location1.Y=3616.496mil|Location2.Y=3699.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3917.047mil|Location2.X=3999.724mil|Location1.Y=3616.496mil|Location2.Y=3699.173mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (41.5mm,26.5mm) from Top Layer to Bottom Layer And Via (43mm,28mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3956.417mil|Location2.X=4039.095mil|Location1.Y=3478.701mil|Location2.Y=3502.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3956.417mil|Location2.X=4039.095mil|Location1.Y=3478.701mil|Location2.Y=3502.323mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (42.5mm,23mm) from Top Layer to Bottom Layer And Via (44mm,23mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3976.102mil|Location2.X=4058.78mil|Location1.Y=3675.551mil|Location2.Y=3758.228mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3976.102mil|Location2.X=4058.78mil|Location1.Y=3675.551mil|Location2.Y=3758.228mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (43mm,28mm) from Top Layer to Bottom Layer And Via (44.5mm,29.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDRA1JAVAPM3ILHC1LCA3Y20MNJGGMEJH01FXFLPBFUBNIINZXMV1P"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4982.128mil|Location2.X=4989.794mil|Location1.Y=5435.498mil|Location2.Y=5443.164mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4982.128mil|Location2.X=4989.794mil|Location1.Y=5435.498mil|Location2.Y=5443.164mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "R27" (65.327mm,70.977mm) on Top Overlay And Text "R28" (68.327mm,70.977mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDUJW0ISQGBRBQFPJ1N31WXYWYSBAEILIG5BM45EL5M34IOJ1KVFDD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4226.5mil|Location2.X=4250.089mil|Location1.Y=4866.5mil|Location2.Y=4900.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4226.5mil|Location2.X=4250.089mil|Location1.Y=4866.5mil|Location2.Y=4900.699mil|Absolute=True">Net Antennae: Track (40.132mm,58.166mm)(49.276mm,58.166mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4579.196mil|Location2.X=4602.784mil|Location1.Y=4841.529mil|Location2.Y=4875.728mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4579.196mil|Location2.X=4602.784mil|Location1.Y=4841.529mil|Location2.Y=4875.728mil|Absolute=True">Net Antennae: Track (58.234mm,57.532mm)(64.642mm,57.532mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.5mil|Location2.X=4919.089mil|Location1.Y=4497.5mil|Location2.Y=4531.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.5mil|Location2.X=4919.089mil|Location1.Y=4497.5mil|Location2.Y=4531.699mil|Absolute=True">Net Antennae: Track (66.269mm,48.793mm)(66.269mm,55.905mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5418.713mil|Location2.X=5442.301mil|Location1.Y=4925.39mil|Location2.Y=4959.589mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5418.713mil|Location2.X=5442.301mil|Location1.Y=4925.39mil|Location2.Y=4959.589mil|Absolute=True">Net Antennae: Track (79.558mm,59.662mm)(79.558mm,61.251mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6452.917mil|Location2.X=6491.333mil|Location1.Y=4026.382mil|Location2.Y=4085.135mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6452.917mil|Location2.X=6491.333mil|Location1.Y=4026.382mil|Location2.Y=4085.135mil|Absolute=True">Net Antennae: Via (106mm,37mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6492.287mil|Location2.X=6530.703mil|Location1.Y=4026.382mil|Location2.Y=4085.135mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6492.287mil|Location2.X=6530.703mil|Location1.Y=4026.382mil|Location2.Y=4085.135mil|Absolute=True">Net Antennae: Via (107mm,37mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6531.658mil|Location2.X=6570.073mil|Location1.Y=3750.791mil|Location2.Y=3809.544mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6531.658mil|Location2.X=6570.073mil|Location1.Y=3750.791mil|Location2.Y=3809.544mil|Absolute=True">Net Antennae: Via (108mm,30mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.839mil|Location2.X=6621.255mil|Location1.Y=4305.909mil|Location2.Y=4364.663mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.839mil|Location2.X=6621.255mil|Location1.Y=4305.909mil|Location2.Y=4364.663mil|Absolute=True">Net Antennae: Via (109.3mm,44.1mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.839mil|Location2.X=6621.255mil|Location1.Y=4361.028mil|Location2.Y=4419.781mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.839mil|Location2.X=6621.255mil|Location1.Y=4361.028mil|Location2.Y=4419.781mil|Absolute=True">Net Antennae: Via (109.3mm,45.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6571.028mil|Location2.X=6609.444mil|Location1.Y=3750.791mil|Location2.Y=3809.544mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6571.028mil|Location2.X=6609.444mil|Location1.Y=3750.791mil|Location2.Y=3809.544mil|Absolute=True">Net Antennae: Via (109mm,30mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6622.209mil|Location2.X=6660.625mil|Location1.Y=4337.405mil|Location2.Y=4396.158mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6622.209mil|Location2.X=6660.625mil|Location1.Y=4337.405mil|Location2.Y=4396.158mil|Absolute=True">Net Antennae: Via (110.3mm,44.9mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6645.831mil|Location2.X=6684.247mil|Location1.Y=4507.681mil|Location2.Y=4566.434mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6645.831mil|Location2.X=6684.247mil|Location1.Y=4507.681mil|Location2.Y=4566.434mil|Absolute=True">Net Antennae: Via (110.9mm,49.225mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6610.398mil|Location2.X=6648.814mil|Location1.Y=3750.791mil|Location2.Y=3809.544mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6610.398mil|Location2.X=6648.814mil|Location1.Y=3750.791mil|Location2.Y=3809.544mil|Absolute=True">Net Antennae: Via (110mm,30mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6661.579mil|Location2.X=6699.995mil|Location1.Y=4309.846mil|Location2.Y=4368.6mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6661.579mil|Location2.X=6699.995mil|Location1.Y=4309.846mil|Location2.Y=4368.6mil|Absolute=True">Net Antennae: Via (111.3mm,44.2mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6649.768mil|Location2.X=6688.184mil|Location1.Y=4656.303mil|Location2.Y=4715.056mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6649.768mil|Location2.X=6688.184mil|Location1.Y=4656.303mil|Location2.Y=4715.056mil|Absolute=True">Net Antennae: Via (111mm,53mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6697.012mil|Location2.X=6735.428mil|Location1.Y=4581.5mil|Location2.Y=4640.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6697.012mil|Location2.X=6735.428mil|Location1.Y=4581.5mil|Location2.Y=4640.253mil|Absolute=True">Net Antennae: Via (112.2mm,51.1mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6708.823mil|Location2.X=6747.239mil|Location1.Y=4390.555mil|Location2.Y=4449.308mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6708.823mil|Location2.X=6747.239mil|Location1.Y=4390.555mil|Location2.Y=4449.308mil|Absolute=True">Net Antennae: Via (112.5mm,46.25mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6689.138mil|Location2.X=6727.554mil|Location1.Y=4262.602mil|Location2.Y=4321.355mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6689.138mil|Location2.X=6727.554mil|Location1.Y=4262.602mil|Location2.Y=4321.355mil|Absolute=True">Net Antennae: Via (112mm,43mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6689.138mil|Location2.X=6727.554mil|Location1.Y=4420.083mil|Location2.Y=4478.836mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6689.138mil|Location2.X=6727.554mil|Location1.Y=4420.083mil|Location2.Y=4478.836mil|Absolute=True">Net Antennae: Via (112mm,47mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6748.193mil|Location2.X=6786.609mil|Location1.Y=4388.587mil|Location2.Y=4447.34mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6748.193mil|Location2.X=6786.609mil|Location1.Y=4388.587mil|Location2.Y=4447.34mil|Absolute=True">Net Antennae: Via (113.5mm,46.2mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6728.508mil|Location2.X=6766.924mil|Location1.Y=4183.862mil|Location2.Y=4242.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6728.508mil|Location2.X=6766.924mil|Location1.Y=4183.862mil|Location2.Y=4242.615mil|Absolute=True">Net Antennae: Via (113mm,41mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6728.508mil|Location2.X=6766.924mil|Location1.Y=4420.083mil|Location2.Y=4478.836mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6728.508mil|Location2.X=6766.924mil|Location1.Y=4420.083mil|Location2.Y=4478.836mil|Absolute=True">Net Antennae: Via (113mm,47mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6767.878mil|Location2.X=6806.294mil|Location1.Y=4183.862mil|Location2.Y=4242.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6767.878mil|Location2.X=6806.294mil|Location1.Y=4183.862mil|Location2.Y=4242.615mil|Absolute=True">Net Antennae: Via (114mm,41mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6767.878mil|Location2.X=6806.294mil|Location1.Y=4420.083mil|Location2.Y=4478.836mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6767.878mil|Location2.X=6806.294mil|Location1.Y=4420.083mil|Location2.Y=4478.836mil|Absolute=True">Net Antennae: Via (114mm,47mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6807.248mil|Location2.X=6845.664mil|Location1.Y=4656.303mil|Location2.Y=4715.056mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6807.248mil|Location2.X=6845.664mil|Location1.Y=4656.303mil|Location2.Y=4715.056mil|Absolute=True">Net Antennae: Via (115mm,53mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6885.988mil|Location2.X=6924.404mil|Location1.Y=4105.122mil|Location2.Y=4163.875mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6885.988mil|Location2.X=6924.404mil|Location1.Y=4105.122mil|Location2.Y=4163.875mil|Absolute=True">Net Antennae: Via (117mm,39mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6885.988mil|Location2.X=6924.404mil|Location1.Y=4380.713mil|Location2.Y=4439.466mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6885.988mil|Location2.X=6924.404mil|Location1.Y=4380.713mil|Location2.Y=4439.466mil|Absolute=True">Net Antennae: Via (117mm,46mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6925.358mil|Location2.X=6963.774mil|Location1.Y=4656.303mil|Location2.Y=4715.056mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6925.358mil|Location2.X=6963.774mil|Location1.Y=4656.303mil|Location2.Y=4715.056mil|Absolute=True">Net Antennae: Via (118mm,53mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2917.484mil|Location2.X=2955.9mil|Location1.Y=3640.555mil|Location2.Y=3699.308mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2917.484mil|Location2.X=2955.9mil|Location1.Y=3640.555mil|Location2.Y=3699.308mil|Absolute=True">Net Antennae: Via (16.2mm,27.2mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3174.374mil|Location2.X=3212.79mil|Location1.Y=2992.917mil|Location2.Y=3051.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3174.374mil|Location2.X=3212.79mil|Location1.Y=2992.917mil|Location2.Y=3051.67mil|Absolute=True">Net Antennae: Via (22.725mm,10.75mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3145.831mil|Location2.X=3184.247mil|Location1.Y=3120.87mil|Location2.Y=3179.623mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3145.831mil|Location2.X=3184.247mil|Location1.Y=3120.87mil|Location2.Y=3179.623mil|Absolute=True">Net Antennae: Via (22mm,14mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3228.508mil|Location2.X=3266.924mil|Location1.Y=2992.917mil|Location2.Y=3051.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3228.508mil|Location2.X=3266.924mil|Location1.Y=2992.917mil|Location2.Y=3051.67mil|Absolute=True">Net Antennae: Via (24.1mm,10.75mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3263.941mil|Location2.X=3302.357mil|Location1.Y=3120.87mil|Location2.Y=3179.623mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3263.941mil|Location2.X=3302.357mil|Location1.Y=3120.87mil|Location2.Y=3179.623mil|Absolute=True">Net Antennae: Via (25mm,14mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3411.579mil|Location2.X=3449.995mil|Location1.Y=3011.618mil|Location2.Y=3070.371mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3411.579mil|Location2.X=3449.995mil|Location1.Y=3011.618mil|Location2.Y=3070.371mil|Absolute=True">Net Antennae: Via (28.75mm,11.225mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3382.051mil|Location2.X=3420.467mil|Location1.Y=3120.87mil|Location2.Y=3179.623mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3382.051mil|Location2.X=3420.467mil|Location1.Y=3120.87mil|Location2.Y=3179.623mil|Absolute=True">Net Antennae: Via (28mm,14mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3478.508mil|Location2.X=3516.924mil|Location1.Y=3013.587mil|Location2.Y=3072.34mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3478.508mil|Location2.X=3516.924mil|Location1.Y=3013.587mil|Location2.Y=3072.34mil|Absolute=True">Net Antennae: Via (30.45mm,11.275mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3854.492mil|Location2.X=3892.908mil|Location1.Y=3455.516mil|Location2.Y=3514.269mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3854.492mil|Location2.X=3892.908mil|Location1.Y=3455.516mil|Location2.Y=3514.269mil|Absolute=True">Net Antennae: Via (40mm,22.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3909.61mil|Location2.X=3948.026mil|Location1.Y=3455.516mil|Location2.Y=3514.269mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3909.61mil|Location2.X=3948.026mil|Location1.Y=3455.516mil|Location2.Y=3514.269mil|Absolute=True">Net Antennae: Via (41.4mm,22.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3913.547mil|Location2.X=3951.963mil|Location1.Y=3612.996mil|Location2.Y=3671.749mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3913.547mil|Location2.X=3951.963mil|Location1.Y=3612.996mil|Location2.Y=3671.749mil|Absolute=True">Net Antennae: Via (41.5mm,26.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3952.917mil|Location2.X=3991.333mil|Location1.Y=3475.201mil|Location2.Y=3533.954mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3952.917mil|Location2.X=3991.333mil|Location1.Y=3475.201mil|Location2.Y=3533.954mil|Absolute=True">Net Antennae: Via (42.5mm,23mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3972.602mil|Location2.X=4011.018mil|Location1.Y=3672.051mil|Location2.Y=3730.804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3972.602mil|Location2.X=4011.018mil|Location1.Y=3672.051mil|Location2.Y=3730.804mil|Absolute=True">Net Antennae: Via (43mm,28mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4031.657mil|Location2.X=4070.073mil|Location1.Y=3731.106mil|Location2.Y=3789.859mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4031.657mil|Location2.X=4070.073mil|Location1.Y=3731.106mil|Location2.Y=3789.859mil|Absolute=True">Net Antennae: Via (44.5mm,29.5mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4011.972mil|Location2.X=4050.388mil|Location1.Y=3475.201mil|Location2.Y=3533.954mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Fuel Fighter\FF_Telemetry_2020\Telemetry_PCB\Rev2\Telemetry_PCB_2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4011.972mil|Location2.X=4050.388mil|Location1.Y=3475.201mil|Location2.Y=3533.954mil|Absolute=True">Net Antennae: Via (44mm,23mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

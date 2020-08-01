@@ -1,0 +1,41 @@
+Added Component: Designator=C1(C_SMD_0805_pcb)
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Added Component: Designator=P1(XT-60)
+Add component (AddParameter): Name = "Supplier Link 1"; Value = "https://www.digikey.com/product-detail/en/sparkfun-electronics/PRT-10474/1568-1816-ND/8258064"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1568-1816-ND"; VariantName = "[No Variations]"
+Added Component: Designator=P2(XT-60)
+Add component (AddParameter): Name = "Supplier Link 1"; Value = "https://www.digikey.com/product-detail/en/sparkfun-electronics/PRT-10474/1568-1816-ND/8258064"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1568-1816-ND"; VariantName = "[No Variations]"
+Added Component: Designator=P3(JST_SE_4PIN)
+Add component (AddParameter): Name = "Supplier Link 1"; Value = "https://www.digikey.com/product-detail/en/jst-sales-america-inc/S4B-XH-A-LF-SN/455-2243-ND/1651041"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "455-2243-ND"; VariantName = "[No Variations]"
+Added Component: Designator=U1(SOIC-8)
+Add component (AddParameter): Name = "Part_name"; Value = "TMCS1100A1"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=C1-1
+Added Pin To Net: NetName=+5 Pin=P3-1
+Added Pin To Net: NetName=+5 Pin=U1-8
+Added Net: Name=+5
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Pin To Net: NetName=GND Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P3-4
+Added Pin To Net: NetName=GND Pin=U1-5
+Added Net: Name=GND
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_1 Pin=U1-1
+Added Pin To Net: NetName=NetP1_1 Pin=U1-2
+Added Net: Name=NetP1_1
+Added Pin To Net: NetName=NetP2_1 Pin=P2-1
+Added Pin To Net: NetName=NetP2_1 Pin=U1-3
+Added Pin To Net: NetName=NetP2_1 Pin=U1-4
+Added Net: Name=NetP2_1
+Added Pin To Net: NetName=NetP3_2 Pin=P3-2
+Added Pin To Net: NetName=NetP3_2 Pin=U1-7
+Added Net: Name=NetP3_2
+Added Pin To Net: NetName=NetP3_3 Pin=P3-3
+Added Pin To Net: NetName=NetP3_3 Pin=U1-6
+Added Net: Name=NetP3_3
+Added Class: Name=Current_sens
+Added Room: Name=Current_sens

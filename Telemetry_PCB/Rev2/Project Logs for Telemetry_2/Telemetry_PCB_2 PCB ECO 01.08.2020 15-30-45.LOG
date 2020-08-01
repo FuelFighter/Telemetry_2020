@@ -1,0 +1,40 @@
+Removed Pin From Net: NetName=GND Pin=P4-2
+Removed Member From Class: ClassName=Telemetry_canbus Member=D5
+Removed Member From Class: ClassName=Telemetry_canbus Member=P4
+Removed Member From Class: ClassName=Telemetry_schematic Member=P4
+Removed Member From Class: ClassName=Telemetry_canbus Member=P7
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=P10
+Removed Member From Class: ClassName=Telemetry_canbus Member=R10
+Removed Member From Class: ClassName=Telemetry_canbus Member=R12
+Removed Member From Class: ClassName=Telemetry_schematic Member=R24
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C1 C_EL_SMT_Ø6.3
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C2 C_EL_SMT_Ø6.3
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C6 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C7 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C8 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component D1 D_CUS10S30
+Added Member To Class: ClassName=Telemetry_schematic Member=Component D4 LED
+Added Member To Class: ClassName=Telemetry_canbus Member=Component D6 LED
+Added Member To Class: ClassName=Telemetry_canbus Member=Component D7 LED
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P1 XT-60
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P5 1x5_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P8 1x5_M
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P9 1x5_M
+Added Member To Class: ClassName=Telemetry_canbus Member=Component P11 RJ11
+Added Member To Class: ClassName=Telemetry_canbus Member=Component P12 CAN_Term
+Added Member To Class: ClassName=Telemetry_temp_meas Member=Component P14 Temp R
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R1 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R5 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R6 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R7 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R12 SMD
+Added Member To Class: ClassName=Telemetry_canbus Member=Component R13 SMD
+Added Member To Class: ClassName=Telemetry_canbus Member=Component R15 SMD
+Added Member To Class: ClassName=Telemetry_canbus Member=Component R16 SMD
+Added Member To Class: ClassName=Telemetry_temp_meas Member=Component R20 SMD
+Added Member To Class: ClassName=Telemetry_temp_meas Member=Component R22 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R27 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component U1 MCP16311
+Added Member To Class: ClassName=Telemetry_schematic Member=Component U2 teensy_3.6
+Added Member To Class: ClassName=Telemetry_schematic Member=Component U3 LAMBDA80
+Added Member To Class: ClassName=Telemetry_temp_meas Member=Component U6 AD8628
