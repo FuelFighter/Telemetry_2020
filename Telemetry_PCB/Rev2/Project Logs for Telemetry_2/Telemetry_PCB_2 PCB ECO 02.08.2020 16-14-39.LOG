@@ -1,0 +1,29 @@
+Removed Member From Class: ClassName=Telemetry_canbus Member=P9
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=P12
+Removed Member From Class: ClassName=Telemetry_temp_meas Member=R11
+Change component parameters: Designator = "R6" ("R6"); Footprint = "R_SMD_0805_pcb"; UniqueID = "\AEFCBHFZ" ("\AEFCBHFZ")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "150K"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=24V_Board New Net Name=48V
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C1 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C3 C_EL_SMT_Ø6.3
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C4 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component C5 SMD
+Added Member To Class: ClassName=Telemetry_canbus Member=Component C6 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component D1 LED
+Added Member To Class: ClassName=Telemetry_schematic Member=Component D2 LED
+Added Member To Class: ClassName=Telemetry_schematic Member=Component D3 LED
+Added Member To Class: ClassName=Telemetry_schematic Member=Component P7 1x5_M
+Added Member To Class: ClassName=Telemetry_canbus Member=Component P10 RJ11
+Added Member To Class: ClassName=Telemetry_temp_meas Member=Component P13 Temp R
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R1 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R2 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R3 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R4 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R5 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R7 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R8 SMD
+Added Member To Class: ClassName=Telemetry_schematic Member=Component R9 SMD
+Added Member To Class: ClassName=Telemetry_temp_meas Member=Component R14 SMD
+Added Member To Class: ClassName=Telemetry_temp_meas Member=Component R23 SMD

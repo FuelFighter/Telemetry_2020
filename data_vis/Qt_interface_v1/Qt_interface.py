@@ -1,16 +1,18 @@
 import sys
 
-from win32api import GetSystemMetrics
+from win32api import GetSystemMetrics 	# for window resolution
 
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtWidgets import (QAction, QApplication, QHeaderView, QHBoxLayout, QLabel, QLineEdit,
 							   QMainWindow, QPushButton, QTableWidget, QTableWidgetItem,
-							   QVBoxLayout, QWidget)
+							   QVBoxLayout, QWidget, QMenu)
 #from PyQt5.QtCharts import QtCharts
 
 import pyqtgraph as pg
+import serial
+from serial.tools import list_ports
 
 # used to set window size when starting the program.
 monitor_width = GetSystemMetrics(0)                         # requires pypiwin32 package
@@ -20,6 +22,17 @@ window_scaling = 0.6                                        # needs to be betwee
 
 class SerialRead:
 	#self.port_names = list_ports.comports()
+	
+	def get_com_port_list(self):
+		return list_ports.comports()
+
+
+	def list_comport(self):
+		self.ports = list_ports.comports()
+		for i in range(len(ports)):
+			print(self.ports[i].device)
+	
+
 	# checks if portName is available on the PC
 	def comport_not_available(self):
 		ports = list_ports.comports()
@@ -34,8 +47,8 @@ class SerialRead:
 		self.ser = serial.Serial()
 		self.port_name = port
 		# allowed baudrates. Defaults to 9600.
-		self.baudrate_list = [300, 600, 1200, 2400, 4800,
-							  9600, 14400, 19200, 28800, 38400, 57600, 115200]
+		self.baudrate_list = [300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, 115200]
+		
 		if(baudrate in self.baudrate_list):
 			self.ser.baudrate = baudrate
 		else:
@@ -83,7 +96,13 @@ class SerialRead:
 			self.pack_count += 1
 			print(arr, " - ", self.pack_count, ' - ', len(arr))
 			self.ser.flush()
-#dont know why this is here so i hope i can comment it out
+
+	def set_com_port(self, port):
+		self.port_name = port
+		#print(self.port_name, port)
+
+
+#dont remember why this is here so i hope i can comment it out
 # arr = []
 
 
@@ -107,23 +126,24 @@ class Widget(QWidget):
 		# plotting data
 		self.plot_widget = pg.PlotWidget(name="Plot 1")
 
-
-
+		'''
 		# this was intended for some fancy steering graphics. Does not scale as it should after resizing the window
 		# may be unnecessary if we're not keeping the potmeter for autonomous in the car anyways.
-		#self.draw_label = QLabel()
-		#self.draw_label.setScaledContents(True)
-		#self.draw_label.sizeHint()
-		#self.steering_canvas = QtGui.QPixmap(100, 500)
-		#self.scaled = self.steering_canvas.scaled(100,100, Qt.KeepAspectRatio, Qt.FastTransformation)
-		#self.label_w = self.draw_label.width()
-		#self.label_h = self.draw_label.height()
-		#print(self.label_w, self.label_h)
+		self.draw_label = QLabel()
+		self.draw_label.setScaledContents(True)
+		self.draw_label.sizeHint()
+		self.steering_canvas = QtGui.QPixmap(100, 500)
+		self.scaled = self.steering_canvas.scaled(100,100, Qt.KeepAspectRatio, Qt.FastTransformation)
+		self.label_w = self.draw_label.width()
+		self.label_h = self.draw_label.height()
+		print(self.label_w, self.label_h)
 
-		#self.draw_label.setPixmap(self.steering_canvas.scaled(350, 350, Qt.KeepAspectRatio, Qt.SmoothTransformation)) 
-		#self.draw_label.setPixmap(self.scaled)
-		#self.draw_label.setPixmap(QtGui.QPixmap('logo.png'))
-		#self.draw_something()
+		self.draw_label.setPixmap(self.steering_canvas.scaled(350, 350, Qt.KeepAspectRatio, Qt.SmoothTransformation)) 
+		self.draw_label.setPixmap(self.scaled)
+		self.draw_label.setPixmap(QtGui.QPixmap('logo.png'))
+		self.draw_something()
+		'''
+
 
 		# can translation. 
 		self.can_table = QTableWidget()
@@ -165,7 +185,8 @@ class Widget(QWidget):
 		
 		self.setLayout(self.vbox_layout)
 		'''
-	# used in the pixmap thingy. Not needed if not
+	# early corona commemt: used in the pixmap thingy. Not needed if not
+	# early august comment: i dont remember why i wrote the previous comment. can most likely just ignore it.
 	'''
 	def draw_something(self):
 		painter = QtGui.QPainter(self.draw_label.pixmap())
@@ -174,17 +195,57 @@ class Widget(QWidget):
 	'''
 
 
-
 class MainWindow(QMainWindow):
+
 	def __init__(self, widget):
 		QMainWindow.__init__(self)
-		self.setWindowTitle("DNV GL Fuel Fighter Data Vis")
 
+		self.setWindowTitle("DNV GL Fuel Fighter Data Visualization")
+		self.initMenu()
+
+	def initMenu(self):
 		self.menu = self.menuBar()
 		self.file_menu = self.menu.addMenu("File")
-
+		
 		self.setCentralWidget(widget)
+		
 
+		'''
+		self.serial_menu = self.menu.addMenu("Serial")
+		self.serial_action = QAction('List Serial ports', self)
+		# self.serial_action.setStatusTip('')
+		self.serial_action.triggered.connect(lambda:SerialRead.list_comport(self))
+		self.display_serial = QAction(str(lambda:list_prots.comports()[0].device))
+		self.serial_menu.addAction(self.display_serial)
+		self.serial_menu.addAction(self.serial_action)
+		'''
+
+
+		#serial menu
+		self.serial_menu = QMenu('Serial', self)
+		self.serial_list = QMenu('Serial ports', self)
+
+		# gets all COM ports and adds them in menu.
+		for i in range(len(SerialRead.get_com_port_list(self))):
+			self.port = list_ports.comports()[i].device
+			self.act = QAction(self.port, self)
+			self.act.setData(self.port) 						# needed for returning correct port in act_clicked
+			self.act.triggered.connect(self.act_clicked)
+			self.serial_list.addAction(self.act)
+
+		self.serial_menu.addMenu(self.serial_list)
+
+		self.menu.addMenu(self.serial_menu)
+
+	def act_clicked(self):
+		action = self.sender()
+		print(action.data())
+		SerialRead.set_com_port(self, action.data())
+
+	def list_comport(self):
+		ports = list_ports.comports()
+		for i in range(len(ports)):
+			print(ports[i].device)
 
 
 
@@ -203,6 +264,5 @@ if __name__ == "__main__":
 	window.show()
 	# set icon of window
 	app.setWindowIcon(QtGui.QIcon('logo.png'))	
-
 
 	sys.exit(app.exec_())
